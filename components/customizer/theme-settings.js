@@ -269,7 +269,7 @@ const ThemeSettings = () => {
 
   return (
     <div>
-      <a href={null} onClick={() => openSetting()}>
+      {/* <a href={null} onClick={() => openSetting()}>
         <div className="setting-sidebar" id="setting-icon">
           <div>
             <i className="fa fa-cog" aria-hidden="true"></i>
@@ -521,7 +521,7 @@ const ThemeSettings = () => {
         </ModalFooter>
       </Modal>
 
-      <ToastContainer />
+      <ToastContainer /> */}
     </div>
   );
 };

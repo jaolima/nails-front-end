@@ -65,7 +65,7 @@ const Electronic = () => {
           />
         </div>
 
-        <ThemeSettings />
+        {/* <ThemeSettings /> */}
       </div>
     </Fragment>
   );

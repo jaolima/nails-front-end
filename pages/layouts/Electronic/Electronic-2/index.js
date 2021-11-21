@@ -54,7 +54,7 @@ const Electronic2 = () => {
           logoName={"logo/8.png"}
         />
       </div>
-      <ThemeSettings />
+      {/* <ThemeSettings /> */}
     </Fragment>
   );
 };

@@ -62,7 +62,7 @@ const Pets = () => {
         inner="title-inner1"
         hrClass={true}
       />
-      <ThemeSettings />
+      {/* <ThemeSettings /> */}
       <FooterTwo logoName={"logo/14.png"} layoutClass="black-subfooter" />
     </>
   );

@@ -150,7 +150,7 @@ const NavBar = () => {
                   <a className="nav-link" onClick={(e) => openMblNav(e)}>
                     {" "}
                     {t(menuItem.title)}
-                    <span className="sub-arrow"></span>
+                    {menuItem.arrow == false ? '' : <span className="sub-arrow"></span>}
                   </a>
                   {menuItem.children && !menuItem.megaMenu ? (
                     <ul className="nav-submenu">
@@ -158,9 +158,8 @@ const NavBar = () => {
                         return (
                           <li
                             key={index}
-                            className={`${
-                              childrenItem.children ? "sub-menu " : ""
-                            }`}
+                            className={`${childrenItem.children ? "sub-menu " : ""
+                              }`}
                           >
                             {childrenItem.type === "sub" ? (
                               <a
@@ -194,9 +193,8 @@ const NavBar = () => {
                             )}
                             {childrenItem.children ? (
                               <ul
-                                className={`nav-sub-childmenu ${
-                                  childrenItem.active ? "menu-open " : "active"
-                                }`}
+                                className={`nav-sub-childmenu ${childrenItem.active ? "menu-open " : "active"
+                                  }`}
                               >
                                 {childrenItem.children.map(
                                   (childrenSubItem, key) => (
@@ -229,38 +227,37 @@ const NavBar = () => {
                       })}
                     </ul>
                   ) : (
-                    <div
-                      className={`mega-menu-container  ${
-                        menuItem.megaMenu ? "" : "opensubmenu"
-                      }`}
-                    >
-                      {menuItem.megaMenu === true ? (
-                        <Container>
-                          <Row>
-                            {menuItem.children.map((megaMenuItem, i) => {
-                              return (
-                                <div
-                                  className={`${
-                                    menuItem.megaMenuType == "small"
+                    menuItem.arrow == false ? '' : (
+                      <div
+                        className={`mega-menu-container  ${menuItem.megaMenu ? "" : "opensubmenu"
+                          }`}
+                      >
+                        {menuItem.megaMenu === true ? (
+                          <Container>
+                            <Row>
+                              {menuItem.children.map((megaMenuItem, i) => {
+                                return (
+                                  <div
+                                    className={`${menuItem.megaMenuType == "small"
                                       ? "col mega-box"
                                       : menuItem.megaMenuType == "medium"
-                                      ? "col-lg-3"
-                                      : menuItem.megaMenuType == "large"
-                                      ? "col"
-                                      : ""
-                                  } `}
-                                  key={i}
-                                >
-                                  <div className="link-section">
-                                    <div className="menu-title">
-                                      <h5 onClick={(e) => handleMegaSubmenu(e)}>
-                                        {megaMenuItem.title}
-                                      </h5>
-                                    </div>
-                                    <div className="menu-content">
-                                      <ul>
-                                        {menuItem.title === "Elements"
-                                          ? megaMenuItem.children.map(
+                                        ? "col-lg-3"
+                                        : menuItem.megaMenuType == "large"
+                                          ? "col"
+                                          : ""
+                                      } `}
+                                    key={i}
+                                  >
+                                    <div className="link-section">
+                                      <div className="menu-title">
+                                        <h5 onClick={(e) => handleMegaSubmenu(e)}>
+                                          {megaMenuItem.title}
+                                        </h5>
+                                      </div>
+                                      <div className="menu-content">
+                                        <ul>
+                                          {menuItem.title === "Elements"
+                                            ? megaMenuItem.children.map(
                                               (subMegaMenuItem, i) => {
                                                 return (
                                                   <li key={i}>
@@ -278,7 +275,7 @@ const NavBar = () => {
                                                 );
                                               }
                                             )
-                                          : megaMenuItem.children.map(
+                                            : megaMenuItem.children.map(
                                               (subMegaMenuItem, i) => {
                                                 return (
                                                   <li key={i}>
@@ -293,18 +290,19 @@ const NavBar = () => {
                                                 );
                                               }
                                             )}
-                                      </ul>
+                                        </ul>
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                              );
-                            })}
-                          </Row>
-                        </Container>
-                      ) : (
-                        ""
-                      )}
-                    </div>
+                                );
+                              })}
+                            </Row>
+                          </Container>
+                        ) : (
+                          ""
+                        )}
+                      </div>
+                    )
                   )}
                 </li>
               );

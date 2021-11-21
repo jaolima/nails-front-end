@@ -71,7 +71,7 @@ const Beauty = () => {
         newLatter={true}
         logoName={"layout3/logo.png"}
       />
-      <ThemeSettings />
+      {/* <ThemeSettings /> */}
     </Fragment>
   );
 };
