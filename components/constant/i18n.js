@@ -10,7 +10,7 @@ i18next
         resources: {
             en: {
                 translations: {
-                    'topbar_title': 'Welcome to Our store Multikart',
+                    'topbar_title': 'Beauty is in your hands',
                     'call_us': 'Call Us',
                     'Home': 'Home',
                     'features': 'features',

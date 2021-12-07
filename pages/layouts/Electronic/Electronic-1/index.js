@@ -23,7 +23,7 @@ const Electronic = () => {
       </Helmet>
       <ModalComponent />
       <div className="container-fluid layout-8">
-        <title>MultiKart | Electronic Store</title>
+        <title>Swiss Nails Factory</title>
 
         <HeaderFour
           fluid={true}

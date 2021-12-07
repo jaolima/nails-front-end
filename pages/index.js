@@ -1,10 +1,10 @@
 import React from "react";
 import Banner from "./layouts/Fashion/Components/Banner";
 import CollectionBanner from "./layouts/Fashion/Components/Collection-Banner";
-import TopCollection1 from "../components/common/Collections/Collection1";
+import TopProduct from "../components/common/Collections/TopProduct";
 import TopCollection2 from "../components/common/Collections/Collection2";
 import Parallax from "./layouts/Fashion/Components/Parallax";
-import SpecialProducts from "../components/common/Collections/TabCollection5";
+import TopCategories from "../components/common/Collections/TopCategories";
 import ServiceLayout from "../components/common/Service/service3";
 import Blog from "../components/common/Blog/blog1";
 import Instagram from "../components/common/instagram/instagram1";
@@ -12,7 +12,6 @@ import LogoBlock from "../components/common/logo-block";
 import HeaderOne from "../components/headers/header-one";
 import { withApollo } from "../helpers/apollo/apollo";
 import { Product4, Product5, Product6 } from "../services/script";
-import Paragraph from "../components/common/Paragraph";
 import ModalComponent from "../components/common/Modal";
 import Helmet from "react-helmet";
 import favicon from "../public/assets/images/favicon/1.png";
@@ -30,41 +29,30 @@ const Fashion = () => {
       <Banner />
       <ServiceLayout sectionClass="border-section small-section" />
       {/* <CollectionBanner /> */}
-      <Paragraph
-        title="title1 section-t-space"
-        inner="title-inner1"
-        hrClass={false}
-      />
-      {/* <TopCollection
-        noTitle="null"
-        backImage={true}
-        type="fashion"
-        title="top collection"
-        subtitle="special offer"
-        productSlider={Product4}
-        designClass="section-b-space p-t-0 ratio_asos"
-        noSlider="false"
-        cartClass="cart-info cart-wrap"
-      /> */}
 
-      <TopCollection1
-        noTitle="null"
+
+      <TopProduct
+        titleClass="title1 section-t-space"
+        title="special offer"
+        designClass="section-b-space ratio_square"
+        subTitle="top collection"
+        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        inner="title-inner1"
+        line={true}
+
         backImage={true}
         type="beauty"
         innerClass="title1"
-        inner="title-inner1"
         productSlider={Product5}
-        title="New Products"
         subtitle="special offer"
         productDetail="text-center"
-        designClass="section-b-space ratio_square"
-        noSlider="true"
         cartClass="cart-box"
       />
 
 
       <Parallax />
-      <SpecialProducts
+
+      <TopCategories
         type="fashion"
         backImage={true}
         productSlider={Product4}

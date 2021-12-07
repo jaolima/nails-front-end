@@ -28,7 +28,7 @@ const Electronic2 = () => {
         topClass="top-header top-header-dark2"
       />
       <div className="container-fluid layout-8">
-        <title>MultiKart | Electronic Store</title>
+        <title>Swiss Nails Factory</title>
 
         <HomeBanner />
         <Collection />

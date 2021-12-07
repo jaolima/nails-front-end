@@ -47,7 +47,7 @@ export default function MyApp({ Component, pageProps }) {
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
-            <title>Multikart - Multi-purpopse E-commerce React Template</title>
+            <title>Swiss Nails Factory</title>
           </Helmet>
           <div>
             <SettingProvider>

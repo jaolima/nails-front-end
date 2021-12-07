@@ -94,9 +94,9 @@ const ProductItem = ({
           <a href={null} title="Quick View" onClick={toggle}>
             <i className="fa fa-search" aria-hidden="true"></i>
           </a>
-          <a href={null} title="Compare" onClick={toggleCompare}>
+          {/* <a href={null} title="Compare" onClick={toggleCompare}>
             <i className="fa fa-refresh" aria-hidden="true"></i>
-          </a>
+          </a> */}
           <Modal
             isOpen={modalCompare}
             toggle={toggleCompare}

@@ -47,7 +47,7 @@ const Banner = ({ imgClass, title, about, btn }) => {
 const MainBanner = () => {
   return (
     <Fragment>
-      <title>MultiKart | Beauty Store</title>
+      <title>Swiss Nails Factory</title>
       <HeaderOne logoName={"layout3/logo.png"} topClass="top-header" />
       <section className="p-0">
         <Slider className="slide-1 home-slider">
