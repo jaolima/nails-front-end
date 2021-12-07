@@ -351,14 +351,14 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                 <Row>
                   {/* Product Box */}
                   {!data ||
-                  !data.products ||
-                  !data.products.items ||
-                  data.products.items.length === 0 ||
-                  loading ? (
+                    !data.products ||
+                    !data.products.items ||
+                    data.products.items.length === 0 ||
+                    loading ? (
                     data &&
-                    data.products &&
-                    data.products.items &&
-                    data.products.items.length === 0 ? (
+                      data.products &&
+                      data.products.items &&
+                      data.products.items.length === 0 ? (
                       <Col xs="12">
                         <div>
                           <div className="col-sm-12 empty-cart-cls text-center">

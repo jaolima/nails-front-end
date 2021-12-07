@@ -20,8 +20,8 @@ const FilterPage = ({sm,sidebarView,closeSidebar}) => {
                             <i className="fa fa-angle-left" aria-hidden="true"></i> back
                         </span>
                     </div>
-                    <Category />
-                    <Brand/>
+                    {/* <Category /> */}
+                    {/* <Brand/> */}
                     <Color/>
                     <Size/>
                     <Price />
