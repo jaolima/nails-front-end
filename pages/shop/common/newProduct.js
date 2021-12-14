@@ -4,7 +4,7 @@ import gql from "graphql-tag";
 import { Media } from "reactstrap";
 import Slider from "react-slick";
 import { CurrencyContext } from "../../../helpers/Currency/CurrencyContext";
-
+import { useTranslation } from "react-i18next";
 const GET_PRODUCTS = gql`
   query newProducts($type: String!) {
     newProducts(type: $type) {
@@ -19,6 +19,7 @@ const GET_PRODUCTS = gql`
 `;
 
 const NewProduct = () => {
+          const { t } = useTranslation();
   const CurContect = useContext(CurrencyContext);
   const symbol = CurContect.state.symbol;
   var { loading, data } = useQuery(GET_PRODUCTS, {
@@ -30,7 +31,7 @@ const NewProduct = () => {
   return (
     // <!-- side-bar single product slider start -->
     <div className="theme-card">
-      <h5 className="title-border">new product</h5>
+      <h5 className="title-border">{t('new product')}</h5>
       <Slider className="offer-slider slide-1">
         <div>
           {!data ||

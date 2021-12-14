@@ -9,7 +9,7 @@ import { Media, Container, Row, Col } from "reactstrap";
 import LogoImage from "./common/logo";
 import cart from "../../public/assets/images/jewellery/icon/cart.png";
 import search from "../../public/assets/images/jewellery/icon/search.png";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import SearchOverlay from "./common/search-overlay";
 
 const HeaderSix = ({ logoName, direction }) => {
@@ -74,7 +74,7 @@ const HeaderSix = ({ logoName, direction }) => {
                               />
                             </div>
                           </li>
-                          <Currency icon={settings} />
+                          <Currency icon={language} />
 
                           {direction === undefined ? (
                             <CartContainer icon={cart} />

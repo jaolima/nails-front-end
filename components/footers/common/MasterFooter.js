@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import LogoImage from "../../headers/common/logo";
 import CopyRight from "./copyright";
+import { useTranslation } from "react-i18next";
 
 const MasterFooter = ({
   containerFluid,
@@ -28,6 +29,7 @@ const MasterFooter = ({
   const [isOpen, setIsOpen] = useState();
   const [collapse, setCollapse] = useState(0);
   const width = window.innerWidth < 750;
+  const { t } = useTranslation();
   useEffect(() => {
     const changeCollapse = () => {
       if (window.innerWidth < 750) {
@@ -54,11 +56,8 @@ const MasterFooter = ({
                   <Col lg="6">
                     <div className="subscribe">
                       <div>
-                        <h4>KNOW IT ALL FIRST!</h4>
-                        <p>
-                          Never Miss Anything From Multikart By Signing Up To
-                          Our Newsletter.
-                        </p>
+                        <h4>{t('SUBSCRIBE TO OUR NEWSLETTER!')}</h4>
+                        <p>{t('Never Miss Anything From Swiss Nails Factory By Signing Up To Our Newsletter.')}</p>
                       </div>
                     </div>
                   </Col>
@@ -69,11 +68,11 @@ const MasterFooter = ({
                           type="text"
                           className="form-control"
                           id="exampleFormControlInput1"
-                          placeholder="Enter your email"
+                          placeholder={t("Enter your email")}
                         />
                       </FormGroup>
                       <Button type="submit" className="btn btn-solid">
-                        subscribe
+                        {t('subscribe')}
                       </Button>
                     </Form>
                   </Col>
@@ -90,9 +89,8 @@ const MasterFooter = ({
             <Row className="footer-theme partition-f">
               <Col lg="4" md="6">
                 <div
-                  className={`footer-title ${
-                    isOpen && collapse == 1 ? "active" : ""
-                  } footer-mobile-title`}
+                  className={`footer-title ${isOpen && collapse == 1 ? "active" : ""
+                    } footer-mobile-title`}
                 >
                   <h4
                     onClick={() => {
@@ -100,7 +98,7 @@ const MasterFooter = ({
                       setIsOpen(!isOpen);
                     }}
                   >
-                    about
+                    {t('about')}
                     <span className="according-menu"></span>
                   </h4>
                 </div>
@@ -111,15 +109,11 @@ const MasterFooter = ({
                     <div className="footer-logo">
                       <LogoImage logo={logoName} />
                     </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam,
-                    </p>
+                    <p>{t('NAILS FACTORY is one of the top suppliers to the Swiss nail salons. But our high-quality products are also the perfect choice for private use. A huge selection of nail polishes, nail art products, UV and LED lamps and many other accessories for successful nail modeling await you in our Nails Online Shop.')}</p>
                     <div className="footer-social">
                       <ul>
                         <li>
-                          <a href="https://www.facebook.com" target="_blank">
+                          <a href="https://www.facebook.com/Nails-Factorych-103119622035783" target="_blank">
                             <i
                               className="fa fa-facebook"
                               aria-hidden="true"
@@ -127,7 +121,7 @@ const MasterFooter = ({
                           </a>
                         </li>
                         <li>
-                          <a href="https://plus.google.com" target="_blank">
+                          <a href="https://www.google.com/maps/place/Nails+Factory/@47.3246674,8.2088617,15z/data=!4m5!3m4!1s0x0:0x6a223ed1dd95e69f!8m2!3d47.3246674!4d8.2088617?sa=X&ved=2ahUKEwjg39TAwI7sAhVyQxUIHb6uA8kQ_BIwDXoECBYQCA&shorturl=1" target="_blank">
                             <i
                               className="fa fa-google-plus"
                               aria-hidden="true"
@@ -135,21 +129,11 @@ const MasterFooter = ({
                           </a>
                         </li>
                         <li>
-                          <a href="https://twitter.com" target="_blank">
-                            <i className="fa fa-twitter" aria-hidden="true"></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.instagram.com" target="_blank">
+                          <a href="https://www.instagram.com/nailsfactory_schweiz/?hl=en" target="_blank">
                             <i
                               className="fa fa-instagram"
                               aria-hidden="true"
                             ></i>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://rss.com" target="_blank">
-                            <i className="fa fa-rss" aria-hidden="true"></i>
                           </a>
                         </li>
                       </ul>
@@ -160,9 +144,8 @@ const MasterFooter = ({
               <Col className="offset-xl-1">
                 <div className="sub-title">
                   <div
-                    className={`footer-title ${
-                      isOpen && collapse == 2 ? "active" : ""
-                    } `}
+                    className={`footer-title ${isOpen && collapse == 2 ? "active" : ""
+                      } `}
                   >
                     <h4
                       onClick={() => {
@@ -172,7 +155,7 @@ const MasterFooter = ({
                         } else setIsOpen(true);
                       }}
                     >
-                      my account
+                      {t('categories')}
                       <span className="according-menu"></span>
                     </h4>
                   </div>
@@ -183,22 +166,22 @@ const MasterFooter = ({
                       <ul>
                         <li>
                           <Link href={`/shop/left_sidebar`}>
-                            <a>womens</a>
+                            <a>{t('Starter sets')}</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/shop/left_sidebar`}>
-                            <a> clothing </a>
+                            <a> {t('Instruments & accessories')} </a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/shop/left_sidebar`}>
-                            <a>accessories</a>
+                            <a>{t('Milling cutters & accessories')}</a>
                           </Link>
                         </li>
                         <li>
                           <Link href={`/shop/left_sidebar`}>
-                            <a> featured </a>
+                            <a> {t('Coupons')} </a>
                           </Link>
                         </li>
                       </ul>
@@ -209,9 +192,8 @@ const MasterFooter = ({
               <Col>
                 <div className="sub-title">
                   <div
-                    className={`footer-title ${
-                      isOpen && collapse == 3 ? "active" : ""
-                    } `}
+                    className={`footer-title ${isOpen && collapse == 3 ? "active" : ""
+                      } `}
                   >
                     <h4
                       onClick={() => {
@@ -221,7 +203,7 @@ const MasterFooter = ({
                         } else setIsOpen(true);
                       }}
                     >
-                      why we choose
+                      {t('information')}
                       <span className="according-menu"></span>
                     </h4>
                   </div>
@@ -231,19 +213,16 @@ const MasterFooter = ({
                     <div className="footer-contant">
                       <ul>
                         <li>
-                          <a href="#">shipping & return</a>
+                          <a href="#">{t('Locations')}</a>
                         </li>
                         <li>
-                          <a href="#">secure shopping</a>
+                          <a href="#">{t('FAQ')}</a>
                         </li>
                         <li>
-                          <a href="#">gallary</a>
+                          <a href="#">{t('B2B request')}</a>
                         </li>
                         <li>
-                          <a href="#">affiliates</a>
-                        </li>
-                        <li>
-                          <a href="#">contacts</a>
+                          <a href="#">{t('contact')}</a>
                         </li>
                       </ul>
                     </div>
@@ -253,9 +232,8 @@ const MasterFooter = ({
               <Col>
                 <div className="sub-title">
                   <div
-                    className={`footer-title ${
-                      isOpen && collapse == 4 ? "active" : ""
-                    } `}
+                    className={`footer-title ${isOpen && collapse == 4 ? "active" : ""
+                      } `}
                   >
                     <h4
                       onClick={() => {
@@ -265,7 +243,7 @@ const MasterFooter = ({
                         } else setIsOpen(true);
                       }}
                     >
-                      store information
+                      {t('contact')}
                       <span className="according-menu"></span>
                     </h4>
                   </div>
@@ -275,18 +253,14 @@ const MasterFooter = ({
                     <div className="footer-contant">
                       <ul className="contact-list">
                         <li>
-                          <i className="fa fa-map-marker"></i>Multikart Demo
-                          Store, Demo store India 345-659
+                          <i className="fa fa-map-marker"></i>{t('Seengen location Guardian Way 6 5707 Seengen')}
                         </li>
                         <li>
-                          <i className="fa fa-phone"></i>Call Us: 123-456-7898
+                          <i className="fa fa-phone"></i>{t('Phone + 41 62 771 00 21')}
                         </li>
                         <li>
-                          <i className="fa fa-envelope-o"></i>Email Us:{" "}
-                          <a href="#">Support@Fiot.com</a>
-                        </li>
-                        <li>
-                          <i className="fa fa-fax"></i>Fax: 123456
+                          <i className="fa fa-envelope-o"></i>{t('Email Us')}:{" "}
+                          <a href="#">contact@nails-factory.ch</a>
                         </li>
                       </ul>
                     </div>

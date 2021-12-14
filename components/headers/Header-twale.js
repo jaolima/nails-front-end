@@ -2,7 +2,7 @@ import React from "react";
 import SideBar from "./common/sidebar";
 import { Media, Container, Row, Col } from "reactstrap";
 import search from "../../public/assets/images/icon/search.png";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import cart from "../../public/assets/images/icon/cart.png";
 import Currency from "./common/currency";
 import CartContainer from "../containers/CartContainer";
@@ -58,7 +58,7 @@ const HeaderTwale = ({ logoName }) => {
                             />
                           </div>
                         </li>
-                        <Currency icon={settings} />
+                        <Currency icon={language} />
                         {/*Header Cart Component */}
                         <CartContainer icon={cart} />
                       </ul>

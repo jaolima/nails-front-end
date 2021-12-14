@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 import { Collapse, Input } from "reactstrap";
 import FilterContext from "../../../helpers/filter/FilterContext";
-
+import { useTranslation } from "react-i18next";
 const GET_SIZE = gql`
   query getSize($type: String) {
     getSize(type: $type) {
@@ -13,6 +13,7 @@ const GET_SIZE = gql`
 `;
 
 const Size = () => {
+      const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const context = useContext(FilterContext);
   const isChecked = context.isChecked;
@@ -28,7 +29,7 @@ const Size = () => {
   return (
     <div className="collection-collapse-block border-0 open">
       <h3 className="collapse-block-title" onClick={toggle}>
-        size
+        {t('size')}
       </h3>
       <Collapse isOpen={isOpen}>
         <div className="collection-collapse-block-content">

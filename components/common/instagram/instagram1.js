@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Row, Col, Media, Container } from "reactstrap";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
+import Link from "next/link";
 
 const GET_PRODUCTS = gql`
   query instagram($type: String!) {
@@ -75,6 +76,7 @@ const Instagram = ({ type }) => {
         <Row>
           <Col className="pt-0">
             <h2 className="title-borderless"># instagram</h2>
+            <h3 className="title-borderless"><Link href="https://www.instagram.com/nailsfactory_schweiz/">@nailsfactory_schweiz</Link></h3>
             <div className="slide-7 no-arrow slick-instagram">
               <Slider {...settings}>
                 {data &&

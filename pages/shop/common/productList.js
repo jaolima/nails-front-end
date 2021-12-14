@@ -11,6 +11,7 @@ import PostLoader from "../../../components/common/PostLoader";
 import CartContext from "../../../helpers/cart";
 import { WishlistContext } from "../../../helpers/wishlist/WishlistContext";
 import { CompareContext } from "../../../helpers/Compare/CompareContext";
+import { useTranslation } from "react-i18next";
 
 const GET_PRODUCTS = gql`
   query products(
@@ -66,6 +67,7 @@ const GET_PRODUCTS = gql`
 `;
 
 const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
+  const { t } = useTranslation();
   const cartContext = useContext(CartContext);
   const quantity = cartContext.quantity;
   const wishlistContext = useContext(WishlistContext);
@@ -165,23 +167,8 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                 />
               </a>
               <div className="top-banner-content small-section">
-                <h4>fashion</h4>
-                <h5>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry.
-                </h5>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged. It was popularised in the 1960s with
-                  the release of Letraset sheets containing Lorem Ipsum
-                  passages, and more recently with desktop publishing software
-                  like Aldus PageMaker including versions of Lorem Ipsum.
-                </p>
+                <h4>{t('Nail varnishes - color varnishes')}</h4>
+                <p> {t('Great nail polish color polishes with an exceptionally nourishing formula. The composition works without the 18 harmful chemicals that can normally be found in nail polishes. They dry super fast. You don’t have to wait so long before you can go back to everyday business. This effect is supported by the body’s own warmth. This helps the nail polish to dry very quickly. The wait is finally over!')}</p>
               </div>
             </div>
             <Row>
@@ -222,7 +209,7 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                   {
                     <li>
                       <a href={null} className="filter_tag">
-                        price: {selectedPrice.min}- {selectedPrice.max}
+                        {t('price')}: {selectedPrice.min}- {selectedPrice.max}
                       </a>
                     </li>
                   }
@@ -240,7 +227,7 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                       >
                         <span className="filter-btn btn btn-theme">
                           <i className="fa fa-filter" aria-hidden="true"></i>{" "}
-                          Filter
+                          {t('Filter')}
                         </span>
                       </div>
                     </Col>
@@ -328,19 +315,19 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                         <select
                           onChange={(e) => setLimit(parseInt(e.target.value))}
                         >
-                          <option value="10">10 Products Par Page</option>
-                          <option value="15">15 Products Par Page</option>
-                          <option value="20">20 Products Par Page</option>
+                          <option value="10">{t('10 Products Par Page')}</option>
+                          <option value="15">{t('15 Products Par Page')}</option>
+                          <option value="20">{t('20 Products Par Page')}</option>
                         </select>
                       </div>
                       <div className="product-page-filter">
                         <select onChange={(e) => setSortBy(e.target.value)}>
-                          <option value="AscOrder">Sorting items</option>
-                          <option value="HighToLow">High To Low</option>
-                          <option value="LowToHigh">Low To High</option>
-                          <option value="Newest">Newest</option>
-                          <option value="AscOrder">Asc Order</option>
-                          <option value="DescOrder">Desc Order</option>
+                          <option value="AscOrder">{t("Sorting items")}</option>
+                          <option value="HighToLow">{t("High To Low")}</option>
+                          <option value="LowToHigh">{t("Low To High")}</option>
+                          <option value="Newest">{t("Newest")}</option>
+                          <option value="AscOrder">{t("Asc Order")}</option>
+                          <option value="DescOrder">{t("Desc Order")}</option>
                         </select>
                       </div>
                     </div>
@@ -368,9 +355,9 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                               alt=""
                             />
                             <h3>
-                              <strong>Your Cart is Empty</strong>
+                              <strong>{t("Your Cart is Empty")}</strong>
                             </h3>
-                            <h4>Explore more shortlist some items.</h4>
+                            <h4>{t("Explore more shortlist some items.")}</h4>
                           </div>
                         </div>
                       </Col>
@@ -427,7 +414,7 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                           {isLoading && (
                             <Spinner animation="border" variant="light" />
                           )}
-                          Load More
+                          {t('Load More')}
                         </Button>
                       )}
                     </Col>

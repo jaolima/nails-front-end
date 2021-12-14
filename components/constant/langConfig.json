@@ -1,4 +1,10 @@
 [
+    { "lang": "Deutsch", "val":"de"},
     { "lang": "English", "val":"en"},
-    { "lang": "Franch", "val":"fn"}
+    { "lang": "Española", "val":"es"},
+    { "lang": "Français", "val":"fr"},
+    { "lang": "Italiano", "val":"it"},
+    { "lang": "Português", "val":"pt"},
+    { "lang": "Shqip", "val":"sq"},
+    { "lang": "中国人", "val":"zh"}
 ]

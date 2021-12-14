@@ -9,7 +9,7 @@ import ServiceLayout from "../components/common/Service/service3";
 import Blog from "../components/common/Blog/blog1";
 import Instagram from "../components/common/instagram/instagram1";
 import LogoBlock from "../components/common/logo-block";
-import HeaderOne from "../components/headers/header-one";
+import HeaderOne from "../components/headers/header-two";
 import { withApollo } from "../helpers/apollo/apollo";
 import { Product4, Product5, Product6 } from "../services/script";
 import ModalComponent from "../components/common/Modal";
@@ -24,27 +24,23 @@ const Fashion = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href={favicon ? favicon : ""} />
       </Helmet>
-      <ModalComponent />
-      <HeaderOne logoName={"logo.png"} topClass="top-header" />
-      <Banner />
-      <ServiceLayout sectionClass="border-section small-section" />
-      {/* <CollectionBanner /> */}
 
+      <ModalComponent />
+
+      <HeaderOne logoName={"logo.png"} topClass="top-header" />
+
+      <Banner />
+
+      <ServiceLayout sectionClass="border-section small-section" />
 
       <TopProduct
-        titleClass="title1 section-t-space"
         title="special offer"
-        designClass="section-b-space ratio_square"
         subTitle="top collection"
-        text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        titleClass="title1 section-t-space"
+        designClass="section-b-space ratio_square"
         inner="title-inner1"
         line={true}
-
-        backImage={true}
         type="beauty"
-        innerClass="title1"
-        productSlider={Product5}
-        subtitle="special offer"
         productDetail="text-center"
         cartClass="cart-box"
       />
@@ -52,22 +48,12 @@ const Fashion = () => {
 
       <Parallax />
 
-      <TopCategories
-        type="fashion"
-        backImage={true}
-        productSlider={Product4}
-        line={true}
-        title="title1 section-t-space"
-        inner="title-inner1"
-        designClass="section-b-space p-t-0 ratio_asos"
-        noSlider="true"
-        cartClass="cart-info cart-wrap"
-      />
-      {/* <Blog type="fashion" title="title1" inner="title-inner1" /> */}
       <Instagram type="fashion" />
-      <div className="section-b-space">
+
+      {/* <div className="section-b-space">
         <LogoBlock />
-      </div>
+      </div> */}
+
       <MasterFooter
         footerClass={`footer-light`}
         footerLayOut={"light-layout upper-footer"}

@@ -5,12 +5,13 @@ import SideBar from "./common/sidebar";
 import Cart from "../containers/Cart";
 import CartContainer from "../containers/CartContainer";
 import TopBar from "./common/topbar-dark";
-import { Media, Container, Row, Col } from "reactstrap";
+import { Media, Container, Row, Col, Input } from "reactstrap";
 import LogoImage from "./common/logo";
 import search from "../../public/assets/images/icon/search.png";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import Currency from "./common/currency";
 import SearchOverlay from "./common/search-overlay";
+import { useTranslation } from "react-i18next";
 
 const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
   useEffect(() => {
@@ -19,16 +20,16 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
     }, 2000);
   }, []);
 
-  const openNav = () => {
-    var openmyslide = document.getElementById("mySidenav");
-    if (openmyslide) {
-      openmyslide.classList.add("open-side");
-    }
-  };
+  // const openNav = () => {
+  //   var openmyslide = document.getElementById("mySidenav");
+  //   if (openmyslide) {
+  //     openmyslide.classList.add("open-side");
+  //   }
+  // };
   const openSearch = () => {
     document.getElementById("search-overlay").style.display = "block";
   };
-
+  const { t } = useTranslation();
   return (
     <div>
       <header id="sticky" className={`${headerClass}`}>
@@ -40,44 +41,32 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
           <Row>
             <Col>
               <div className="main-menu border-section border-top-0">
-                <div className="menu-left">
-                  <div className="navbar">
-                    <a href={null} onClick={openNav}>
-                      <div className="bar-style">
-                        {" "}
-                        <i
-                          className="fa fa-bars sidebar-bar"
-                          aria-hidden="true"
-                        ></i>
-                      </div>
-                    </a>
-                    {/*SideBar Navigation Component*/}
-                    <SideBar />
-                  </div>
-                </div>
                 <div className="brand-logo layout2-logo">
                   <LogoImage logo={logoName} />
+                </div>
+                <div>
+                  <form className="form_search" role="textbox">
+                    {/* eslint-disable-next-line */}
+                    <Input
+                      id="query search-autocomplete"
+                      type="search"
+                      placeholder={t('Find your product here...')}
+                      className="nav-search nav-search-field"
+                      aria-expanded="true"
+                    />
+                    <button
+                      type="submit"
+                      name="nav-submit-button"
+                      className="btn-search"
+                    >
+                      <i className="fa fa-search"></i>
+                    </button>
+                  </form>
                 </div>
                 <div className="menu-right pull-right">
                   <div>
                     <div className="icon-nav">
                       <ul>
-                        <li className="onhover-div mobile-search">
-                          <div>
-                            <Media
-                              src={search}
-                              onClick={openSearch}
-                              className="img-fluid"
-                              alt=""
-                            />
-                            {/* <i
-                              className="fa fa-search"
-                              onClick={openSearch}
-                            ></i> */}
-                          </div>
-                        </li>
-                        <Currency icon={settings} />
-                        {/*Header Cart Component */}
                         {direction === undefined ? (
                           <CartContainer icon={cart} />
                         ) : (

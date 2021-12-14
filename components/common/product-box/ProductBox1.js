@@ -5,7 +5,7 @@ import { Row, Col, Media, Modal, ModalBody } from "reactstrap";
 import CartContext from "../../../helpers/cart";
 import { CurrencyContext } from "../../../helpers/Currency/CurrencyContext";
 import MasterProductDetail from "./MasterProductDetail";
-
+import { useTranslation } from "react-i18next";
 const ProductItem = ({
   product,
   addCart,
@@ -26,7 +26,7 @@ const ProductItem = ({
   const minusQty = cartContext.minusQty;
   const quantity = cartContext.quantity;
   const setQuantity = cartContext.setQuantity;
-
+  const { t } = useTranslation();
   const [image, setImage] = useState("");
   const [modal, setModal] = useState(false);
   const [modalCompare, setModalCompare] = useState(false);
@@ -58,8 +58,8 @@ const ProductItem = ({
     <div className="product-box product-wrap">
       <div className="img-wrapper">
         <div className="lable-block">
-          {product.new === true ? <span className="lable3">new</span> : ""}
-          {product.sale === true ? <span className="lable4">on sale</span> : ""}
+          {product.new === true ? <span className="lable3">{t('new')}</span> : ""}
+          {product.sale === true ? <span className="lable4">{t('on sale')}</span> : ""}
         </div>
         <div className="front" onClick={clickProductDetail}>
           <Media
@@ -108,19 +108,18 @@ const ProductItem = ({
                 <Col lg="12">
                   <div className="media">
                     <Media
-                      src={`${
-                        product.variants && image
+                      src={`${product.variants && image
                           ? image
                           : product.images[0].src
-                      }`}
+                        }`}
                       alt=""
                       className="img-fluid"
                     />
                     <div className="media-body align-self-center text-center">
                       <h5>
-                        <i className="fa fa-check"></i>Item{" "}
+                        <i className="fa fa-check"></i>{t('Item')}{" "}
                         <span>{product.title}</span>
-                        <span>successfully added to your Compare list</span>
+                        <span>{t('successfully added to your Compare list')}</span>
                       </h5>
                       <div className="buttons d-flex justify-content-center">
                         <Link href="/page/compare">
@@ -129,7 +128,7 @@ const ProductItem = ({
                             className="btn-sm btn-solid"
                             onClick={addCompare}
                           >
-                            View Compare list
+                            {t('View Compare list')}
                           </a>
                         </Link>
                       </div>
@@ -144,9 +143,8 @@ const ProductItem = ({
           <ul className="product-thumb-list">
             {product.images.map((img, i) => (
               <li
-                className={`grid_thumb_img ${
-                  img.src === image ? "active" : ""
-                }`}
+                className={`grid_thumb_img ${img.src === image ? "active" : ""
+                  }`}
                 key={i}
               >
                 <a href={null} title="Add to Wishlist">
@@ -183,9 +181,8 @@ const ProductItem = ({
             <Col lg="6" xs="12">
               <div className="quick-view-img">
                 <Media
-                  src={`${
-                    product.variants && image ? image : product.images[0].src
-                  }`}
+                  src={`${product.variants && image ? image : product.images[0].src
+                    }`}
                   alt=""
                   className="img-fluid"
                 />
@@ -203,12 +200,12 @@ const ProductItem = ({
                     {uniqueTags ? (
                       <ul className="color-variant">
                         {product.type === "jewellery" ||
-                        product.type === "nursery" ||
-                        product.type === "beauty" ||
-                        product.type === "electronics" ||
-                        product.type === "goggles" ||
-                        product.type === "watch" ||
-                        product.type === "pets" ? (
+                          product.type === "nursery" ||
+                          product.type === "beauty" ||
+                          product.type === "electronics" ||
+                          product.type === "goggles" ||
+                          product.type === "watch" ||
+                          product.type === "pets" ? (
                           ""
                         ) : (
                           <>
@@ -238,7 +235,7 @@ const ProductItem = ({
                   ""
                 )}
                 <div className="border-product">
-                  <h6 className="product-title">product details</h6>
+                  <h6 className="product-title">{t('product details')}</h6>
                   <p>{product.description}</p>
                 </div>
                 <div className="product-description border-product">
@@ -257,7 +254,7 @@ const ProductItem = ({
                   ) : (
                     ""
                   )}
-                  <h6 className="product-title">quantity</h6>
+                  <h6 className="product-title">{t('quantity')}</h6>
                   <div className="qty-box">
                     <div className="input-group">
                       <span className="input-group-prepend">
@@ -297,13 +294,13 @@ const ProductItem = ({
                     className="btn btn-solid"
                     onClick={() => addCart(product)}
                   >
-                    add to cart
+                    {t('add to cart')}
                   </button>
                   <button
                     className="btn btn-solid"
                     onClick={clickProductDetail}
                   >
-                    View detail
+                    {t('View detail')}
                   </button>
                 </div>
               </div>

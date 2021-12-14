@@ -6,7 +6,7 @@ import LogoImage from "./common/logo";
 import { Media, Container, Row, Col } from "reactstrap";
 import CartContainer from "../containers/CartContainer";
 import search from "../../public/assets/images/icon/layout4/search.png";
-import settings from "../../public/assets/images/icon/layout4/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import cart from "../../public/assets/images/icon/cart.png";
 import Currency from "./common/currency";
 import SearchOverlay from "./common/search-overlay";
@@ -75,7 +75,7 @@ const HeaderEight = ({ logoName }) => {
                           </div>
                           <SearchOverlay />
                         </li>
-                        <Currency icon={settings} />
+                        <Currency icon={language} />
                         <CartContainer icon={cart} />
                       </ul>
                     </div>

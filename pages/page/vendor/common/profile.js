@@ -117,11 +117,11 @@ const ProfilePage = () => {
         <div className="collection-wrapper">
           <Container>
             <Row>
-              <FilterPage
+              {/* <FilterPage
                 sm="3"
                 sidebarView={sidebarView}
                 closeSidebar={() => openCloseSidebar(sidebarView)}
-              />
+              /> */}
               <ProductList
                 colClass="col-xl-3 col-md-6 col-grid-box"
                 openSidebar={() => openCloseSidebar(sidebarView)}
