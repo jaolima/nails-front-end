@@ -7,7 +7,7 @@ import OutsideImagePage from './product/imageOutsidePage';
 
 const ThumbnailOutside = () => {
     return (
-        <CommonLayout parent="home" title="product">
+        <CommonLayout parent="Home" title="product">
             <OutsideImagePage />
             <ProductTab />
             <ProductSection />

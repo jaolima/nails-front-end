@@ -7,7 +7,7 @@ import AccordianPage from './product/accordian_page';
 const Accordian = () => {
 
   return (
-    <CommonLayout parent="home" title="product">
+    <CommonLayout parent="Home" title="product">
       <AccordianPage />
       <ProductSection />
     </CommonLayout>

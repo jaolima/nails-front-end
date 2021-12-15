@@ -6,7 +6,7 @@ import ToolService from "../../components/common/Service/service3";
 
 const Service = () => {
     return (
-        <CommonLayout parent="home" title="elements" subTitle="service">
+        <CommonLayout parent="Home" title="elements" subTitle="service">
             <div className="section-t-space">
                 <ServiceLayout sectionClass={"service border-section small-section"}  />
             </div>

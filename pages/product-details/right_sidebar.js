@@ -7,7 +7,7 @@ import RightSidebarPage from './product/rightSidebarPage';
 const LeftSidebar = () => {
 
   return (
-    <CommonLayout parent="home" title="product">
+    <CommonLayout parent="Home" title="product">
         <RightSidebarPage />
       <ProductSection />
     </CommonLayout>

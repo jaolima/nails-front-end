@@ -5,7 +5,7 @@ import { withApollo } from '../../helpers/apollo/apollo';
 
 const Search = () => {
     return (
-        <CommonLayout parent="home" title="search">
+        <CommonLayout parent="Home" title="search">
             {/* <!--section start--> */}
             <section className="authentication-page section-b-space">
                 <Container>

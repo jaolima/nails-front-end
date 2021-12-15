@@ -7,7 +7,7 @@ import ProductSection from './common/product_section';
 
 const ThumbnailLeft = () => {
     return (
-        <CommonLayout parent="home" title="product">
+        <CommonLayout parent="Home" title="product">
             <LeftImagePage />
             <ProductTab />
             <ProductSection />

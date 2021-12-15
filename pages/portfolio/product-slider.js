@@ -6,7 +6,7 @@ import { Product4 } from "../../services/script";
 
 const ProductSlider = () => {
   return (
-    <CommonLayout parent="home" title="Elements" subTitle="product-slider">
+    <CommonLayout parent="Home" title="Elements" subTitle="product-slider">
       <TopCollection
         type="fashion"
         productSlider={Product4}

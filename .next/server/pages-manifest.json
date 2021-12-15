@@ -4,5 +4,5 @@
   "/_error": "pages/_error.js",
   "/product-details/[id]": "pages/product-details/[id].js",
   "/": "pages/index.js",
-  "/shop/left_sidebar": "pages/shop/left_sidebar.js"
+  "/404": "pages/404.js"
 }

@@ -70,7 +70,7 @@ const ProductTab = () => {
                     reprehenderit in voluptate velit esse cillum dolore eu
                     fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id
-                    est laborum."
+                    est laborum.
                   </p>
                 </TabPane>
                 <TabPane tabId="2">
@@ -82,7 +82,7 @@ const ProductTab = () => {
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum."
+                    deserunt mollit anim id est laborum.
                   </p>
                 </TabPane>
                 <TabPane tabId="3">
@@ -94,7 +94,7 @@ const ProductTab = () => {
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum."
+                    deserunt mollit anim id est laborum.
                   </p>
                 </TabPane>
                 <TabPane tabId="4">
@@ -106,7 +106,7 @@ const ProductTab = () => {
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
                     occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum."
+                    deserunt mollit anim id est laborum.
                   </p>
                 </TabPane>
               </TabContent>

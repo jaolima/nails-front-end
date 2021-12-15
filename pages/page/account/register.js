@@ -1,40 +1,41 @@
 import React from 'react';
 import CommonLayout from '../../../components/shop/common-layout';
-import { Input, Container, Row, Form, Label ,Col} from 'reactstrap';
-
+import { Input, Container, Row, Form, Label, Col } from 'reactstrap';
+import { useTranslation } from "react-i18next";
 const Register = () => {
+    const { t } = useTranslation();
     return (
-        <CommonLayout parent="home" title="register">
+        <CommonLayout parent={t('Home')} title={t('register')}>
             <section className="register-page section-b-space">
                 <Container>
                     <Row>
                         <Col lg="12">
-                            <h3>create account</h3>
+                            <h3>{t('create account')}</h3>
                             <div className="theme-card">
                                 <Form className="theme-form">
                                     <Row>
                                         <Col md="6">
-                                            <Label for="email">First Name</Label>
-                                            <Input type="text" className="form-control" id="fname" placeholder="First Name"
+                                            <Label for="email">{t('First Name')}</Label>
+                                            <Input type="text" className="form-control" id="fname" placeholder={t('First Name')}
                                                 required="" />
                                         </Col>
                                         <Col md="6">
-                                            <Label for="review">Last Name</Label>
-                                            <Input type="password" className="form-control" id="lname" placeholder="Last Name"
+                                            <Label for="review">{t('Last Name')}</Label>
+                                            <Input type="password" className="form-control" id="lname" placeholder={t('Last Name')}
                                                 required="" />
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col md="6">
-                                            <Label for="email">email</Label>
-                                            <Input type="text" className="form-control" id="email" placeholder="Email" required="" />
+                                            <Label for="email">{t('email')}</Label>
+                                            <Input type="text" className="form-control" id="email" placeholder={t('Email')} required="" />
                                         </Col>
                                         <Col md="6">
-                                            <Label for="review">Password</Label>
+                                            <Label for="review">{t('Password')}</Label>
                                             <Input type="password" className="form-control" id="review"
-                                                placeholder="Enter your password" required="" />
+                                                placeholder={t('Enter your password')} required="" />
                                         </Col>
-                                        <a href="#" className="btn btn-solid">create Account</a>
+                                        <a href="#" className="btn btn-solid">{t('create Account')}</a>
                                     </Row>
                                 </Form>
                             </div>

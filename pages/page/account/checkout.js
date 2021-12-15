@@ -3,8 +3,9 @@ import CommonLayout from '../../../components/shop/common-layout';
 import firebase from '../../../config/base'
 import CheckoutPage from './common/checkout-page';
 import Login from '../../page/account/login-auth'
-
+import { useTranslation } from "react-i18next";
 const Checkout = () => {
+            const { t } = useTranslation();
     const [currentUser, setCurrentUser] = useState(false);
     useEffect(() => {
         firebase.auth().onAuthStateChanged(setCurrentUser);
@@ -12,7 +13,7 @@ const Checkout = () => {
     return (
         <>
         {currentUser !== null ?
-            <CommonLayout parent="home" title="checkout">
+            <CommonLayout parent={t('Home')} title={t('checkout')}>
                 <CheckoutPage />
             </CommonLayout>
         :

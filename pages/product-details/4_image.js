@@ -7,7 +7,7 @@ import FourImagePage from './product/4_image_page';
 const FourImage = () => {
 
   return (
-    <CommonLayout parent="home" title="product">
+    <CommonLayout parent="Home" title="product">
         <FourImagePage />
       <ProductSection />
     </CommonLayout>

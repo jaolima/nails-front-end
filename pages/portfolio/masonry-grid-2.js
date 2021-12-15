@@ -5,7 +5,7 @@ import { withApollo } from '../../helpers/apollo/apollo'
 
 const MasonryGridTwo = () => {
     return (
-        <CommonLayout parent="home" title="Portfolio">
+        <CommonLayout parent="Home" title="Portfolio">
             <MasonryTwoPage grid={2} colClass="col-lg-6" />
         </CommonLayout>
     )
