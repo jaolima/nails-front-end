@@ -4,7 +4,7 @@ import Become from './common/become';
 
 const BecomeVendor = () => {
     return (
-        <CommonLayout parent="home" title="Become vendor">
+        <CommonLayout parent="Home" title="Become vendor">
             <Become />
         </CommonLayout>
     )

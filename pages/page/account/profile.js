@@ -4,7 +4,7 @@ import ProfilePage from './common/profile-page';
 
 const Profile = () => {
     return (
-        <CommonLayout parent="home" title="profile">
+        <CommonLayout parent="Home" title="profile">
             <ProfilePage />
         </CommonLayout>        
     )

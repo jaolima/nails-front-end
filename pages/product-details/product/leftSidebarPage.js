@@ -94,7 +94,7 @@ const LeftSidebarPage = ({ pathId }) => {
               <NewProduct />
               {/* <!-- side-bar single product slider end --> */}
             </Col>
-            <Col lg="9" sm="12" xs="12">
+            <Col lg="9" sm="12" xs="12" className="mb-5">
               <Container fluid={true}>
                 <Row>
                   <Col cl="12">
@@ -155,7 +155,7 @@ const LeftSidebarPage = ({ pathId }) => {
                   </Row>
                 )}
               </Container>
-              <ProductTab />
+              {/* <ProductTab /> */}
             </Col>
           </Row>
         </Container>

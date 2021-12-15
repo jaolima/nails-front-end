@@ -6,7 +6,7 @@ import ThreeColBottomPage from "./product/3_col_Bottom_page";
 
 const ThreeColBottom = () => {
   return (
-    <CommonLayout parent="home" title="product">
+    <CommonLayout parent="Home" title="product">
       <ThreeColBottomPage />
       <ProductSection />
     </CommonLayout>

@@ -6,7 +6,7 @@ import { withApollo } from '../../helpers/apollo/apollo';
 
 const BlogDetail = () => {
     return (
-        <CommonLayout parent="home" title="blog">
+        <CommonLayout parent="Home" title="blog">
             <section className="section-b-space blog-page ratio2_3">
                 <Container>
                     <Row>

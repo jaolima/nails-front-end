@@ -5,7 +5,7 @@ import { withApollo } from "../../helpers/apollo/apollo";
 
 const ImageSwatch = () => {
   return (
-    <CommonLayout parent="home" title="product">
+    <CommonLayout parent="Home" title="product">
       <ImageSwatchPage />
     </CommonLayout>
   );

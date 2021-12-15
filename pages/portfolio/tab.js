@@ -6,7 +6,7 @@ import WithSlider from "../../components/common/Collections/TabCollection6";
 
 const Tab = () => {
   return (
-    <CommonLayout parent="home" title="Portfolio" subTitle="tab">
+    <CommonLayout parent="Home" title="Portfolio" subTitle="tab">
       <SpecialProducts
         heading="without slider"
         title="title1"

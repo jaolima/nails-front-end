@@ -61,7 +61,7 @@ const btnStyleClass = [
 
 const Typography = () => {
   return (
-    <CommonLayout parent="home" title="typography">
+    <CommonLayout parent="Home" title="typography">
       <section className="section-b-space typography_section">
         <Container>
           <Row>

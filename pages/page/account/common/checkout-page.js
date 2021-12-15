@@ -6,8 +6,9 @@ import paypal from "../../../../public/assets/images/paypal.png";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { CurrencyContext } from "../../../../helpers/Currency/CurrencyContext";
-
+import { useTranslation } from "react-i18next";
 const CheckoutPage = () => {
+  const { t } = useTranslation();
   const cartContext = useContext(CartContext);
   const cartItems = cartContext.state;
   const cartTotal = cartContext.cartTotal;
@@ -52,7 +53,7 @@ const CheckoutPage = () => {
   };
 
   const onCancel = (data) => {
-    console.log("The payment was cancelled!", data);
+    console.log(t("The payment was cancelled!"), data);
   };
 
   const onError = (err) => {
@@ -73,11 +74,11 @@ const CheckoutPage = () => {
               <Row>
                 <Col lg="6" sm="12" xs="12">
                   <div className="checkout-title">
-                    <h3>Billing Details</h3>
+                    <h3>{t('Billing Details')}</h3>
                   </div>
                   <div className="row check-out">
                     <div className="form-group col-md-6 col-sm-6 col-xs-12">
-                      <div className="field-label">First Name</div>
+                      <div className="field-label">{t('First Name')}</div>
                       <input
                         type="text"
                         className={`${errors.firstName ? "error_border" : ""}`}
@@ -85,11 +86,11 @@ const CheckoutPage = () => {
                         ref={register({ required: true })}
                       />
                       <span className="error-message">
-                        {errors.firstName && "First name is required"}
+                        {errors.firstName && t('First name is required')}
                       </span>
                     </div>
                     <div className="form-group col-md-6 col-sm-6 col-xs-12">
-                      <div className="field-label">Last Name</div>
+                      <div className="field-label">{t('Last Name')}</div>
                       <input
                         type="text"
                         className={`${errors.last_name ? "error_border" : ""}`}
@@ -97,11 +98,11 @@ const CheckoutPage = () => {
                         ref={register({ required: true })}
                       />
                       <span className="error-message">
-                        {errors.last_name && "Last name is required"}
+                        {errors.last_name && t('Last name is required')}
                       </span>
                     </div>
                     <div className="form-group col-md-6 col-sm-6 col-xs-12">
-                      <div className="field-label">Phone</div>
+                      <div className="field-label">{t('Phone')}</div>
                       <input
                         type="text"
                         name="phone"
@@ -109,11 +110,11 @@ const CheckoutPage = () => {
                         ref={register({ pattern: /\d+/ })}
                       />
                       <span className="error-message">
-                        {errors.phone && "Please enter number for phone."}
+                        {errors.phone && t('Please enter number for phone.')}
                       </span>
                     </div>
                     <div className="form-group col-md-6 col-sm-6 col-xs-12">
-                      <div className="field-label">Email Address</div>
+                      <div className="field-label">{t('Email Address')}</div>
                       <input
                         className="form-control"
                         className={`${errors.email ? "error_border" : ""}`}
@@ -125,30 +126,30 @@ const CheckoutPage = () => {
                         })}
                       />
                       <span className="error-message">
-                        {errors.email && "Please enter proper email address ."}
+                        {errors.email && t('Please enter proper email address .')}
                       </span>
                     </div>
                     <div className="form-group col-md-12 col-sm-12 col-xs-12">
-                      <div className="field-label">Country</div>
+                      <div className="field-label">{t('Country')}</div>
                       <select name="country" ref={register({ required: true })}>
-                        <option>India</option>
-                        <option>South Africa</option>
-                        <option>United State</option>
-                        <option>Australia</option>
+                        <option>{t('India')}</option>
+                        <option>{t('South Africa')}</option>
+                        <option>{t('United State')}</option>
+                        <option>{t('Australia')}</option>
                       </select>
                     </div>
                     <div className="form-group col-md-12 col-sm-12 col-xs-12">
-                      <div className="field-label">Address</div>
+                      <div className="field-label">{t('Address')}</div>
                       <input
                         className="form-control"
                         className={`${errors.address ? "error_border" : ""}`}
                         type="text"
                         name="address"
                         ref={register({ required: true, min: 20, max: 120 })}
-                        placeholder="Street address"
+                        placeholder={t("Street address")}
                       />
                       <span className="error-message">
-                        {errors.address && "Please right your address ."}
+                        {errors.address && t('Please right your address .')}
                       </span>
                     </div>
                     <div className="form-group col-md-12 col-sm-12 col-xs-12">
@@ -162,11 +163,11 @@ const CheckoutPage = () => {
                         onChange={setStateFromInput}
                       />
                       <span className="error-message">
-                        {errors.city && "select one city"}
+                        {errors.city && t('select one city')}
                       </span>
                     </div>
                     <div className="form-group col-md-12 col-sm-6 col-xs-12">
-                      <div className="field-label">State / County</div>
+                      <div className="field-label">{t('State / County')}</div>
                       <input
                         className="form-control"
                         type="text"
@@ -176,11 +177,11 @@ const CheckoutPage = () => {
                         onChange={setStateFromInput}
                       />
                       <span className="error-message">
-                        {errors.state && "select one state"}
+                        {errors.state && t('select one state')}
                       </span>
                     </div>
                     <div className="form-group col-md-12 col-sm-6 col-xs-12">
-                      <div className="field-label">Postal Code</div>
+                      <div className="field-label">{t('Postal Code')}</div>
                       <input
                         className="form-control"
                         type="text"
@@ -189,7 +190,7 @@ const CheckoutPage = () => {
                         ref={register({ pattern: /\d+/ })}
                       />
                       <span className="error-message">
-                        {errors.pincode && "Required integer"}
+                        {errors.pincode && t('Required integer')}
                       </span>
                     </div>
                     <div className="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -199,7 +200,7 @@ const CheckoutPage = () => {
                         id="account-option"
                       />
                       &ensp;{" "}
-                      <label htmlFor="account-option">Create An Account?</label>
+                      <label htmlFor="account-option">{t('Create An Account?')}</label>
                     </div>
                   </div>
                 </Col>
@@ -209,7 +210,7 @@ const CheckoutPage = () => {
                       <div className="order-box">
                         <div className="title-box">
                           <div>
-                            Product <span>Total</span>
+                            {t('Product')} <span>{t('Total')}</span>
                           </div>
                         </div>
                         <ul className="qty">
@@ -225,14 +226,14 @@ const CheckoutPage = () => {
                         </ul>
                         <ul className="sub-total">
                           <li>
-                            Subtotal{" "}
+                            {t('Subtotal')}{" "}
                             <span className="count">
                               {symbol}
                               {cartTotal}
                             </span>
                           </li>
                           <li>
-                            Shipping
+                            {t('Shipping')}
                             <div className="shipping">
                               <div className="shopping-option">
                                 <input
@@ -241,7 +242,7 @@ const CheckoutPage = () => {
                                   id="free-shipping"
                                 />
                                 <label htmlFor="free-shipping">
-                                  Free Shipping
+                                  {t('Free Shipping')}
                                 </label>
                               </div>
                               <div className="shopping-option">
@@ -251,7 +252,7 @@ const CheckoutPage = () => {
                                   id="local-pickup"
                                 />
                                 <label htmlFor="local-pickup">
-                                  Local Pickup
+                                  {t('Local Pickup')}
                                 </label>
                               </div>
                             </div>
@@ -259,7 +260,7 @@ const CheckoutPage = () => {
                         </ul>
                         <ul className="total">
                           <li>
-                            Total{" "}
+                            {t('Total')}{" "}
                             <span className="count">
                               {symbol}
                               {cartTotal}
@@ -280,7 +281,7 @@ const CheckoutPage = () => {
                                     defaultChecked={true}
                                     onClick={() => checkhandle("stripe")}
                                   />
-                                  <label htmlFor="payment-2">Stripe</label>
+                                  <label htmlFor="payment-2">{t('Stripe')}</label>
                                 </div>
                               </li>
                               <li>
@@ -292,7 +293,7 @@ const CheckoutPage = () => {
                                     onClick={() => checkhandle("paypal")}
                                   />
                                   <label htmlFor="payment-1">
-                                    PayPal
+                                    {t('PayPal')}
                                     <span className="image">
                                       <Media src={paypal} alt="" />
                                     </span>
@@ -306,7 +307,7 @@ const CheckoutPage = () => {
                           <div className="text-right">
                             {payment === "stripe" ? (
                               <button type="submit" className="btn-solid btn">
-                                Place Order
+                                {t('Place Order')}
                               </button>
                             ) : (
                               <PayPalButton

@@ -116,7 +116,7 @@ const TeamDetail = ({ img, name, post, about }) => {
 const AboutUs = () => {
   return (
     <>
-      <CommonLayout parent="home" title="About-us">
+      <CommonLayout parent="Home" title="About-us">
         {/* // <!-- about section start --> */}
         <section className="about-page section-b-space">
           <Container>
