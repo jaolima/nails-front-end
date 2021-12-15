@@ -3,6 +3,5 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/product-details/[id]": "pages/product-details/[id].js",
-  "/": "pages/index.js",
-  "/404": "pages/404.js"
+  "/shop/left_sidebar": "pages/shop/left_sidebar.js"
 }
