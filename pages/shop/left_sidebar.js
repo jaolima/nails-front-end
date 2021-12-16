@@ -5,8 +5,10 @@ import ProductList from './common/productList';
 import { Container, Row } from 'reactstrap';
 import FilterPage from './common/filter';
 import { useTranslation } from "react-i18next";
+
 const LeftSidebar = () => {
-        const { t } = useTranslation();
+
+    const { t } = useTranslation();
     const [sidebarView, setSidebarView] = useState(false)
     const openCloseSidebar = () => {
         if (sidebarView) {
