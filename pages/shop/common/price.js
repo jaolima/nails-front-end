@@ -2,8 +2,9 @@ import React, { useState, useContext, useEffect } from "react";
 import InputRange from "react-input-range";
 import FilterContext from "../../../helpers/filter/FilterContext";
 import { useRouter } from "next/router";
-
+import { useTranslation } from "react-i18next";
 const Price = () => {
+        const { t } = useTranslation();
   const context = useContext(FilterContext);
   const price = context.selectedPrice;
   const router = useRouter();
@@ -16,7 +17,7 @@ const Price = () => {
 
   return (
     <div className="collection-collapse-block border-0 open">
-      <h3 className="collapse-block-title">price</h3>
+      <h3 className="collapse-block-title">{t('price')}</h3>
       <div className="collection-collapse-block-content">
         <div className="wrapper mt-3">
           <div className="range-slider">

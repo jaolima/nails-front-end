@@ -4,7 +4,7 @@ import Dashboard from './common/dashboard';
 
 const VendorDashboard = () => {
     return (
-        <CommonLayout parent="home" title="vendor dashboard">
+        <CommonLayout parent="Home" title="vendor dashboard">
             <Dashboard />
         </CommonLayout>
     )

@@ -6,8 +6,9 @@ import { CurrencyContext } from "../../../helpers/Currency/CurrencyContext";
 import CartContext from "../../../helpers/cart";
 import CountdownComponent from "../../../components/common/widgets/countdownComponent";
 import MasterSocial from "./master_social";
-
+import { useTranslation } from "react-i18next";
 const DetailsWithPrice = ({ item, stickyClass, changeColorVar }) => {
+  const { t } = useTranslation();
   const [modal, setModal] = useState(false);
   const CurContect = useContext(CurrencyContext);
   const symbol = CurContect.state.symbol;
@@ -28,14 +29,14 @@ const DetailsWithPrice = ({ item, stickyClass, changeColorVar }) => {
   return (
     <>
       <div className={`product-right ${stickyClass}`}>
-        Detail Price
+        {t('Detail Price')}
         <h2> {product.title} </h2>
         <h4>
           <del>
             {symbol}
             {product.price}
           </del>
-          <span>{product.discount}% off</span>
+          <span>{product.discount}{t('% off')}</span>
         </h4>
         <h3>
           {symbol}
@@ -85,7 +86,7 @@ const DetailsWithPrice = ({ item, stickyClass, changeColorVar }) => {
           {product.variants ? (
             <div>
               <h6 className="product-title size-text">
-                select size
+                {t('select size')}
                 <span>
                   <a
                     href={null}
@@ -93,12 +94,12 @@ const DetailsWithPrice = ({ item, stickyClass, changeColorVar }) => {
                     data-target="#sizemodal"
                     onClick={toggle}
                   >
-                    size chart
+                    {t('size chart')}
                   </a>
                 </span>
               </h6>
               <Modal isOpen={modal} toggle={toggle} centered>
-                <ModalHeader toggle={toggle}>Sheer Straight Kurta</ModalHeader>
+                <ModalHeader toggle={toggle}>{t('Sheer Straight Kurta')}</ModalHeader>
                 <ModalBody>
                   <Media src={sizeChart} alt="size" className="img-fluid" />
                 </ModalBody>
@@ -119,7 +120,7 @@ const DetailsWithPrice = ({ item, stickyClass, changeColorVar }) => {
             ""
           )}
           <span className="instock-cls">{stock}</span>
-          <h6 className="product-title">quantity</h6>
+          <h6 className="product-title">{t('quantity')}</h6>
           <div className="qty-box">
             <div className="input-group">
               <span className="input-group-prepend">
@@ -160,24 +161,24 @@ const DetailsWithPrice = ({ item, stickyClass, changeColorVar }) => {
             className="btn btn-solid"
             onClick={() => context.addToCart(product, quantity)}
           >
-            add to cart
+            {t('add to cart')}
           </a>
           <Link href={`/page/account/checkout`}>
-            <a className="btn btn-solid">buy now</a>
+            <a className="btn btn-solid">{t('buy now')}</a>
           </Link>
         </div>
         <div className="border-product">
-          <h6 className="product-title">product details</h6>
+          <h6 className="product-title">{t('product details')}</h6>
           <p>{product.description}</p>
         </div>
         <div className="border-product">
-          <h6 className="product-title">share it</h6>
+          <h6 className="product-title">{t('share it')}</h6>
           <div className="product-icon">
             <MasterSocial />
           </div>
         </div>
         <div className="border-product">
-          <h6 className="product-title">Time Reminder</h6>
+          <h6 className="product-title">{t('Time Reminder')}</h6>
           <CountdownComponent />
         </div>
       </div>

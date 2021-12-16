@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 const Error = () => {
     return (
-        <CommonLayout parent="home" title="404">
+        <CommonLayout parent="Home" title="404">
             <section className="p-0">
                 <Container>
                     <Row>

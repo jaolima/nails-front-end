@@ -4,7 +4,7 @@ import { Container, Row, Form, Input,Col } from 'reactstrap';
 
 const ForgetPwd = () => {
     return (
-        <CommonLayout parent="home" title="Forget Password">
+        <CommonLayout parent="Home" title="Forget Password">
             <section className="pwd-page section-b-space">
                 <Container>
                     <Row>

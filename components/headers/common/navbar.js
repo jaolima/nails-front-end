@@ -112,9 +112,10 @@ const NavBar = () => {
   };
 
   const openMblNav = (event) => {
+    console.lo
     if (event.target.classList.contains("sub-arrow")) return;
 
-    if (event.target.nextElementSibling.classList.contains("opensubmenu"))
+    if (event.target.nextElementSibling !== null && event.target.nextElementSibling.classList.contains("opensubmenu"))
       event.target.nextElementSibling.classList.remove("opensubmenu");
     else {
       document.querySelectorAll(".nav-submenu").forEach(function (value) {
@@ -147,11 +148,13 @@ const NavBar = () => {
                   key={i}
                   className={` ${menuItem.megaMenu ? "mega-menu" : ""}`}
                 >
-                  <a className="nav-link" onClick={(e) => openMblNav(e)}>
-                    {" "}
-                    {t(menuItem.title)}
-                    {menuItem.arrow == false ? '' : <span className="sub-arrow"></span>}
-                  </a>
+                  <Link href={`${menuItem.path}`}>
+                    <a className="nav-link" onClick={(e) => openMblNav(e)}>
+                      {" "}
+                      {t(menuItem.title)}
+                      {menuItem.arrow == false ? '' : <span className="sub-arrow"></span>}
+                    </a>
+                  </Link>
                   {menuItem.children && !menuItem.megaMenu ? (
                     <ul className="nav-submenu">
                       {menuItem.children.map((childrenItem, index) => {
@@ -166,7 +169,7 @@ const NavBar = () => {
                                 href={null}
                                 onClick={() => toggletNavActive(childrenItem)}
                               >
-                                {childrenItem.title}
+                                {t(childrenItem.title)}
                                 {childrenItem.tag === "new" ? (
                                   <span className="new-tag">new</span>
                                 ) : (
@@ -180,7 +183,7 @@ const NavBar = () => {
                             {childrenItem.type === "link" ? (
                               <Link href={`${childrenItem.path}`}>
                                 <a>
-                                  {childrenItem.title}
+                                  {t(childrenItem.title)}
                                   {childrenItem.tag === "new" ? (
                                     <span className="new-tag">new</span>
                                   ) : (
@@ -201,16 +204,7 @@ const NavBar = () => {
                                     <li key={key}>
                                       {childrenSubItem.type === "link" ? (
                                         <Link href={childrenSubItem.path}>
-                                          <a className="sub-menu-title">
-                                            {childrenSubItem.title}
-                                            {childrenSubItem.tag === "new" ? (
-                                              <span className="new-tag">
-                                                new
-                                              </span>
-                                            ) : (
-                                              ""
-                                            )}
-                                          </a>
+                                          <a className="sub-menu-title">{t(childrenSubItem.title)}</a>
                                         </Link>
                                       ) : (
                                         ""
@@ -251,7 +245,7 @@ const NavBar = () => {
                                     <div className="link-section">
                                       <div className="menu-title">
                                         <h5 onClick={(e) => handleMegaSubmenu(e)}>
-                                          {megaMenuItem.title}
+                                          {t(megaMenuItem.title)}
                                         </h5>
                                       </div>
                                       <div className="menu-content">
@@ -269,7 +263,7 @@ const NavBar = () => {
                                                       <i
                                                         className={`icon-${subMegaMenuItem.icon}`}
                                                       ></i>
-                                                      {subMegaMenuItem.title}
+                                                      {t(subMegaMenuItem.title)}
                                                     </a>
                                                   </li>
                                                 );
@@ -284,7 +278,7 @@ const NavBar = () => {
                                                         subMegaMenuItem.path
                                                       }
                                                     >
-                                                      {subMegaMenuItem.title}
+                                                      {t(subMegaMenuItem.title)}
                                                     </a>
                                                   </li>
                                                 );

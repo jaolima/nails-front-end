@@ -7,7 +7,7 @@ import CartContainer from "../containers/CartContainer";
 import LogoImage from "./common/logo";
 import { Container, Col, Row, Media } from "reactstrap";
 import Currency from "./common/currency";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import SearchOverlay from "./common/search-overlay";
 
 const HeaderFour = ({ logoName, topClass, fluid, hfluid }) => {
@@ -83,7 +83,7 @@ const HeaderFour = ({ logoName, topClass, fluid, hfluid }) => {
                           </div>
                         </li>
 
-                        <Currency icon={settings} />
+                        <Currency icon={language} />
                         {/*Header Cart Component */}
                         <CartContainer icon={cart} />
                       </ul>

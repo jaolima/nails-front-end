@@ -1,33 +1,38 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
 import {
+  svgFastEfficient,
   svgFreeShipping,
-  svgservice,
   svgoffer,
   svgpayment,
+  svgLowCost
 } from "../../../services/script";
 import MasterServiceContent from "./MasterServiceConternt";
-
 const Data = [
   {
     link: svgFreeShipping,
-    title: "free shipping",
-    service: "free shipping world wide",
+    title: "Express Shipping",
+    service: "from Mon-Fri",
   },
   {
-    link: svgservice,
-    title: "24 X 7 service",
-    service: "online service for new customer",
+    link: svgLowCost,
+    title: "Cheapest in",
+    service: "Switzerland Prices",
   },
   {
     link: svgoffer,
-    title: "festival offer",
-    service: "new online special festival offer",
+    title: "Absolutely safe",
+    service: "Payment Methods",
+  },
+  {
+    link: svgFastEfficient,
+    title: "Direct from the",
+    service: "manufacturer einkaufen",
   },
   {
     link: svgpayment,
-    title: "online payment",
-    service: "new online special festival offer",
+    title: "free shipping",
+    service: "from CHF 100.-",
   },
 ];
 
@@ -42,11 +47,8 @@ const Service = ({ layoutClass, hrLine }) => {
                 return (
                   <Col
                     key={i}
-                    lg="3"
-                    sm="6"
-                    className={` ${
-                      hrLine ? "service-block1" : "service-block"
-                    }`}
+                    className={` ${hrLine ? "service-block1" : "service-block"
+                      }`}
                   >
                     <MasterServiceContent
                       link={data.link}

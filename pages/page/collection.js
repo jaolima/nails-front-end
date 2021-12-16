@@ -111,7 +111,7 @@ const MasterCollection = ({ img, totalProducts, type, about, link, btn }) => {
 
 const Collection = () => {
   return (
-    <CommonLayout parent="home" title="collection">
+    <CommonLayout parent="Home" title="collection">
       <section className="collection section-b-space ratio_square ">
         <Container>
           <Row className="partition-collection">

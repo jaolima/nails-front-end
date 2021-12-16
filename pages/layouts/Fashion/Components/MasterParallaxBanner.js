@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "reactstrap";
-
+import { useTranslation } from "react-i18next";
 const MasterParallaxBanner = ({
   parallaxSectionClass,
   bg,
@@ -9,6 +9,7 @@ const MasterParallaxBanner = ({
   subTitle1,
   subTitle2,
 }) => {
+  const { t } = useTranslation();
   return (
     <Fragment>
       <section className={`p-0 ${parallaxSectionClass}`}>
@@ -17,9 +18,9 @@ const MasterParallaxBanner = ({
             <Row>
               <Col>
                 <div className="banner-contain">
-                  <h2>{title}</h2>
-                  <h3>{subTitle1}</h3>
-                  <h4>{subTitle2}</h4>
+                  <h2>{t(title)}</h2>
+                  <h3>{t(subTitle1)}</h3>
+                  <h4>{t(subTitle2)}</h4>
                 </div>
               </Col>
             </Row>

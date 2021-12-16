@@ -7,7 +7,7 @@ import RightImagePage from './product/rightImagePage';
 
 const ThumbnailRight = () => {
     return (
-        <CommonLayout parent="home" title="product">
+        <CommonLayout parent="Home" title="product">
             <RightImagePage />
             <ProductTab />
             <ProductSection />

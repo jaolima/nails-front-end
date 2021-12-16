@@ -82,7 +82,7 @@ const FaqList = ({ faq }) => {
 const FaqPage = () => {
   return (
     <>
-      <CommonLayout parent="home" title="faq">
+      <CommonLayout parent="Home" title="faq">
         <section className="faq-section section-b-space">
           <Container>
             <Row>

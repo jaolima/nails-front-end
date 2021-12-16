@@ -10,7 +10,7 @@ import twenty from '../../public/assets/images/20.jpg';
 
 const BlogDetail = () => {
     return (
-        <CommonLayout parent="home" title="blog" subTitle="blog detail">
+        <CommonLayout parent="Home" title="blog" subTitle="blog detail">
             <section className="blog-detail-page section-b-space ratio2_3">
                 <Container>
                     <Row>

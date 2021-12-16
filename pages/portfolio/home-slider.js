@@ -22,7 +22,7 @@ const Data = [
 ];
 const HomeSlider = () => {
   return (
-    <CommonLayout parent="home" title="elements" subTitle="slider">
+    <CommonLayout parent="Home" title="elements" subTitle="slider">
       <Container>
         <section className="section-b-space">
           <Slider className="slide-1 home-slider">

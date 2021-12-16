@@ -7,8 +7,9 @@ import Brand from './brand'
 import Color from './color'
 import Size from './size'
 import Price from './price';
-
+import { useTranslation } from "react-i18next";
 const FilterPage = ({sm,sidebarView,closeSidebar}) => {
+        const { t } = useTranslation();
     return (
         <>
             <Col sm={sm} className="collection-filter" style={sidebarView ? {left:"0px"} : {}}>
@@ -17,7 +18,7 @@ const FilterPage = ({sm,sidebarView,closeSidebar}) => {
                     {/* <!-- brand filter start --> */}
                     <div className="collection-mobile-back" onClick={() => closeSidebar()}>
                         <span className="filter-back">
-                            <i className="fa fa-angle-left" aria-hidden="true"></i> back
+                            <i className="fa fa-angle-left" aria-hidden="true"></i> {t('back')}
                         </span>
                     </div>
                     {/* <Category /> */}

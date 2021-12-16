@@ -4,7 +4,7 @@ import CollectionBannerPage from './common/collection-banner';
 
 const CollectionBanner = () => {
     return (
-        <CommonLayout parent="home" title="elements" subTitle="banner">
+        <CommonLayout parent="Home" title="elements" subTitle="banner">
             <CollectionBannerPage />
         </CommonLayout>
     )

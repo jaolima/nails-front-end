@@ -6,11 +6,13 @@ import like from "../../../public/assets/images/icon/like.png";
 import user from "../../../public/assets/images/icon/users.png";
 import Link from "next/link";
 import search from "../../../public/assets/images/icon/search.png";
-import settings from "../../../public/assets/images/icon/setting.png";
+import language from "../../../public/assets/images/icon/language_translator.png";
 import cart from "../../../public/assets/images/icon/shopping-cart.png";
 import Currency from "../common/currency";
 import CartContainer from "../../containers/CartContainer";
 import SearchOverlay from "./search-overlay";
+import { useTranslation } from "react-i18next";
+
 const IconTopbar = () => {
   const context = useContext(CartContext);
   const openNav = () => {
@@ -28,6 +30,7 @@ const IconTopbar = () => {
     document.getElementById("search-overlay").style.display = "none";
   };
 
+  const { t } = useTranslation();
   const cartList = context.state;
   const total = context.cartTotal;
   const symbol = "$";
@@ -39,7 +42,7 @@ const IconTopbar = () => {
             <Col sm="6">
               <div className="header-contact">
                 <ul>
-                  <li>Beauty is in your hands</li>
+                  <li>{t('Beauty is in your hands')}</li>
                 </ul>
               </div>
               <div className="menu-left">
@@ -81,12 +84,12 @@ const IconTopbar = () => {
                     <ul className="onhover-show-div">
                       <li>
                         <Link href="/page/account/login">
-                          <a data-lng="en">Login</a>
+                          <a data-lng="en">{t('Login')}</a>
                         </Link>
                       </li>
                       <li>
                         <Link href="/">
-                          <a data-lng="es">Logout</a>
+                          <a data-lng="es">{t('Logout')}</a>
                         </Link>
                       </li>
                     </ul>
@@ -106,7 +109,7 @@ const IconTopbar = () => {
                           <i className="fa fa-search" onClick={openSearch}></i>
                         </div>
                       </li>
-                      <Currency icon={settings} />
+                      <Currency icon={language} />
                       {/*Header Cart Component */}
                       <CartContainer icon={cart} />
                     </ul>

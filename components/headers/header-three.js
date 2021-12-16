@@ -6,7 +6,7 @@ import TopBarDark from "./common/topbar-dark";
 import LogoImage from "./common/logo";
 import { Media, Container, Row, Col, Input } from "reactstrap";
 import search from "../../public/assets/images/icon/search.png";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import cart from "../../public/assets/images/icon/cart.png";
 import SearchOverlay from "./common/search-overlay";
 
@@ -98,7 +98,7 @@ const HeaderThree = (props) => {
                             ></i> */}
                           </div>
                         </li>
-                        <Currency icon={settings} />
+                        <Currency icon={language} />
                         {/*Header Cart Component */}
                         <CartContainer icon={cart} />
                       </ul>

@@ -599,7 +599,7 @@ const MasterSiteMap = ({ data }) => {
 };
 const Sitemap = () => {
   return (
-    <CommonLayout parent="home" title="site-map">
+    <CommonLayout parent="Home" title="site-map">
       <section className="section-b-space sitemap_page">
         <Container>
           <Row>

@@ -5,7 +5,7 @@ import { withApollo } from '../../../helpers/apollo/apollo';
 
 const VendorProfile = () => {
     return (
-        <CommonLayout parent="home" title="Vendor Profile">
+        <CommonLayout parent="Home" title="Vendor Profile">
             <ProfilePage />
         </CommonLayout>
     )

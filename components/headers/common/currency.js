@@ -31,7 +31,7 @@ const Currency = ({ icon }) => {
     <li className="onhover-div mobile-setting">
       <div>
         <Media src={icon} className="img-fluid" alt="" />
-        <i className="fa fa-cog"></i>
+        <i className="fa fa-globe-europe"></i>
       </div>
       <div className="show-div setting">
         <h6>language</h6>
@@ -48,17 +48,6 @@ const Currency = ({ icon }) => {
               </a>
             </li>
           ))}
-        </ul>
-        <h6>currency</h6>
-        <ul className="list-inline">
-          {data &&
-            data.getCurrency.map((cur, i) => (
-              <li key={i}>
-                <div onClick={() => selectedCurrency(cur)}>
-                  {cur.symbol} {cur.currency}
-                </div>
-              </li>
-            ))}
         </ul>
       </div>
     </li>

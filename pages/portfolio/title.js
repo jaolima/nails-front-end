@@ -4,7 +4,7 @@ import TitlePage from './common/title-page';
 
 const Title = () => {
     return (
-        <CommonLayout parent="home" title="elements" subTitle="title">
+        <CommonLayout parent="Home" title="elements" subTitle="title">
             <TitlePage />
         </CommonLayout>
     )

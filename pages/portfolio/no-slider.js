@@ -6,7 +6,7 @@ import { Product7 } from '../../services/script';
 
 const NoSlider = () => {
     return (
-        <CommonLayout parent="home" title="Elements" subTitle="no-slider">
+        <CommonLayout parent="Home" title="Elements" subTitle="no-slider">
            <TopCollection type="fashion" productSlider={Product7} designClass="section-b-space ratio_asos" noSlider={false} cartClass="cart-info cart-wrap" />
         </CommonLayout>       
     )

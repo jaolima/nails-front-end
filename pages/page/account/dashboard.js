@@ -5,7 +5,7 @@ import { Container, Row ,Col} from 'reactstrap';
 const Dashboard = () => {
     const [accountInfo,setAccountInfo] = useState(false)
     return (
-        <CommonLayout parent="home" title="dashboard">
+        <CommonLayout parent="Home" title="dashboard">
             <section className="section-b-space">
                 <Container>
                     <Row>

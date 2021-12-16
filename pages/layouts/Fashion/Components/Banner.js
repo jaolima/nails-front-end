@@ -1,22 +1,21 @@
 import React, { Fragment } from "react";
 import Slider from "react-slick";
-import Link from "next/link";
-import { Container, Row, Col } from "reactstrap";
 import MasterBanner from "./MasterBanner";
 
 const Data = [
   {
-    img: "home1",
-    title: "welcome to fashion",
-    desc: "men fashion",
+    img: "home4",
+    title: "From us for you ♡",
+    desc: "Festive holidays with our Shellac colors",
     link: "/left-sidebar/collection ",
   },
   {
-    img: "home2",
-    title: "welcome to fashion",
-    desc: "women fashion",
+    img: "home3",
+    title: "Christmas Sale!",
+    desc: "Now from CHF 50.- 10% off EVERYTHING and from CHF 0.- a free gift! - Code-> merrynails",
     link: "/left-sidebar/collection ",
   },
+
 ];
 
 const Banner = () => {

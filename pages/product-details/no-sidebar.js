@@ -7,7 +7,7 @@ import NoSidebarPage from './product/noSidebarPage';
 const LeftSidebar = () => {
   const id = "1";
   return (
-    <CommonLayout parent="home" title="product">
+    <CommonLayout parent="Home" title="product">
         <NoSidebarPage pathId="1" />
       <ProductSection />
     </CommonLayout>

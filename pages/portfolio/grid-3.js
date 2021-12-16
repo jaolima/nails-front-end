@@ -5,7 +5,7 @@ import { withApollo } from '../../helpers/apollo/apollo';
 
 const GridThree = () => {
     return (
-        <CommonLayout parent="home" title="Portfolio">
+        <CommonLayout parent="Home" title="Portfolio">
             <GridTwoPage colClass="col-lg-4 col-sm-6" limit='9' />
         </CommonLayout>
     )

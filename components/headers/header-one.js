@@ -7,7 +7,7 @@ import TopBarDark from "./common/topbar-dark";
 import { Media, Container, Row, Col } from "reactstrap";
 import LogoImage from "./common/logo";
 import search from "../../public/assets/images/icon/search.png";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import cart from "../../public/assets/images/icon/cart.png";
 import Currency from "./common/currency";
 import { useRouter } from "next/router";
@@ -81,16 +81,16 @@ const HeaderOne = ({
           <Row>
             <Col>
               <div className="main-menu">
-                <div className="menu-left">
+                {/* <div className="menu-left">
                   <div className="brand-logo">
                     <LogoImage logo={logoName} />
                   </div>
-                </div>
+                </div> */}
                 <div className="menu-right pull-right">
                   {/*Top Navigation Bar Component*/}
                   <NavBar />
 
-                  <div>
+                  {/* <div>
                     <div className="icon-nav">
                       <ul>
                         <li className="onhover-div mobile-search">
@@ -103,8 +103,7 @@ const HeaderOne = ({
                             />
                           </div>
                         </li>
-                        <Currency icon={settings} />
-                        {/*Header Cart Component */}
+                        <Currency icon={language} />
                         {direction === undefined ? (
                           <CartContainer layout={direction} icon={cart} />
                         ) : (
@@ -112,7 +111,7 @@ const HeaderOne = ({
                         )}
                       </ul>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </Col>

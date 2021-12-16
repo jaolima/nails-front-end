@@ -7,7 +7,7 @@ import TopBar from "./common/topbar";
 import { Media, Container, Row, Col } from "reactstrap";
 import LogoImage from "./common/logo";
 import search from "../../public/assets/images/icon/search.png";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import cart from "../../public/assets/images/icon/layout4/cart.png";
 import SearchOverlay from "./common/search-overlay";
 
@@ -82,7 +82,7 @@ const HeaderTen = ({ logoName, topClass, headerClass }) => {
                                 />
                               </div>
                             </li>
-                            <Currency icon={settings} />
+                            <Currency icon={language} />
                             {/*Header Cart Component */}
                             <CartContainer icon={cart} />
                           </ul>

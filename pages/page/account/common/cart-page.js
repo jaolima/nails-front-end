@@ -4,8 +4,9 @@ import CartContext from "../../../../helpers/cart";
 import { Container, Row, Col, Media, Input } from "reactstrap";
 import { CurrencyContext } from "../../../../helpers/Currency/CurrencyContext";
 import cart from "../../../../public/assets/images/icon-empty-cart.png";
-
+import { useTranslation } from "react-i18next";
 const CartPage = () => {
+  const { t } = useTranslation();
   const context = useContext(CartContext);
   const cartItems = context.state;
   const curContext = useContext(CurrencyContext);
@@ -54,12 +55,12 @@ const CartPage = () => {
                 <table className="table cart-table table-responsive-xs">
                   <thead>
                     <tr className="table-head">
-                      <th scope="col">image</th>
-                      <th scope="col">product name</th>
-                      <th scope="col">price</th>
-                      <th scope="col">quantity</th>
-                      <th scope="col">action</th>
-                      <th scope="col">total</th>
+                      <th scope="col">{t('image')}</th>
+                      <th scope="col">{t('product name')}</th>
+                      <th scope="col">{t('price')}</th>
+                      <th scope="col">{t('quantity')}</th>
+                      <th scope="col">{t('action')}</th>
+                      <th scope="col">{t('total')}</th>
                     </tr>
                   </thead>
                   {cartItems.map((item, index) => {
@@ -168,7 +169,7 @@ const CartPage = () => {
                 <table className="table cart-table table-responsive-md">
                   <tfoot>
                     <tr>
-                      <td>total price :</td>
+                      <td>{t('total price')} :</td>
                       <td>
                         <h2>
                           {symbol} {total}{" "}
@@ -182,12 +183,12 @@ const CartPage = () => {
             <Row className="cart-buttons">
               <Col xs="6">
                 <Link href={`/shop/left_sidebar`}>
-                  <a className="btn btn-solid">continue shopping</a>
+                  <a className="btn btn-solid">{t('continue shopping')}</a>
                 </Link>
               </Col>
               <Col xs="6">
                 <Link href={`/page/account/checkout`}>
-                  <a className="btn btn-solid">check out</a>
+                  <a className="btn btn-solid">{t('check out')}</a>
                 </Link>
               </Col>
             </Row>
@@ -206,9 +207,9 @@ const CartPage = () => {
                       alt=""
                     />
                     <h3>
-                      <strong>Your Cart is Empty</strong>
+                      <strong>{t('Your Cart is Empty')}</strong>
                     </h3>
-                    <h4>Explore more shortlist some items.</h4>
+                    <h4>{t('Explore more shortlist some items.')}</h4>
                   </div>
                 </div>
               </Col>

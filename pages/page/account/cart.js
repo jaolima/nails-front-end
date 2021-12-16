@@ -5,7 +5,7 @@ import CartPage from './common/cart-page';
 
 const Wishliat = () => {
     return (
-        <CommonLayout parent="home" title="cart">
+        <CommonLayout parent="Home" title="cart">
             <CartPage />
         </CommonLayout>
     )

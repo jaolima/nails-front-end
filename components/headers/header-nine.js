@@ -3,7 +3,7 @@ import LogoImage from "./common/logo";
 import TopBar from "./common/topbar";
 import NavBar from "./common/navbar";
 import search from "../../public/assets/images/icon/search.png";
-import settings from "../../public/assets/images/icon/setting.png";
+import language from "../../public/assets/images/icon/language_translator.png";
 import { Media, Container, Row, Col } from "reactstrap";
 import CartContainer from "../containers/CartContainer";
 import cart from "../../public/assets/images/icon/Add-to-cart.png";
@@ -47,7 +47,7 @@ const HeaderNine = ({ logoName }) => {
                             />
                           </div>
                         </li>
-                        <Currency icon={settings} />
+                        <Currency icon={language} />
                         <CartContainer icon={cart} />
                       </ul>
                     </div>

@@ -9,7 +9,7 @@ import { Product4 } from "../../services/script";
 
 const ProducxBox = () => {
   return (
-    <CommonLayout parent="home" title="Elements" subTitle="product-box">
+    <CommonLayout parent="Home" title="Elements" subTitle="product-box">
       <TopCollection
         innerClass="title2"
         inner="title-inner2"

@@ -2,31 +2,36 @@ import React from "react";
 import MasterServiceContent from "../../../components/common/Service/MasterServiceConternt";
 import {
   svgFreeShipping,
-  svgservice,
+  svgLowCost,
+  svgFastEfficient,
   svgoffer,
   svgpayment,
 } from "../../../services/script";
 const Data = [
   {
     link: svgFreeShipping,
-    title: "free shipping",
-    service: "free shipping world wide",
+    title: "Express Shipping",
+    service: "from Mon-Fri",
   },
   {
-    link: svgservice,
-    title: "24 X 7 service",
-    service: "online service for new customer",
+    link: svgLowCost,
+    title: "Cheapest in",
+    service: "Switzerland Prices",
   },
   {
     link: svgoffer,
-    title: "festival offer",
-    service: "new online special festival offer",
+    title: "Absolutely safe",
+    service: "Payment Methods",
+  },
+  {
+    link: svgFastEfficient,
+    title: "Direct from the",
+    service: "manufacturer einkaufen",
   },
   {
     link: svgpayment,
-    title: "online payment",
-    service: "new online special festival offer",
-    lastChild: true,
+    title: "free shipping",
+    service: "from CHF 100.-",
   },
 ];
 

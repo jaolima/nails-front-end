@@ -9,7 +9,7 @@ import ShoesCategoryThree from "../layouts/Shoes/components/Category-three";
 
 const Category = () => {
     return (
-        <CommonLayout parent="home" title="elements" subTitle="category">
+        <CommonLayout parent="Home" title="elements" subTitle="category">
             <ShoesCategory />
             <div className="section-b-space">
                 <ShoesCategoryTwo />

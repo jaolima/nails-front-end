@@ -7,7 +7,7 @@ import ThreeColLeftPage from "./product/3_col_left_page";
 
 const ThreeColLeft = () => {
   return (
-    <CommonLayout parent="home" title="product">
+    <CommonLayout parent="Home" title="product">
       <ThreeColLeftPage />
       <ProductSection />
     </CommonLayout>

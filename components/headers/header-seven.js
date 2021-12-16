@@ -8,7 +8,7 @@ import heart from "../../public/assets/images/jewellery/icon/heart.png";
 import avatar from "../../public/assets/images/jewellery/icon/avatar.png";
 import Currency from "./common/currency";
 import cart from "../../public/assets/images/jewellery/icon/cart.png";
-import settings from "../../public/assets/images/jewellery/icon/controls.png";
+import language from "../../public/assets/images/jewellery/icon/controls.png";
 import CartContainer from "../containers/CartContainer";
 import SearchOverlay from "./common/search-overlay";
 
@@ -81,7 +81,7 @@ const HeaderSeven = ({ logoName }) => {
                             />
                           </div>
                         </li>
-                        <Currency icon={settings} />
+                        <Currency icon={language} />
                         <CartContainer icon={cart} />
                       </ul>
                     </div>

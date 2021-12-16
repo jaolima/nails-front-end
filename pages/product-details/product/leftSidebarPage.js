@@ -9,7 +9,7 @@ import ImageZoom from "../common/image-zoom";
 import DetailsWithPrice from "../common/detail-price";
 import Filter from "../common/filter";
 import { Container, Row, Col, Media } from "reactstrap";
-
+import { useTranslation } from "react-i18next";
 const GET_SINGLE_PRODUCTS = gql`
   query product($id: Int!) {
     product(id: $id) {
@@ -45,7 +45,7 @@ const LeftSidebarPage = ({ pathId }) => {
       id: parseInt(pathId),
     },
   });
-
+  const { t } = useTranslation();
   const [state, setState] = useState({ nav1: null, nav2: null });
   const slider1 = useRef();
   const slider2 = useRef();
@@ -88,28 +88,28 @@ const LeftSidebarPage = ({ pathId }) => {
         <Container>
           <Row>
             <Col sm="3" className="collection-filter">
-              <Filter />
+              {/* <Filter /> */}
               <Service />
               {/* <!-- side-bar single product slider start --> */}
               <NewProduct />
               {/* <!-- side-bar single product slider end --> */}
             </Col>
-            <Col lg="9" sm="12" xs="12">
+            <Col lg="9" sm="12" xs="12" className="mb-5">
               <Container fluid={true}>
                 <Row>
                   <Col cl="12">
                     <div className="filter-main-btn mb-2">
                       <span onClick={filterClick} className="filter-btn">
                         <i className="fa fa-filter" aria-hidden="true"></i>{" "}
-                        filter
+                        {t('Filter')}
                       </span>
                     </div>
                   </Col>
                 </Row>
                 {!data ||
-                !data.product ||
-                data.product.length === 0 ||
-                loading ? (
+                  !data.product ||
+                  data.product.length === 0 ||
+                  loading ? (
                   "loading"
                 ) : (
                   <Row>
@@ -134,15 +134,15 @@ const LeftSidebarPage = ({ pathId }) => {
                       >
                         {data.product.variants
                           ? data.product.images.map((vari, index) => (
-                              <div key={index}>
-                                <Media
-                                  src={`${vari.src}`}
-                                  key={index}
-                                  alt={vari.alt}
-                                  className="img-fluid"
-                                />
-                              </div>
-                            ))
+                            <div key={index}>
+                              <Media
+                                src={`${vari.src}`}
+                                key={index}
+                                alt={vari.alt}
+                                className="img-fluid"
+                              />
+                            </div>
+                          ))
                           : ""}
                       </Slider>
                     </Col>
@@ -155,7 +155,7 @@ const LeftSidebarPage = ({ pathId }) => {
                   </Row>
                 )}
               </Container>
-              <ProductTab />
+              {/* <ProductTab /> */}
             </Col>
           </Row>
         </Container>

@@ -13,7 +13,7 @@ const OrderSuccess = () => {
     const symbol = curContext.state.symbol;
 
     return (
-        <CommonLayout parent="home" title="order success">
+        <CommonLayout parent="Home" title="order success">
             <section className="section-b-space light-layout">
                 <Container>
                     <Row>

@@ -45,7 +45,7 @@ const ContactDetail = ({ img, title, desc1, desc2 }) => {
 };
 const Contact = () => {
   return (
-    <CommonLayout parent="home" title="Contact">
+    <CommonLayout parent="Home" title="Contact">
       <section className="contact-page section-b-space">
         <Container>
           <Row className="section-b-space">

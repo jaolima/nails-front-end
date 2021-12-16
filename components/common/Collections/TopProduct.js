@@ -9,6 +9,7 @@ import { Row, Col, Container } from 'reactstrap';
 import CartContext from '../../../helpers/cart';
 import { WishlistContext } from '../../../helpers/wishlist/WishlistContext';
 import { CompareContext } from '../../../helpers/Compare/CompareContext';
+import { useTranslation } from "react-i18next";
 
 const GET_PRODUCTS = gql`
     query  products($type:_CategoryType!,$indexFrom:Int! ,$limit:Int!) {
@@ -57,7 +58,7 @@ const TopProduct = (props) => {
     cartClass,
     productDetail
   } = props;
-
+  const { t } = useTranslation();
   const context = useContext(CartContext)
   const contextWishlist = useContext(WishlistContext);
   const contextCompare = useContext(CompareContext);
@@ -75,18 +76,10 @@ const TopProduct = (props) => {
   return (
     <>
       <div className={titleClass}>
-        <h4>{title}</h4>
-        <h2 className={inner}>{subTitle}</h2>
+        <h4>{t(title)}</h4>
+        <h2 className={inner}>{t(subTitle)}</h2>
       </div>
-      <Container>
-        <Row>
-          <Col lg="6" className="m-auto">
-            <div className="product-para">
-              <p className="text-center">{text}</p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+     
       <section className={designClass}>
         <Container>
           <Row>
