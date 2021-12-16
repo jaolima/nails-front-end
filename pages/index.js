@@ -9,7 +9,7 @@ import ServiceLayout from "../components/common/Service/service3";
 import Blog from "../components/common/Blog/blog1";
 import Instagram from "../components/common/instagram/instagram1";
 import LogoBlock from "../components/common/logo-block";
-import HeaderOne from "../components/headers/header-two";
+import HeaderTwo from "../components/headers/header-two";
 import { withApollo } from "../helpers/apollo/apollo";
 import { Product4, Product5, Product6 } from "../services/script";
 import ModalComponent from "../components/common/Modal";
@@ -25,9 +25,13 @@ const Fashion = () => {
         <link rel="icon" type="image/x-icon" href={favicon ? favicon : ""} />
       </Helmet>
 
-      <ModalComponent />
+      {/* <ModalComponent /> */}
 
-      <HeaderOne logoName={"logo.png"} topClass="top-header" />
+      <HeaderTwo
+        logoName={"logo.png"}
+        topClass="top-header"
+        headerClass="header-2 green-gradient"
+      />
 
       <Banner />
 

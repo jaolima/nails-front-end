@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderOne from "../headers/header-one";
+import HeaderOne from "../headers/header-two";
 import Breadcrubs from "../common/widgets/breadcrubs";
 import Helmet from "react-helmet";
 import favicon from "../../public/assets/images/favicon/1.png";

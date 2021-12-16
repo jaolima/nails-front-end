@@ -133,7 +133,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Express Shipping',
                     'from Mon-Fri': 'from Mon-Fri',
-                    'heapest in': 'heapest in',
+                    'Cheapest in': 'Cheapest in',
                     'Switzerland Prices': 'Switzerland Prices',
                     'Absolutely safe': 'Absolutely safe',
                     'Payment Methods': 'Payment Methods',
@@ -429,7 +429,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Expressversand',
                     'from Mon-Fri': 'von Mo-Fr',
-                    'heapest in': 'haufigste in',
+                    'Cheapest in': 'Günstigstes in',
                     'Switzerland Prices': 'Schweiz Preise',
                     'Absolutely safe': 'Absolut sicher',
                     'Payment Methods': 'Zahlungsarten',
@@ -724,7 +724,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Envío express',
                     'from Mon-Fri': 'de lunes a viernes',
-                    'heapest in': 'más pesado en',
+                    'Cheapest in': 'más pesado en',
                     'Switzerland Prices': 'Precios de Suiza',
                     'Absolutely safe': 'Absolutamente seguro',
                     'Payment Methods': 'Métodos de pago',
@@ -1019,7 +1019,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Livraison express',
                     'from Mon-Fri': 'du lundi au vendredi',
-                    'heapest in': 'plus gros dans',
+                    'Cheapest in': 'plus gros dans',
                     'Switzerland Prices': 'Prix Suisse',
                     'Absolutely safe': 'Absolument sûr',
                     'Payment Methods': 'méthodes de payement',
@@ -1314,7 +1314,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Spedizione espressa',
                     'from Mon-Fri': 'da lun-ven',
-                    'heapest in': 'più ammasso in',
+                    'Cheapest in': 'più ammasso in',
                     'Switzerland Prices': 'Prezzi Svizzera',
                     'Absolutely safe': 'Assolutamente sicuro',
                     'Payment Methods': 'Modalità di pagamento',
@@ -1609,7 +1609,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Encomenda expressa',
                     'from Mon-Fri': 'de seg-sex',
-                    'heapest in': 'mais alto em',
+                    'Cheapest in': 'mais alto em',
                     'Switzerland Prices': 'Preços da Suíça',
                     'Absolutely safe': 'Absolutamente seguro',
                     'Payment Methods': 'Métodos de Pagamento',
@@ -1904,7 +1904,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Transporti Express',
                     'from Mon-Fri': 'nga e Hëna-Premte',
-                    'heapest in': 'më e grumbulluara në',
+                    'Cheapest in': 'më e grumbulluara në',
                     'Switzerland Prices': 'Çmimet në Zvicër',
                     'Absolutely safe': 'Absolutisht i sigurt',
                     'Payment Methods': 'menyra pagese',
@@ -2200,7 +2200,7 @@ i18next
                     //SERVICE
                     'Express Shipping': '快递',
                     'from Mon-Fri': '周一至周五',
-                    'heapest in': '堆在',
+                    'Cheapest in': '堆在',
                     'Switzerland Prices': '瑞士 价格',
                     'Absolutely safe': '绝对安全',
                     'Payment Methods': '支付方式',
