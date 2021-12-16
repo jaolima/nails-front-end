@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from "react";
 import { toast } from "react-toastify";
-
+import { useRouter } from "next/router";
 export const Context = createContext({
   compareItems: Function,
   addToCompare: Function,
@@ -22,7 +22,7 @@ const getLocalCompareItems = () => {
 
 export const Provider = (props) => {
   const [compareItems, setcompareItems] = useState(getLocalCompareItems());
-
+  const { t } = useTranslation();
   useEffect(() => {
     localStorage.setItem("compare", JSON.stringify(compareItems));
   }, [compareItems]);
@@ -31,17 +31,17 @@ export const Provider = (props) => {
   const addToCompare = (item) => {
     const index = compareItems.findIndex((compare) => compare.id === item.id);
     if (index === -1) {
-      toast.success("Product Added Successfully !");
+      toast.success(t('Product Added Successfully !'));
       setcompareItems([...compareItems, item]);
     } else {
-      toast.error("This Product Already Added !");
+      toast.error(t('This Product Already Added !'));
     }
   };
 
   // Remove Product From compare
   const removeFromComapre = (item) => {
     setcompareItems(compareItems.filter((e) => e.id !== item.id));
-    toast.error("Product Removed Successfully !");
+    toast.error(t('Product Removed Successfully !'));
   };
 
   return (

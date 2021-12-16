@@ -1,6 +1,6 @@
 import React, {createContext , useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-
+import { useRouter } from "next/router";
 export const Context = createContext({
   wishlistItems: Function,
   addToWish: Function,
@@ -22,7 +22,7 @@ const getLocalWishlistItems = () => {
 };
 
 export const Provider = (props) => {
-
+  const { t } = useTranslation();
     const [wishlistItems, setWishlistItems] = useState(getLocalWishlistItems())
 
     useEffect(() => {
@@ -34,17 +34,17 @@ export const Provider = (props) => {
     const addToWish = (item) => {
         const index = wishlistItems.findIndex(wish => wish.id === item.id)
         if (index === -1) {
-            toast.success("Product Added Successfully !");
+            toast.success(t('Product Added Successfully !'));
             setWishlistItems([...wishlistItems, item])
         }else{
-          toast.error("This Product Already Added !");
+          toast.error(t('This Product Already Added !'));
         }
     }
 
     // Remove Product From Wishlist
     const removeFromWish = (item) => {
       setWishlistItems(wishlistItems.filter((e)=>(e.id !== item.id)))
-      toast.error("Product Removed Successfully !");
+      toast.error(t('Product Removed Successfully !'));
     }
 
     // const {value} = props

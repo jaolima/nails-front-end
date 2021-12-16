@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Context from "./index";
 import { toast } from "react-toastify";
-
+import { useRouter } from "next/router";
 const getLocalCartItems = () => {
   try {
     const list = localStorage.getItem("cartList");
@@ -16,6 +16,7 @@ const getLocalCartItems = () => {
 };
 
 const CartProvider = (props) => {
+    const { t } = useTranslation();
   const [cartItems, setCartItems] = useState(getLocalCartItems());
   const [cartTotal, setCartTotal] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -30,7 +31,7 @@ const CartProvider = (props) => {
 
   // Add Product To Cart
   const addToCart = (item, quantity) => {
-    toast.success("Product Added Successfully !");
+    toast.success(t('Product Added Successfully !'));
     const index = cartItems.findIndex((itm) => itm.id === item.id);
 
     if (index !== -1) {
@@ -51,7 +52,7 @@ const CartProvider = (props) => {
   };
 
   const removeFromCart = (item) => {
-    toast.error("Product Removed Successfully !");
+    toast.error(t('Product Removed Successfully !'));
     setCartItems(cartItems.filter((e) => e.id !== item.id));
   };
 
@@ -81,7 +82,7 @@ const CartProvider = (props) => {
           total: item.price * quantity,
         };
         setCartItems([...cartItems]);
-        toast.info("Product Quantity Updated !");
+        toast.info(t('Product Quantity Updated !'));
       } else {
         const product = {
           ...item,
@@ -89,10 +90,10 @@ const CartProvider = (props) => {
           total: (item.price - (item.price * item.discount) / 100) * quantity,
         };
         setCartItems([...cartItems, product]);
-        toast.success("Product Added Updated !");
+        toast.success(t('Product Added Updated !'));
       }
     } else {
-      toast.error("Enter Valid Quantity !");
+      toast.error(t('Enter Valid Quantity !'));
     }
   };
 

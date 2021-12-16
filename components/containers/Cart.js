@@ -82,17 +82,17 @@ const CartComponent = ({ icon, layout }) => {
               <li>
                 <div className="total">
                   <h5>
-                    subtotal : <span>${total}</span>
+                    {t('subtotal')} : <span>${total}</span>
                   </h5>
                 </div>
               </li>
               <li>
                 <div className="buttons">
                   <Link href="/page/account/cart">
-                    <a className="btn btn-solid btn-xs view-cart">view cart</a>
+                    <a className="btn btn-solid btn-xs view-cart">{t('view cart')}</a>
                   </Link>
                   <Link href="/page/account/checkout">
-                    <a className="btn btn-solid btn-xs checkout">checkout</a>
+                    <a className="btn btn-solid btn-xs checkout">{t('checkout')}</a>
                   </Link>
                 </div>
               </li>

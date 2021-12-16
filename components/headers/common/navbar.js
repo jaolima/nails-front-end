@@ -162,7 +162,7 @@ const NavBar = () => {
                       {menuItem.arrow == false ? '' : <span className="sub-arrow"></span>}
                     </a>
                   )}
-                  {menuItem.children && !menuItem.megaMenu ? (
+                  {(menuItem.children && !menuItem.megaMenu ) && (
                     <ul className="nav-submenu">
                       {menuItem.children.map((childrenItem, index) => {
                         return (
@@ -236,81 +236,6 @@ const NavBar = () => {
                         );
                       })}
                     </ul>
-                  ) : (
-                    <div
-                      className={`mega-menu-container  ${menuItem.megaMenu ? "" : "opensubmenu"
-                        }`}
-                    >
-                      {menuItem.megaMenu === true ? (
-                        <Container>
-                          <Row>
-                            {menuItem.children.map((megaMenuItem, i) => {
-                              return (
-                                <div
-                                  className={`${menuItem.megaMenuType == "small"
-                                      ? "col mega-box"
-                                      : menuItem.megaMenuType == "medium"
-                                        ? "col-lg-3"
-                                        : menuItem.megaMenuType == "large"
-                                          ? "col"
-                                          : ""
-                                    } `}
-                                  key={i}
-                                >
-                                  <div className="link-section">
-                                    <div className="menu-title">
-                                      <h5 onClick={(e) => handleMegaSubmenu(e)}>
-                                        {megaMenuItem.title}
-                                      </h5>
-                                    </div>
-                                    <div className="menu-content">
-                                      <ul>
-                                        {menuItem.title === "Elements"
-                                          ? megaMenuItem.children.map(
-                                            (subMegaMenuItem, i) => {
-                                              return (
-                                                <li key={i}>
-                                                  <a
-                                                    href={
-                                                      subMegaMenuItem.path
-                                                    }
-                                                  >
-                                                    <i
-                                                      className={`icon-${subMegaMenuItem.icon}`}
-                                                    ></i>
-                                                    {subMegaMenuItem.title}
-                                                  </a>
-                                                </li>
-                                              );
-                                            }
-                                          )
-                                          : megaMenuItem.children.map(
-                                            (subMegaMenuItem, i) => {
-                                              return (
-                                                <li key={i}>
-                                                  <a
-                                                    href={
-                                                      subMegaMenuItem.path
-                                                    }
-                                                  >
-                                                    {subMegaMenuItem.title}
-                                                  </a>
-                                                </li>
-                                              );
-                                            }
-                                          )}
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </Row>
-                        </Container>
-                      ) : (
-                        ""
-                      )}
-                    </div>
                   )}
                 </li>
               );

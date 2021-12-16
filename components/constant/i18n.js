@@ -301,6 +301,14 @@ i18next
                     'action': 'action',
                     'continue shopping': 'continue shopping',
                     'check out': 'check out',
+                    'Product Added Successfully !': 'Product Added Successfully !',
+                    'This Product Already Added !': 'This Product Already Added !',
+                    'Product Removed Successfully !': 'Product Removed Successfully !',
+                    'Product Added Updated !': 'Product Added Updated !',
+                    'Enter Valid Quantity !': 'Enter Valid Quantity !',
+                    'This Product Already Added !': 'This Product Already Added !',
+                    'Product Removed Successfully !': 'Product Removed Successfully !',
+                    'Product Quantity Updated !': 'Product Quantity Updated !',
                 }
             },
             de: {
@@ -596,6 +604,14 @@ i18next
                     'action': "Aktion",
                     'continue shopping': "mit dem Einkaufen fortfahren",
                     'check out': "Kasse",
+                    'Product Added Successfully !': 'Produkt erfolgreich hinzugefügt!',
+                    'This Product Already Added !': 'Dieses Produkt wurde bereits hinzugefügt!',
+                    'Product Removed Successfully !': 'Produkt erfolgreich entfernt!',
+                    'Product Added Updated !': 'Produkt hinzugefügt Aktualisiert!',
+                    'Enter Valid Quantity !': 'Geben Sie eine gültige Menge ein!',
+                    'This Product Already Added !': 'Dieses Produkt wurde bereits hinzugefügt!',
+                    'Product Removed Successfully !': 'Produkt erfolgreich entfernt!',
+                    'Product Quantity Updated !': 'Produktmenge aktualisiert!',
                 }
             },
             es: {
@@ -891,6 +907,14 @@ i18next
                     'action': "acción",
                     'continue shopping': "seguir comprando",
                     'check out': "verificar",
+                    'Product Added Successfully !': "¡Producto agregado exitosamente!",
+                    'This Product Already Added !': "¡Este producto ya se agregó!",
+                    'Product Removed Successfully !': "¡Producto eliminado correctamente!",
+                    'Product Added Updated !': "Producto añadido actualizado!",
+                    'Enter Valid Quantity !': "¡Ingrese una cantidad válida!",
+                    'This Product Already Added !': "¡Este producto ya se agregó!",
+                    'Product Removed Successfully !': "¡Producto eliminado correctamente!",
+                    'Product Quantity Updated !': "Cantidad de producto actualizada!",
                 }
             },
             fr: {
@@ -1186,6 +1210,14 @@ i18next
                     'action': "action",
                     'continue shopping': "Continuer vos achats",
                     'check out': "vérifier",
+                    'Product Added Successfully !': "Produit ajouté avec succès !",
+                    'This Product Already Added !': "Ce produit déjà ajouté !",
+                    'Product Removed Successfully !': "Produit supprimé avec succès !",
+                    'Product Added Updated !': "Produit ajouté mis à jour !",
+                    'Enter Valid Quantity !': "Entrez une quantité valide !",
+                    'This Product Already Added !': "Ce produit déjà ajouté !",
+                    'Product Removed Successfully !': "Produit supprimé avec succès !",
+                    'Product Quantity Updated !': "Quantité de produit mise à jour !",
                 }
             },
             it: {
@@ -1481,6 +1513,14 @@ i18next
                     'action': "azione",
                     'continue shopping': "continua a fare acquisti",
                     'check out': "guardare",
+                    'Product Added Successfully !': "Prodotto aggiunto con successo!",
+                    'This Product Already Added !': "Questo prodotto è già stato aggiunto!",
+                    'Product Removed Successfully !': "Prodotto rimosso con successo!",
+                    'Product Added Updated !': "Prodotto aggiunto aggiornato!",
+                    'Enter Valid Quantity !': "Inserisci una quantità valida!",
+                    'This Product Already Added !': "Questo prodotto è già stato aggiunto!",
+                    'Product Removed Successfully !': "Prodotto rimosso con successo!",
+                    'Product Quantity Updated !': "Quantità di prodotto aggiornata!",
                 }
             },
             pt: {
@@ -1776,6 +1816,14 @@ i18next
                     'action': "açao",
                     'continue shopping': "continue comprando",
                     'check out': "Verificação de saída",
+                    'Product Added Successfully !': "Produto adicionado com sucesso!",
+                    'This Product Already Added !': "Este produto já foi adicionado!",
+                    'Product Removed Successfully !': "Produto removido com sucesso!",
+                    'Product Added Updated !': "Produto adicionado atualizado!",
+                    'Enter Valid Quantity !': "Insira a quantidade válida!",
+                    'This Product Already Added !': "Este produto já foi adicionado!",
+                    'Product Removed Successfully !': "Produto removido com sucesso!",
+                    'Product Quantity Updated !': "Quantidade do produto atualizada!",
                 }
             },
             sq: {
@@ -2072,6 +2120,14 @@ i18next
                     'action': "veprim",
                     'continue shopping': "vazhdoni pazarin",
                     'check out': "shikoni",
+                    'Product Added Successfully !': "Produkti u shtua me sukses!",
+                    'This Product Already Added !': "Ky produkt është shtuar tashmë!",
+                    'Product Removed Successfully !': "Produkti u hoq me sukses!",
+                    'Product Added Updated !': "Produkti i shtuar i përditësuar!",
+                    'Enter Valid Quantity !': "Shkruani sasinë e vlefshme!",
+                    'This Product Already Added !': "Ky produkt është shtuar tashmë!",
+                    'Product Removed Successfully !': "Produkti u hoq me sukses!",
+                    'Product Quantity Updated !': "Sasia e produktit e përditësuar!",
                 }
             },
             zh: {
@@ -2367,6 +2423,14 @@ i18next
                     'action': '行动',
                     'continue shopping': '继续购物',
                     'check out': '查看',
+                    'Product Added Successfully !': "产品添加成功",
+                    'This Product Already Added !': "该产品已添加",
+                    'Product Removed Successfully !': "产品删除成功",
+                    'Product Added Updated !': "产品添加更新",
+                    'Enter Valid Quantity !': "输入有效数量",
+                    'This Product Already Added !': "该产品已添加",
+                    'Product Removed Successfully !': "产品删除成功",
+                    'Product Quantity Updated !': "产品数量更新",
                 }
             },
 
