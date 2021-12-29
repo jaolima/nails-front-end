@@ -1,6 +1,9 @@
 import React, {createContext , useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
+
+
 export const Context = createContext({
   wishlistItems: Function,
   addToWish: Function,

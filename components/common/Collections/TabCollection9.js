@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import { Col, Container, Row } from "reactstrap";
 import { useQuery } from "@apollo/react-hooks";
@@ -11,6 +11,7 @@ import { CompareContext } from "../../../helpers/Compare/CompareContext";
 import { Product3 } from "../../../services/script";
 import PostLoader from "../PostLoader";
 import Background from "../../../public/assets/images/parallax/23.jpg";
+import api from "../../../services/api";
 
 const GET_PRODUCTS = gql`
   query products($type: _CategoryType!, $indexFrom: Int!, $limit: Int!) {
@@ -57,6 +58,18 @@ const TabContent = ({
   const wishListContext = useContext(WishlistContext);
   const contextCompare = useContext(CompareContext);
   const quatity = context.quatity;
+  console.log("data ", data && data.products.items);
+  useEffect(() => {
+    async function productGet() {
+      api
+        .get("products")
+        .then((response) => console.log(response.data))
+        .catch((err) => {
+          console.error("ops! ocorreu um erro" + err);
+        });
+    }
+    productGet();
+  }, []);
   return (
     <div>
       {!data ||
