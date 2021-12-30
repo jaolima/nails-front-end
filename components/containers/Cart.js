@@ -3,6 +3,7 @@ import Link from "next/link";
 import CartContext from "../../helpers/cart";
 import { Media } from "reactstrap";
 import { CurrencyContext } from "../../helpers/Currency/CurrencyContext";
+import { useTranslation } from "react-i18next";
 
 const CartComponent = ({ icon, layout }) => {
   const context = useContext(CartContext);
@@ -12,6 +13,7 @@ const CartComponent = ({ icon, layout }) => {
   const total = context.cartTotal;
   const removeFromCart = context.removeFromCart;
   const [openSide, setOpenSide] = useState(false);
+        const { t } = useTranslation();
 
   return (
     <Fragment>
@@ -39,7 +41,7 @@ const CartComponent = ({ icon, layout }) => {
         <a href={null} className="overlay"></a>
         <div className="cart-inner">
           <div className="cart_top">
-            <h3>my cart</h3>
+            <h3>{t('my cart')}</h3>
             <div className="close-cart" onClick={() => setOpenSide(false)}>
               <a href={null}>
                 <i className="fa fa-times" aria-hidden="true"></i>

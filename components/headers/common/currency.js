@@ -6,6 +6,7 @@ import language from "../../constant/langConfig.json";
 import i18next from "../../constant/i18n";
 import { CurrencyContext } from "../../../helpers/Currency/CurrencyContext";
 import { withApollo } from "../../../helpers/apollo/apollo";
+import { useTranslation } from "react-i18next";
 
 const GET_CURRENCY = gql`
   query {
@@ -22,6 +23,7 @@ const Currency = ({ icon }) => {
   var { data } = useQuery(GET_CURRENCY);
   const Context = useContext(CurrencyContext);
   const selectedCurrency = Context.currencyContext.selectedCurrency;
+  const { t } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18next.changeLanguage(lng);
@@ -34,7 +36,7 @@ const Currency = ({ icon }) => {
         <i className="fa fa-globe-europe"></i>
       </div>
       <div className="show-div setting">
-        <h6>language</h6>
+        <h6>{t('language')}</h6>
         <ul>
           {language.map((item, i) => (
             <li key={i}>

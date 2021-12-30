@@ -31,7 +31,7 @@ const TopBarDark = ({ topClass, fluid, direction }) => {
           <Col lg="6">
             <div className="header-contact">
               <ul>
-                <li>{t('Beauty is in your hands')}</li>
+                <li>{t("Beauty is in your hands")}</li>
               </ul>
             </div>
           </Col>
@@ -40,30 +40,33 @@ const TopBarDark = ({ topClass, fluid, direction }) => {
               <li className="mobile-wishlist">
                 <Link href="/page/account/wishlist">
                   <a>
-                    <i className="fa fa-heart" aria-hidden="true"></i> {t('wishlist')}
+                    <i className="fa fa-heart" aria-hidden="true"></i>{" "}
+                    {t("wishlist")}
                   </a>
                 </Link>
               </li>
               <li className="onhover-dropdown mobile-account">
-                <i className="fa fa-user" aria-hidden="true"></i> {t('My Account')}
+                <i className="fa fa-user" aria-hidden="true"></i>{" "}
+                {t("My Account")}
                 <ul className="onhover-show-div">
                   <li>
                     <Link href={`/page/account/login`}>
-                      <a>{t('Login')}</a>
+                      <a>{t("Login")}</a>
                     </Link>
                   </li>
                   <li>
                     <Link href={`/page/account/register`}>
-                      <a>{t('Register')}</a>
+                      <a>{t("Register")}</a>
                     </Link>
                   </li>
                   <li onClick={() => firebaseLogout()}>
-                    <a>{t('Logout')}</a>
+                    <a>{t("Logout")}</a>
                   </li>
                 </ul>
               </li>
               <li className="onhover-dropdown mobile-account">
-                <i className="fa fa-language" aria-hidden="true"></i>  {t('language')}
+                <i className="fa fa-language" aria-hidden="true"></i>{" "}
+                {t("language")}
                 <ul className="onhover-show-div">
                   {langConfig.map((item, i) => (
                     <li key={i}>
@@ -79,7 +82,6 @@ const TopBarDark = ({ topClass, fluid, direction }) => {
                   ))}
                 </ul>
               </li>
-
             </ul>
           </Col>
         </Row>
