@@ -39,7 +39,7 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
 
         <Container>
           <Row>
-            <Col>
+            <Col >
               <div className="main-menu border-section border-top-0">
                 <div className="menu-left">
                   <div className="navbar">

@@ -1,17 +1,9 @@
 import React, { useState } from "react";
 import CommonLayout from "../../../components/shop/common-layout";
-import {
-  Input,
-  Container,
-  Row,
-  Form,
-  Label,
-  Col,
-  Button,
-  FormFeedback,
-} from "reactstrap";
+import { Input, Container, Row, Form, Label, Col, Button } from "reactstrap";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
+import api from "../../../config";
 
 const Register = () => {
   const { t } = useTranslation();
@@ -33,39 +25,39 @@ const Register = () => {
   }
 
   function validation(name, email, password) {
-    console.log("name.length <= 3 ", name.length <= 3);
-    console.log("name.length ", name.length);
-    console.log("name ", name);
-    console.log("email ", email);
-    console.log("password ", password);
-
     if (name === "") {
       toast.error(t("The name field is required."));
+      info.name = true;
     } else if (name.length <= 3) {
       toast.error(t("The name must be longer than 3 characters."));
+      info.name = true;
     } else {
       info.name = false;
     }
 
     if (password === "") {
       toast.error(t("The password field is required."));
+      info.password = true;
     } else if (name.length < 6) {
       toast.error(t("The password must be longer than 6 characters."));
+      info.password = true;
     } else {
       info.password = false;
     }
 
     if (email === "") {
       toast.error(t("The email field is required."));
+      info.email = true;
     } else if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
       toast.error(t("The email is not valid."));
+      info.email = true;
     } else {
       info.email = false;
     }
 
     setInfo(info);
 
-    if (!info.name || !info.password || !info.email) {
+    if (!info.name && !info.password && !info.email) {
       return true;
     } else {
       return false;
@@ -74,40 +66,40 @@ const Register = () => {
 
   function handleSubmit(values) {
     values.preventDefault();
-    console.log("dataForm ", dataForm);
     let respValidation = validation(
       dataForm.name,
       dataForm.email,
       dataForm.password
     );
 
-    if (respValidation) {
-      var axios = require("axios").default;
-      var options = {
-        method: "POST",
-        url: "http://localhost:3333/users",
-        headers: {
-          "user-agent": "vscode-restclient",
-          "content-type": "application/json",
-        },
-        data: {
-          name: dataForm.name,
-          email: dataForm.email,
-          password: dataForm.password,
-          uriImage: "teste.com",
-        },
-      };
-      axios
-        .request(options)
-        .then(function (response) {
-          toast.success(t("Successfully registered !"));
-          router.push("/page/account/login");
-        })
-        .catch(function (error) {
-            console.log("error", error)
-          toast.error(t("Unable to register, please try again later !"));
-        });
-    }
+    console.log("respValidation ", respValidation);
+
+    // if (respValidation) {
+    //   var axios = require("axios").default;
+    //   var options = {
+    //     method: "POST",
+    //     url: api.BASE_URL + "users",
+    //     headers: {
+    //       "content-type": "application/json",
+    //     },
+    //     data: {
+    //       name: dataForm.name,
+    //       email: dataForm.email,
+    //       password: dataForm.password,
+    //       uriImage: "teste.com",
+    //     },
+    //   };
+    //   axios
+    //     .request(options)
+    //     .then(function (response) {
+    //       toast.success(t("Successfully registered !"));
+    //       router.push("/page/account/login");
+    //     })
+    //     .catch(function (error) {
+    //         console.log("error", error)
+    //       toast.error(t("Unable to register, please try again later !"));
+    //     });
+    // }
   }
 
   return (

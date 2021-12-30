@@ -10,7 +10,7 @@ import CartContext from "../../../helpers/cart";
 import { WishlistContext } from "../../../helpers/wishlist/WishlistContext";
 import { CompareContext } from "../../../helpers/Compare/CompareContext";
 import { useTranslation } from "react-i18next";
-import api from "../../../services/api";
+import api from "../../../config";
 
 // const GET_PRODUCTS = gql`
 //   query products($type: _CategoryType!, $indexFrom: Int!, $limit: Int!) {
@@ -64,7 +64,7 @@ const TopProduct = (props) => {
   const contextCompare = useContext(CompareContext);
   const quantity = context.quantity;
 
-  const [dataProduct, setDataProduct] = useState("");
+  const [dataProduct, setDataProduct] = useState(null);
   const [loading, setLoading] = useState(false);
 
   // var { loading1, data } = useQuery(GET_PRODUCTS, {
@@ -78,14 +78,23 @@ const TopProduct = (props) => {
   useEffect(() => {
     setLoading(true);
 
-    api
-      .get("products")
-      .then((response) => {
+    var axios = require("axios").default;
+    var options = {
+      method: "GET",
+      url: api.BASE_URL + "products",
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+    axios
+      .request(options)
+      .then(function (response) {
         setDataProduct(response.data);
       })
-      .catch((err) => {
-        console.error("ops! ocorreu um erro" + err);
+      .catch(function (error) {
+        console.log("error", error);
       });
+
 
     setLoading(false);
   }, []);
