@@ -12,38 +12,6 @@ import { CompareContext } from "../../../helpers/Compare/CompareContext";
 import { useTranslation } from "react-i18next";
 import api from "../../../config";
 
-// const GET_PRODUCTS = gql`
-//   query products($type: _CategoryType!, $indexFrom: Int!, $limit: Int!) {
-//     products(type: $type, indexFrom: $indexFrom, limit: $limit) {
-//       items {
-//         id
-//         title
-//         description
-//         type
-//         brand
-//         category
-//         price
-//         new
-//         stock
-//         sale
-//         discount
-//         variants {
-//           id
-//           sku
-//           size
-//           color
-//           image_id
-//         }
-//         images {
-//           image_id
-//           id
-//           alt
-//           src
-//         }
-//       }
-//     }
-//   }
-// `;
 
 const TopProduct = (props) => {
   const {
@@ -67,13 +35,41 @@ const TopProduct = (props) => {
   const [dataProduct, setDataProduct] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // var { loading1, data } = useQuery(GET_PRODUCTS, {
-  //   variables: {
-  //     type: type,
-  //     indexFrom: 0,
-  //     limit: 8,
-  //   },
-  // });
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
 
   useEffect(() => {
     setLoading(true);
@@ -126,19 +122,21 @@ const TopProduct = (props) => {
                   </div>
                 </div>
               ) : (
-                <Slider {...Product4} className="product-4 product-m no-arrow">
+                <Slider {...settings} className="product-4 product-m no-arrow">
                   {dataProduct &&
                     dataProduct.map((product, index) => (
-                      <div key={index}>
-                        <ProductItem
-                          product={product}
-                          productDetail={productDetail}
-                          // addCompare={() => contextCompare.addToCompare(product)}
-                          addWishlist={() => contextWishlist.addToWish(product)}
-                          addCart={() => context.addToCart(product, quantity)}
-                          cartClass={cartClass}
-                        />
-                      </div>
+                      <>
+                        <div key={index}>
+                          <ProductItem
+                            product={product}
+                            productDetail={productDetail}
+                            // addCompare={() => contextCompare.addToCompare(product)}
+                            addWishlist={() => contextWishlist.addToWish(product)}
+                            addCart={() => context.addToCart(product, quantity)}
+                            cartClass={cartClass}
+                          />
+                        </div>
+                      </>
                     ))}
                 </Slider>
               )}

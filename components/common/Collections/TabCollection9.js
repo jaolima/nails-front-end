@@ -58,7 +58,7 @@ const TabContent = ({
   const wishListContext = useContext(WishlistContext);
   const contextCompare = useContext(CompareContext);
   const quatity = context.quatity;
-  console.log("data ", data && data.products.items);
+  
   useEffect(() => {
     async function productGet() {
       api

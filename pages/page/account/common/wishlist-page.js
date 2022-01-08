@@ -5,9 +5,11 @@ import CartContext from '../../../../helpers/cart/index';
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 import { useTranslation } from "react-i18next";
+
 const WishlistPage = () => {
-        const { t } = useTranslation();
-    const router = useRouter(); 
+
+    const { t } = useTranslation();
+    const router = useRouter();
     const context = useContext(WishlistContext)
     const cartContext = useContext(CartContext);
 
@@ -41,15 +43,15 @@ const WishlistPage = () => {
                                         <tbody key={i}>
                                             <tr>
                                                 <td>
-                                                    <a href="#"><img src={item.images[0].src} alt="" /></a>
+                                                    <a href="#"><img src={item.uri_image} alt="" /></a>
                                                 </td>
-                                                <td><a href="#">{item.title}</a>
+                                                <td><a href="#">{item.name}</a>
                                                     <Row className="mobile-cart-content">
                                                         <div className="col-xs-3">
                                                             <p>out of stock</p>
                                                         </div>
                                                         <div className="col-xs-3">
-                                                            <h2 className="td-color">$63.00</h2>
+                                                            <h2 className="td-color">{item.price}</h2>
                                                         </div>
                                                         <div className="col-xs-3">
                                                             <h2 className="td-color"><a href="#" className="icon mr-1"><i className="fa fa-close"></i>
@@ -58,10 +60,10 @@ const WishlistPage = () => {
                                                     </Row>
                                                 </td>
                                                 <td>
-                                                    <h2>${item.price}</h2>
+                                                    <h2>{item.price}</h2>
                                                 </td>
                                                 <td>
-                                                    <p>{(item.stock > 0) ? 'In Stock' : 'out of Stock'}</p>
+                                                    <p>{(item.qtd > 0) ? t('In Stock') : t('out of Stock')}</p>
                                                 </td>
                                                 <td>
                                                     <a href={null} className="icon" onClick={() => removeFromWish(item)}>

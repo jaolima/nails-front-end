@@ -12,6 +12,7 @@ import CartContext from "../../../helpers/cart";
 import { WishlistContext } from "../../../helpers/wishlist/WishlistContext";
 import { CompareContext } from "../../../helpers/Compare/CompareContext";
 import { useTranslation } from "react-i18next";
+import api from "../../../config";
 
 const GET_PRODUCTS = gql`
   query products(
@@ -66,13 +67,15 @@ const GET_PRODUCTS = gql`
   }
 `;
 
-const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
+const ProductList = ({ colClass, layoutList, openSidebar, noSidebar, category }) => {
+
+
+  const router = useRouter();
   const { t } = useTranslation();
   const cartContext = useContext(CartContext);
   const quantity = cartContext.quantity;
   const wishlistContext = useContext(WishlistContext);
   const compareContext = useContext(CompareContext);
-  const router = useRouter();
   const [limit, setLimit] = useState(8);
   const curContext = useContext(CurrencyContext);
   const [grid, setGrid] = useState(colClass);
@@ -91,9 +94,9 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
   useEffect(() => {
     const pathname = window.location.pathname;
     setUrl(pathname);
-    router.push(
-      `${pathname}?${filterContext.state}&brand=${selectedBrands}&color=${selectedColor}&size=${selectedSize}&minPrice=${selectedPrice.min}&maxPrice=${selectedPrice.max}`
-    );
+    // router.push(
+    //   `${pathname}?${filterContext.state}&brand=${selectedBrands}&color=${selectedColor}&size=${selectedSize}&minPrice=${selectedPrice.min}&maxPrice=${selectedPrice.max}`
+    // );
   }, [selectedBrands, selectedColor, selectedSize, selectedPrice]);
 
   var { loading, data, fetchMore } = useQuery(GET_PRODUCTS, {
@@ -153,6 +156,33 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
     filterContext.setSelectedColor("");
   };
 
+  const [dataProduct, setDataProduct] = useState(null);
+  // const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // setLoading(true);
+
+    var axios = require("axios").default;
+    var options = {
+      method: "GET",
+      url: api.BASE_URL + "products",
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+    axios
+      .request(options)
+      .then(function (response) {
+        setDataProduct(response.data);
+      })
+      .catch(function (error) {
+        console.log("error", error);
+      });
+
+
+    // setLoading(false);
+  }, []);
+
   return (
     <Col className="collection-content">
       <div className="page-main-content">
@@ -168,7 +198,7 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
               </a>
               <div className="top-banner-content small-section">
                 <h4>{t('Nail varnishes - color varnishes')}</h4>
-                <p> {t('Great nail polish color polishes with an exceptionally nourishing formula. The composition works without the 18 harmful chemicals that can normally be found in nail polishes. They dry super fast. You don’t have to wait so long before you can go back to everyday business. This effect is supported by the body’s own warmth. This helps the nail polish to dry very quickly. The wait is finally over!')}</p>
+                <p> {t("Great nail polish color polishes with an exceptionally nourishing formula. The composition works without the 18 harmful chemicals that can normally be found in nail polishes. They dry super fast. You don’t have to wait so long before you can go back to everyday business. This effect is supported by the body’s own warmth. This helps the nail polish to dry very quickly. The wait is finally over!")}</p>
               </div>
             </div>
             <Row>
@@ -337,15 +367,11 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
               <div className={`product-wrapper-grid ${layout}`}>
                 <Row>
                   {/* Product Box */}
-                  {!data ||
-                    !data.products ||
-                    !data.products.items ||
-                    data.products.items.length === 0 ||
+                  {!dataProduct ||
+                    dataProduct.length === 0 ||
                     loading ? (
-                    data &&
-                      data.products &&
-                      data.products.items &&
-                      data.products.items.length === 0 ? (
+                      dataProduct &&
+                      dataProduct.length === 0 ? (
                       <Col xs="12">
                         <div>
                           <div className="col-sm-12 empty-cart-cls text-center">
@@ -378,8 +404,8 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar }) => {
                       </div>
                     )
                   ) : (
-                    data &&
-                    data.products.items.map((product, i) => (
+                    dataProduct &&
+                    dataProduct.map((product, i) => (
                       <div className={grid} key={i}>
                         <div className="product">
                           <div>

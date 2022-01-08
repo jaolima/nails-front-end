@@ -1,5 +1,5 @@
 export const MENUITEMS = [
-   { title: 'Sale', path: '/shop/left_sidebar', type: 'link', arrow: false },
+   { title: 'Sale', path: '/product/sale', type: 'link', arrow: false },
    { title: 'Coupons', path: '/shop/left_sidebar', type: 'link', arrow: false },
    { title: 'Starter sets', path: '/shop/left_sidebar', type: 'link', arrow: false },
    { title: 'Nail varnishes - color varnishes', path: '/shop/left_sidebar', type: 'link', arrow: false },

@@ -4,9 +4,11 @@ import { Input, Container, Row, Form, Label, Col, Button } from "reactstrap";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import api from "../../../config";
+import { useRouter } from "next/router";
 
 const Register = () => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   const [dataForm, setDataForm] = useState({
     name: "",
@@ -38,7 +40,7 @@ const Register = () => {
     if (password === "") {
       toast.error(t("The password field is required."));
       info.password = true;
-    } else if (name.length < 6) {
+    } else if (password.length < 6) {
       toast.error(t("The password must be longer than 6 characters."));
       info.password = true;
     } else {
@@ -74,32 +76,32 @@ const Register = () => {
 
     console.log("respValidation ", respValidation);
 
-    // if (respValidation) {
-    //   var axios = require("axios").default;
-    //   var options = {
-    //     method: "POST",
-    //     url: api.BASE_URL + "users",
-    //     headers: {
-    //       "content-type": "application/json",
-    //     },
-    //     data: {
-    //       name: dataForm.name,
-    //       email: dataForm.email,
-    //       password: dataForm.password,
-    //       uriImage: "teste.com",
-    //     },
-    //   };
-    //   axios
-    //     .request(options)
-    //     .then(function (response) {
-    //       toast.success(t("Successfully registered !"));
-    //       router.push("/page/account/login");
-    //     })
-    //     .catch(function (error) {
-    //         console.log("error", error)
-    //       toast.error(t("Unable to register, please try again later !"));
-    //     });
-    // }
+    if (respValidation) {
+      var axios = require("axios").default;
+      var options = {
+        method: "POST",
+        url: api.BASE_URL + "users",
+        headers: {
+          "content-type": "application/json",
+        },
+        data: {
+          name: dataForm.name,
+          email: dataForm.email,
+          password: dataForm.password,
+          uriImage: "teste.com",
+        },
+      };
+      axios
+        .request(options)
+        .then(function (response) {
+          toast.success(t("Successfully registered !"));
+          router.push("/page/account/login");
+        })
+        .catch(function (error) {
+          console.log("error", error)
+          toast.error(t("Unable to register, please try again later !"));
+        });
+    }
   }
 
   return (
