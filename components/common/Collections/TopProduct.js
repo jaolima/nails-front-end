@@ -77,7 +77,7 @@ const TopProduct = (props) => {
     var axios = require("axios").default;
     var options = {
       method: "GET",
-      url: api.BASE_URL + "products",
+      url: api.BASE_URL + "topproducts",
       headers: {
         "content-type": "application/json",
       },

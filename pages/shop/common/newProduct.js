@@ -1,32 +1,64 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 import { Media } from "reactstrap";
 import Slider from "react-slick";
 import { CurrencyContext } from "../../../helpers/Currency/CurrencyContext";
 import { useTranslation } from "react-i18next";
-const GET_PRODUCTS = gql`
-  query newProducts($type: String!) {
-    newProducts(type: $type) {
-      title
-      price
-      images {
-        alt
-        src
-      }
-    }
-  }
-`;
+import api from "../../../config";
+
+
+// const GET_PRODUCTS = gql`
+//   query newProducts($type: String!) {
+//     newProducts(type: $type) {
+//       title
+//       price
+//       images {
+//         alt
+//         src
+//       }
+//     }
+//   }
+// `;
 
 const NewProduct = () => {
-          const { t } = useTranslation();
+
+  const { t } = useTranslation();
   const CurContect = useContext(CurrencyContext);
   const symbol = CurContect.state.symbol;
-  var { loading, data } = useQuery(GET_PRODUCTS, {
-    variables: {
-      type: "fashion",
-    },
-  });
+  // var { loading, data } = useQuery(GET_PRODUCTS, {
+  //   variables: {
+  //     type: "fashion",
+  //   },
+  // });
+
+  const [dataProduct, setDataProduct] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    var axios = require("axios").default;
+    var options = {
+      method: "GET",
+      url: api.BASE_URL + "topproducts",
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+    axios
+      .request(options)
+      .then(function (response) {
+        setDataProduct(response.data);
+      })
+      .catch(function (error) {
+        console.log("error", error);
+      });
+
+
+    setLoading(false);
+  }, []);
+
 
   return (
     // <!-- side-bar single product slider start -->
@@ -34,21 +66,20 @@ const NewProduct = () => {
       <h5 className="title-border">{t('new product')}</h5>
       <Slider className="offer-slider slide-1">
         <div>
-          {!data ||
-          !data.newProducts ||
-          data.newProducts.length === 0 ||
-          loading ? (
+          {!dataProduct ||
+            dataProduct.length === 0 ||
+            loading ? (
             "loading"
           ) : (
             <>
-              {data &&
-                data.newProducts.slice(0, 3).map((product, index) => (
+              {dataProduct &&
+                dataProduct.slice(0, 3).map((product, index) => (
                   <div className="media" key={index}>
                     <a href="">
                       <Media
                         className="img-fluid blur-up lazyload"
-                        src={product.images[0].src}
-                        alt={product.images[0].alt}
+                        src={product.uri_image}
+                        alt={product.name}
                       />
                     </a>
                     <div className="media-body align-self-center">
@@ -60,7 +91,7 @@ const NewProduct = () => {
                         <i className="fa fa-star"></i>
                       </div>
                       <a href={null}>
-                        <h6>{product.title}</h6>
+                        <h6>{product.name}</h6>
                       </a>
                       <h4>
                         {symbol}
@@ -73,21 +104,20 @@ const NewProduct = () => {
           )}
         </div>
         <div>
-          {!data ||
-          !data.newProducts ||
-          data.newProducts.length === 0 ||
-          loading ? (
+          {!dataProduct ||
+            dataProduct.length === 0 ||
+            loading ? (
             "loading"
           ) : (
             <>
-              {data &&
-                data.newProducts.slice(4, 7).map((product, index) => (
+              {dataProduct &&
+                dataProduct.slice(4, 7).map((product, index) => (
                   <div className="media" key={index}>
                     <a href="">
                       <Media
                         className="img-fluid blur-up lazyload"
-                        src={product.images[0].src}
-                        alt={product.images[0].alt}
+                        src={product.uri_image}
+                        alt={product.name}
                       />
                     </a>
                     <div className="media-body align-self-center">
@@ -99,7 +129,7 @@ const NewProduct = () => {
                         <i className="fa fa-star"></i>
                       </div>
                       <a href={null}>
-                        <h6>{product.title}</h6>
+                        <h6>{product.name}</h6>
                       </a>
                       <h4>
                         {symbol}
@@ -109,7 +139,7 @@ const NewProduct = () => {
                   </div>
                 ))}
             </>
-          )}
+          )} 
         </div>
       </Slider>
     </div>

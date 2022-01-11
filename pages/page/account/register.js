@@ -74,8 +74,6 @@ const Register = () => {
       dataForm.password
     );
 
-    console.log("respValidation ", respValidation);
-
     if (respValidation) {
       var axios = require("axios").default;
       var options = {
