@@ -61,9 +61,6 @@ const Login = () => {
             dataForm.password
         );
 
-        console.log("respValidation ", respValidation)
-        console.log("dataForm ", dataForm)
-
         if (respValidation) {
             var axios = require("axios").default;
             var options = {
@@ -81,9 +78,11 @@ const Login = () => {
                 .request(options)
                 .then(function (response) {
                     // setDataProduct(response.data);
+                    toast.success(t("Access successful"));
                     console.log("response", response);
                 })
                 .catch(function (error) {
+                    toast.error(t("Erro. Could not login"));
                     console.log("error", error);
                 });
         }
