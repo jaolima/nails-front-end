@@ -33,6 +33,7 @@ const ProductItem = ({
   const toggle = () => setModal(!modal);
   const uniqueTags = [];
 
+  console.log("product ", product)
   const onClickHandle = (img) => {
     setImage(img);
   };
@@ -108,9 +109,8 @@ const ProductItem = ({
           <ul className="product-thumb-list">
             {/* {product?.uri_image.map((img, i) => ( */}
             <li
-              className={`grid_thumb_img  ${
-                product?.uri_image === image ? image : product?.uri_image
-              }active`}
+              className={`grid_thumb_img  ${product?.uri_image === image ? image : product?.uri_image
+                }active`}
             >
               <a href={null} title="Add to Wishlist">
                 <Media
@@ -148,7 +148,7 @@ const ProductItem = ({
                   src={`${
                     // product.variants && image ? image : product.images[0].src
                     product?.uri_image
-                  }`}
+                    }`}
                   alt=""
                   className="img-fluid"
                 />
@@ -160,6 +160,7 @@ const ProductItem = ({
                 <h3>
                   {currency.symbol}
                   {(product.price * currency.value).toFixed(2)}
+                  {/* {product.discount && ((product.price - (product.price * product.discount) / 100) * currency.value).toFixed(2)} */}
                 </h3>
                 {/* {product.color ? (
                   <ul className="color-variant">
