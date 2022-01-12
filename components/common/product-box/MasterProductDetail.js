@@ -21,18 +21,21 @@ const MasterProductDetail = ({
         <div className="rating">{RatingStars}</div>
         <h6>{product.name}</h6>
         <h4>
-          {/* {currency.symbol} */}
-           CHF {product.price}
+          {currency.symbol}
+          {product.price}
           {/* {(
             (product.price - (product.price * product.discount) / 100) *
             currency.value
           ).toFixed(2)} */}
-          {/* <del>
-            <span className="money">
-              {currency.symbol}
-              {(product.price * currency.value).toFixed(2)}
-            </span>
-          </del> */}
+          {product.discount && (
+            <del>
+              <span className="money ml-1">
+                {currency.symbol}
+                {((product.price - (product.price * product.discount) / 100) * currency.value).toFixed(2)}
+                {/* {(product.price * currency.value).toFixed(2)} */}
+              </span>
+            </del>
+          )}
         </h4>
         {/* {product.variants.map((vari) => {
           var findItem = uniqueTags.find((x) => x.color === vari.color);

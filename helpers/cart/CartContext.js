@@ -36,21 +36,21 @@ const CartProvider = (props) => {
     toast.success(t("Product Added Successfully !"));
     const index = cartItems.findIndex((itm) => itm.id === item.id);
 
-  //   if (index !== -1) {
-  //     cartItems[index] = {
-  //       ...item,
-  //       qty: quantity,
-  //       total: (item.price - (item.price * item?.discount) / 100) * quantity,
-  //     };
-  //     setCartItems([...cartItems]);
-  //   } else {
-  //     const product = {
-  //       ...item,
-  //       qty: quantity,
-  //       total: item.price - (item.price * item?.discount) / 100,
-  //     };
-  //     setCartItems([...cartItems, product]);
-  //   }
+    if (index !== -1) {
+      cartItems[index] = {
+        ...item,
+        qty: quantity,
+        total: (item.price - (item.price * item?.discount) / 100) * quantity,
+      };
+      setCartItems([...cartItems]);
+    } else {
+      const product = {
+        ...item,
+        qty: quantity,
+        total: item.price - (item.price * item?.discount) / 100,
+      };
+      setCartItems([...cartItems, product]);
+    }
   };
 
   const removeFromCart = (item) => {

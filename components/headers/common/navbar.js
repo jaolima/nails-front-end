@@ -149,7 +149,7 @@ const NavBar = () => {
                 >
                   {menuItem.type === "link" ? (
                     <Link href={`${menuItem.path}`}>
-                      <a className="nav-link" onClick={(e) => openMblNav(e)}>
+                      <a className="nav-link" >
                         {" "}
                         {t(menuItem.title)}
                         {menuItem.arrow == false ? '' : <span className="sub-arrow"></span>}
