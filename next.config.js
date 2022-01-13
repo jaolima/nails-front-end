@@ -4,6 +4,7 @@ const { withPlugins } = require("next-compose-plugins");
 const nextConfig = {
   env: {
     API_URL: "https://multikart-graphql-dun.vercel.app/server.js",
+    REACT_APP_STAGE: "http://65.21.146.141:3333/",
   },
 
   // if you want to run with local graphQl un-comment below one and comment the above code
