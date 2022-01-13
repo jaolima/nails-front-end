@@ -26,7 +26,7 @@ const CartHeader = ({ item, symbol }) => {
               <span>
                 {item.qty} x {symbol}{" "}
                 {/* {(item.price - (item.price * item?.discount) / 100).toFixed(2)} */}
-                {(item.price).toFixed(2)}
+                {(parseInt(item.price)).toFixed(2)}
               </span>
             </h4>
           </div>
