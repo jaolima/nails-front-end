@@ -28,14 +28,14 @@ const TopBarDark = ({ topClass, fluid, direction }) => {
     <div className={topClass}>
       <Container fluid={fluid}>
         <Row>
-          <Col lg="6">
+          <Col lg="3">
             <div className="header-contact">
               <ul>
                 <li>{t("Beauty is in your hands")}</li>
               </ul>
             </div>
           </Col>
-          <Col lg="6" className="text-right">
+          <Col lg="9" className="text-right">
             <ul className="header-dropdown">
               <li className="mobile-wishlist">
                 <Link href="/page/account/wishlist">
@@ -64,7 +64,7 @@ const TopBarDark = ({ topClass, fluid, direction }) => {
                   </li>
                 </ul>
               </li>
-              <li className="onhover-dropdown mobile-account">
+              {/* <li className="onhover-dropdown mobile-account">
                 <i className="fa fa-language" aria-hidden="true"></i>{" "}
                 {t("language")}
                 <ul className="onhover-show-div">
@@ -81,7 +81,7 @@ const TopBarDark = ({ topClass, fluid, direction }) => {
                     </li>
                   ))}
                 </ul>
-              </li>
+              </li> */}
             </ul>
           </Col>
         </Row>

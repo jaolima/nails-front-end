@@ -60,7 +60,6 @@ const TopProduct = (props) => {
     ],
   };
 
-
   useEffect(() => {
     setLoading(true);
 

@@ -6,7 +6,7 @@ const prod = {
   BASE_URL: process.env.REACT_APP_STAGE
 }
 
-const config = process.env.REACT_APP_STAGE === "development" ? dev : prod;
+const config = process.env.REACT_APP_STAGE !== "development" ? dev : prod;
 // const config = dev;
 
 export default {

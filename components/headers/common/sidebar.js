@@ -1,8 +1,13 @@
 import React, { Fragment } from "react";
 import { Row, Col, Media } from "reactstrap";
 import fashion from "../../../public/assets/images/mega-menu/fashion.jpg";
+import { MENUITEMS } from "../../constant/menu";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const SideBar = () => {
+  const { t } = useTranslation();
+
   const closeNav = () => {
     var closemyslide = document.getElementById("mySidenav");
     if (closemyslide) closemyslide.classList.remove("open-side");
@@ -71,6 +76,8 @@ const SideBar = () => {
     }
   };
 
+  console.log("MENUITEMS ", MENUITEMS)
+
   return (
     <Fragment>
       <div id="mySidenav" className="sidenav">
@@ -81,276 +88,105 @@ const SideBar = () => {
               <i className="fa fa-angle-left pr-2" aria-hidden="true"></i> Back
             </div>
           </a>
-          <ul id="sub-menu" className="sidebar-menu">
-            <li>
-              <a href="#" onClick={(e) => handleMegaSubmenu(e)}>
-                clothing
-                <span className="sub-arrow"></span>
-              </a>
-              <ul className="mega-menu clothing-menu">
-                <li>
-                  <Row m="0">
-                    <Col xl="4">
-                      <div className="link-section">
-                        <h5>women's fashion</h5>
-                        <ul>
-                          <li>
-                            <a href="#">dresses</a>
-                          </li>
-                          <li>
-                            <a href="#">skirts</a>
-                          </li>
-                          <li>
-                            <a href="#">westarn wear</a>
-                          </li>
-                          <li>
-                            <a href="#">ethic wear</a>
-                          </li>
-                          <li>
-                            <a href="#">sport wear</a>
-                          </li>
-                        </ul>
-                        <h5>men's fashion</h5>
-                        <ul>
-                          <li>
-                            <a href="#">sports wear</a>
-                          </li>
-                          <li>
-                            <a href="#">western wear</a>
-                          </li>
-                          <li>
-                            <a href="#">ethic wear</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </Col>
-                    <Col xl="4">
-                      <div className="link-section">
-                        <h5>accessories</h5>
-                        <ul>
-                          <li>
-                            <a href="#">fashion jewellery</a>
-                          </li>
-                          <li>
-                            <a href="#">caps and hats</a>
-                          </li>
-                          <li>
-                            <a href="#">precious jewellery</a>
-                          </li>
-                          <li>
-                            <a href="#">necklaces</a>
-                          </li>
-                          <li>
-                            <a href="#">earrings</a>
-                          </li>
-                          <li>
-                            <a href="#">wrist wear</a>
-                          </li>
-                          <li>
-                            <a href="#">ties</a>
-                          </li>
-                          <li>
-                            <a href="#">cufflinks</a>
-                          </li>
-                          <li>
-                            <a href="#">pockets squares</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </Col>
-                    <Col xl="4">
-                      <a href="#" className="mega-menu-banner">
-                        <Media src={fashion} alt="" className="img-fluid" />
+
+          {MENUITEMS && MENUITEMS.map((menuItem, i) => {
+            return (
+              <ul id="sub-menu" className="sidebar-menu">
+                <li key={i}>
+                  {menuItem.type === "link" ? (
+                    <Link href={`${menuItem.path}`}>
+                      <a className="nav-link" >
+                        {" "}
+                        {t(menuItem.title)}
+                        {menuItem.arrow == false ? '' : <span className="sub-arrow"></span>}
                       </a>
-                    </Col>
-                  </Row>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" onClick={(e) => handleSubmenu(e)}>
-                bags
-                <span className="sub-arrow"></span>
-              </a>
-              <ul>
-                <li>
-                  <a href="#">shopper bags</a>
-                </li>
-                <li>
-                  <a href="#">laptop bags</a>
-                </li>
-                <li>
-                  <a href="#">clutches</a>
-                </li>
-                <li>
-                  <a href="#" onClick={(e) => handleSubTwoMenu(e)}>
-                    purses
-                    <span className="sub-arrow"></span>
-                  </a>
-                  <ul>
+                    </Link>
+                  ) : (
+                    <a href="#" onClick={(e) => handleSubmenu(e)}>
+                      {menuItem.title}
+                      <span className="sub-arrow"></span>
+                    </a>
+                  )}
+
+                  {(menuItem.children && !menuItem.megaMenu) && (
+                    <ul>
+                      {menuItem.children && menuItem.children.map((childrenItem, index) => {
+                        return (
+                          <li key={index}>
+                            {childrenItem.type === "sub" ? (
+                              <a href="#" onClick={(e) => handleSubTwoMenu(e)}>
+                                {childrenItem.title}
+                                <span className="sub-arrow"></span>
+                              </a>
+                            ) : (
+                              ""
+                            )}
+
+                            {childrenItem.type === "link" ? (
+                              <Link href={`${childrenItem.path}`}>
+                                <a>
+                                  {childrenItem.title}
+                                </a>
+                              </Link>
+                            ) : (
+                              ""
+                            )}
+                            {childrenItem.children ? (
+                              <ul>
+
+                                {childrenItem.children.map((childrenSubItem, key) => (
+                                  <li key={key}>
+                                    {childrenSubItem.type === "link" ? (
+                                      <Link href={childrenSubItem.path}>
+                                        {childrenSubItem.title}
+                                      </Link>
+                                    ) : (
+                                      ""
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            ) : (
+                              ""
+                            )}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+
+                  {/* 
                     <li>
-                      <a href="#">purses</a>
+                      <a href="#">laptop bags</a>
                     </li>
                     <li>
-                      <a href="#">wallets</a>
+                      <a href="#">clutches</a>
                     </li>
                     <li>
-                      <a href="#">leathers</a>
-                    </li>
-                    <li>
-                      <a href="#">satchels</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#" onClick={(e) => handleSubmenu(e)}>
-                footwear
-                <span className="sub-arrow"></span>
-              </a>
-              <ul>
-                <li>
-                  <a href="#">sport shoes</a>
-                </li>
-                <li>
-                  <a href="#">formal shoes</a>
-                </li>
-                <li>
-                  <a href="#">casual shoes</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">watches</a>
-            </li>
-            <li>
-              <a href="#" onClick={(e) => handleSubmenu(e)}>
-                Accessories
-                <span className="sub-arrow"></span>
-              </a>
-              <ul>
-                <li>
-                  <a href="#">fashion jewellery</a>
-                </li>
-                <li>
-                  <a href="#">caps and hats</a>
-                </li>
-                <li>
-                  <a href="#">precious jewellery</a>
-                </li>
-                <li>
-                  <a href="#" onClick={(e) => handleSubTwoMenu(e)}>
-                    more..
-                    <span className="sub-arrow"></span>
-                  </a>
-                  <ul>
-                    <li>
-                      <a href="#">necklaces</a>
-                    </li>
-                    <li>
-                      <a href="#">earrings</a>
-                    </li>
-                    <li>
-                      <a href="#">wrist wear</a>
-                    </li>
-                    <li>
-                      <a href="#" onClick={(e) => handleSubThreeMenu(e)}>
-                        accessories
+                      <a href="#" onClick={(e) => handleSubTwoMenu(e)}>
+                        purses
                         <span className="sub-arrow"></span>
                       </a>
                       <ul>
                         <li>
-                          <a href="#">ties</a>
+                          <a href="#">purses</a>
                         </li>
                         <li>
-                          <a href="#">cufflinks</a>
+                          <a href="#">wallets</a>
                         </li>
                         <li>
-                          <a href="#">pockets squares</a>
+                          <a href="#">leathers</a>
                         </li>
                         <li>
-                          <a href="#">helmets</a>
-                        </li>
-                        <li>
-                          <a href="#">scarves</a>
-                        </li>
-                        <li>
-                          <a href="#" onClick={(e) => handleSubFourMenu(e)}>
-                            more...
-                            <span className="sub-arrow"></span>
-                          </a>
-                          <ul>
-                            <li>
-                              <a href="#">accessory gift sets</a>
-                            </li>
-                            <li>
-                              <a href="#">travel accessories</a>
-                            </li>
-                            <li>
-                              <a href="#">phone cases</a>
-                            </li>
-                          </ul>
+                          <a href="#">satchels</a>
                         </li>
                       </ul>
-                    </li>
-                    <li>
-                      <a href="#">belts & more</a>
-                    </li>
-                    <li>
-                      <a href="#">wearable</a>
-                    </li>
-                  </ul>
+                    </li> */}
                 </li>
               </ul>
-            </li>
-            <li>
-              <a href="#">house of design</a>
-            </li>
-            <li>
-              <a href="#" onClick={(e) => handleSubmenu(e)}>
-                beauty & personal care
-                <span className="sub-arrow"></span>
-              </a>
-              <ul>
-                <li>
-                  <a href="#">makeup</a>
-                </li>
-                <li>
-                  <a href="#">skincare</a>
-                </li>
-                <li>
-                  <a href="#">premium beaty</a>
-                </li>
-                <li>
-                  <a href="#" onClick={(e) => handleSubTwoMenu(e)}>
-                    more
-                    <span className="sub-arrow"></span>
-                  </a>
-                  <ul>
-                    <li>
-                      <a href="#">fragrances</a>
-                    </li>
-                    <li>
-                      <a href="#">luxury beauty</a>
-                    </li>
-                    <li>
-                      <a href="#">hair care</a>
-                    </li>
-                    <li>
-                      <a href="#">tools & brushes</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">home & decor</a>
-            </li>
-            <li>
-              <a href="#">kitchen</a>
-            </li>
-          </ul>
+            );
+          })}
+
         </nav>
       </div>
     </Fragment>
