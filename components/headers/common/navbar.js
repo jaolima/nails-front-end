@@ -131,9 +131,9 @@ const NavBar = () => {
     <div>
       <div className="main-navbar">
         <div id="mainnav">
-          <div className="toggle-nav" onClick={openNav.bind(this)}>
+          {/* <div className="toggle-nav" onClick={openNav.bind(this)}>
             <i className="fa fa-bars sidebar-bar"></i>
-          </div>
+          </div> */}
           <ul className="nav-menu" >
             <li className="back-btn" onClick={closeNav.bind(this)}>
               <div className="mobile-back text-right">
@@ -206,8 +206,7 @@ const NavBar = () => {
                                 className={`nav-sub-childmenu ${childrenItem.active ? "menu-open " : "active"
                                   }`}
                               >
-                                {childrenItem.children.map(
-                                  (childrenSubItem, key) => (
+                                {childrenItem.children.map((childrenSubItem, key) => (
                                     <li key={key}>
                                       {childrenSubItem.type === "link" ? (
                                         <Link href={childrenSubItem.path}>

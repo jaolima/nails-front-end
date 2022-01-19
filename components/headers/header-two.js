@@ -12,6 +12,7 @@ import language from "../../public/assets/images/icon/language_translator.png";
 import Currency from "./common/currency";
 import SearchOverlay from "./common/search-overlay";
 import { useTranslation } from "react-i18next";
+import langConfig from "../constant/langConfig.json";
 
 const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
   useEffect(() => {
@@ -20,12 +21,12 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
     }, 2000);
   }, []);
 
-  // const openNav = () => {
-  //   var openmyslide = document.getElementById("mySidenav");
-  //   if (openmyslide) {
-  //     openmyslide.classList.add("open-side");
-  //   }
-  // };
+  const openNav = () => {
+    var openmyslide = document.getElementById("mySidenav");
+    if (openmyslide) {
+      openmyslide.classList.add("open-side");
+    }
+  };
   const openSearch = () => {
     document.getElementById("search-overlay").style.display = "block";
   };
@@ -43,7 +44,7 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
               <div className="main-menu border-section border-top-0">
                 <div className="menu-left">
                   <div className="navbar">
-                    {/* <a href={null} onClick={openNav}>
+                    <a href={null} onClick={openNav}>
                       <div className="bar-style">
                         {" "}
                         <i
@@ -51,9 +52,9 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
                           aria-hidden="true"
                         ></i>
                       </div>
-                    </a> */}
+                    </a>
                     {/*SideBar Navigation Component*/}
-                    {/* <SideBar /> */}
+                    <SideBar />
                   </div>
                 </div>
                 <div className="brand-logo layout2-logo">
@@ -87,6 +88,24 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
                         ) : (
                           <Cart icon={cart} layout={direction} />
                         )}
+                        <li className="onhover-dropdown mobile-account">
+                          <i className="fa fa-language" aria-hidden="true"></i>{" "}
+                          {t("language")}
+                          <ul className="onhover-show-div">
+                            {langConfig.map((item, i) => (
+                              <li key={i}>
+                                <a
+                                  href={null}
+                                  onClick={() => {
+                                    changeLanguage(item.val);
+                                  }}
+                                >
+                                  {item.lang}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
                       </ul>
                     </div>
                   </div>

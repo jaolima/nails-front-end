@@ -267,6 +267,15 @@ body {
   }
 }
 
+@media (max-width: 1199px) {
+  .main-menu {
+    .menu-left {
+      .navbar {
+        display: inline-block;
+      }
+    }
+  }
+}
 @media (max-width: 1430px) and (min-width: 1368px) {
   .banner-timer {
     .timer {
@@ -710,7 +719,7 @@ body {
         .nav-menu {
           > li {
             > a {
-                color: #222222;
+              color: #222222;
             }
             &:hover {
               > a {
@@ -734,7 +743,7 @@ body {
                       content: "+";
                     }
                   }
-                } 
+                }
               }
             }
           }
@@ -748,7 +757,9 @@ body {
             li {
               a {
                 padding: 5px 35px;
-                &:active, &:focus, &.highlighted {
+                &:active,
+                &:focus,
+                &.highlighted {
                   padding: 5px 35px;
                 }
               }
@@ -1429,7 +1440,7 @@ body {
       }
     }
   }
-  .four-slider-skeleton  {
+  .four-slider-skeleton {
     > div {
       &:last-child {
         display: none;
@@ -2401,7 +2412,7 @@ body {
       }
     }
   }
-  .four-slider-skeleton  {
+  .four-slider-skeleton {
     > div {
       &:nth-last-child(2) {
         display: none;
