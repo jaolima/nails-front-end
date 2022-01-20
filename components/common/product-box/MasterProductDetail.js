@@ -22,17 +22,12 @@ const MasterProductDetail = ({
         <h6>{product.name}</h6>
         <h4>
           {currency.symbol}
-          {product.price}
-          {/* {(
-            (product.price - (product.price * product.discount) / 100) *
-            currency.value
-          ).toFixed(2)} */}
+          {((product.price - (product.price * product.discount) / 100) * currency.value).toFixed(2)}
           {product.discount && (
             <del>
               <span className="money ml-1">
                 {currency.symbol}
-                {((product.price - (product.price * product.discount) / 100) * currency.value).toFixed(2)}
-                {/* {(product.price * currency.value).toFixed(2)} */}
+                {product.price}
               </span>
             </del>
           )}

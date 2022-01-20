@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import cart from "../../public/assets/images/icon/cart.png";
+// import cart from "../../public/assets/images/icon/language.png";
 import NavBar from "./common/navbar";
 import SideBar from "./common/sidebar";
 import Cart from "../containers/Cart";
@@ -13,6 +14,8 @@ import Currency from "./common/currency";
 import SearchOverlay from "./common/search-overlay";
 import { useTranslation } from "react-i18next";
 import langConfig from "../constant/langConfig.json";
+import Link from "next/link";
+import i18next from "../constant/i18n";
 
 const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
   useEffect(() => {
@@ -30,7 +33,13 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
   const openSearch = () => {
     document.getElementById("search-overlay").style.display = "block";
   };
+
   const { t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18next.changeLanguage(lng);
+  };
+
   return (
     <div>
       <header id="sticky" className={`${headerClass}`}>
@@ -81,33 +90,45 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
                 </div>
                 <div className="menu-right pull-right">
                   <div>
-                    <div className="icon-nav">
-                      <ul>
-                        {direction === undefined ? (
-                          <CartContainer icon={cart} />
-                        ) : (
-                          <Cart icon={cart} layout={direction} />
-                        )}
-                        <li className="onhover-dropdown mobile-account">
-                          <i className="fa fa-language" aria-hidden="true"></i>{" "}
-                          {t("language")}
-                          <ul className="onhover-show-div">
-                            {langConfig.map((item, i) => (
-                              <li key={i}>
-                                <a
-                                  href={null}
-                                  onClick={() => {
-                                    changeLanguage(item.val);
-                                  }}
-                                >
-                                  {item.lang}
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
-                        </li>
-                      </ul>
-                    </div>
+                    <Row>
+                      <Col lg="12" className="text-right">
+                        <ul className="header-dropdown">
+                          <li className="mobile-wishlist">
+                            <div className="icon-nav">
+                              <ul>
+                                {direction === undefined ? (
+                                  <CartContainer icon={cart} />
+                                ) : (
+                                  <Cart icon={cart} layout={direction} />
+                                )}
+
+                                <li className="onhover-dropdown mobile-account">
+                                  <div>
+                                    <Media src={language} className="img-fluid" alt="" />
+                                  </div>
+                                  <ul className="onhover-show-div">
+                                    {langConfig.map((item, i) => (
+                                      <li key={i}>
+                                        <a
+                                          href={null}
+                                          onClick={() => {
+                                            changeLanguage(item.val);
+                                          }}
+                                        >
+                                          {item.lang}
+                                        </a>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </li>
+
+
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </Col>
+                    </Row>
                   </div>
                 </div>
               </div>

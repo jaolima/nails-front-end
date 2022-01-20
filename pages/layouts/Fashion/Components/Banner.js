@@ -7,13 +7,13 @@ const Data = [
     img: "home4",
     title: "From us for you ♡",
     desc: "Festive holidays with our Shellac colors",
-    link: "/left-sidebar/collection ",
+    link: "/product/sale ",
   },
   {
     img: "home3",
     title: "Christmas Sale!",
     desc: "Now from CHF 50.- 10% off EVERYTHING and from CHF 0.- a free gift! - Code-> merrynails",
-    link: "/left-sidebar/collection ",
+    link: "/product/sale ",
   },
 
 ];

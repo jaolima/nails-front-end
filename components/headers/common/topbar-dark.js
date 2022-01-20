@@ -64,24 +64,6 @@ const TopBarDark = ({ topClass, fluid, direction }) => {
                   </li>
                 </ul>
               </li>
-              {/* <li className="onhover-dropdown mobile-account">
-                <i className="fa fa-language" aria-hidden="true"></i>{" "}
-                {t("language")}
-                <ul className="onhover-show-div">
-                  {langConfig.map((item, i) => (
-                    <li key={i}>
-                      <a
-                        href={null}
-                        onClick={() => {
-                          changeLanguage(item.val);
-                        }}
-                      >
-                        {item.lang}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </li> */}
             </ul>
           </Col>
         </Row>
