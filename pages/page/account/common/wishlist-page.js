@@ -66,10 +66,10 @@ const WishlistPage = () => {
                                                     <p>{(item.qtd > 0) ? t('In Stock') : t('out of Stock')}</p>
                                                 </td>
                                                 <td>
-                                                    <a href={null} className="icon" onClick={() => removeFromWish(item)}>
+                                                    <a href={null} className="icon res-ico" onClick={() => removeFromWish(item)}>
                                                         <i className="fa fa-times"></i>
                                                     </a>
-                                                    <a href={null} className="cart" onClick={() => addCart(item)} >
+                                                    <a href={null} className="cart res-ico" onClick={() => addCart(item)} >
                                                         <i className="fa fa-shopping-cart"></i>
                                                     </a>
                                                 </td>
