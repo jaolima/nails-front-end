@@ -1704,7 +1704,7 @@ i18next
                     //SERVICE
                     'Express Shipping': 'Encomenda expressa',
                     'from Mon-Fri': 'de seg-sex',
-                    'Cheapest in': 'mais alto em',
+                    'Cheapest in': 'mais barato em',
                     'Switzerland Prices': 'Preços da Suíça',
                     'Absolutely safe': 'Absolutamente seguro',
                     'Payment Methods': 'Métodos de Pagamento',
