@@ -69,25 +69,7 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
                 <div className="brand-logo layout2-logo">
                   <LogoImage logo={logoName} />
                 </div>
-                <div>
-                  <form className="form_search" role="textbox">
-                    {/* eslint-disable-next-line */}
-                    <Input
-                      id="query search-autocomplete"
-                      type="search"
-                      placeholder={t('Find your product here...')}
-                      className="nav-search nav-search-field"
-                      aria-expanded="true"
-                    />
-                    <button
-                      type="submit"
-                      name="nav-submit-button"
-                      className="btn-search"
-                    >
-                      <i className="fa fa-search"></i>
-                    </button>
-                  </form>
-                </div>
+              
                 <div className="menu-right pull-right">
                   <div>
                     <Row>

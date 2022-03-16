@@ -179,7 +179,7 @@ button {
 }
 
 .coral {
-  background-color: #FF7F50;
+  background-color: #ff7f50;
 }
 
 .bisque {
@@ -191,7 +191,7 @@ button {
 }
 
 .chocolate {
-  background-color: #7B3F00;
+  background-color: #7b3f00;
 }
 
 .saddlebrown {
@@ -207,7 +207,7 @@ button {
 }
 
 .lawngreen {
-  background-color: #7CFC00;
+  background-color: #7cfc00;
 }
 
 .crimson {
@@ -219,11 +219,11 @@ button {
 }
 
 .beige {
-  background-color: #F5F5DC;
+  background-color: #f5f5dc;
 }
 
 .lightpink {
-  background-color: #FFB6C1;
+  background-color: #ffb6c1;
 }
 
 .cadetblue {
@@ -243,11 +243,11 @@ button {
 }
 
 .purple {
-  background-color:  #800080;
+  background-color: #800080;
 }
 
 .darkturquoise {
-  background-color:  #00ced1;
+  background-color: #00ced1;
 }
 
 .red {
@@ -308,7 +308,6 @@ hr.style1 {
 }
 
 .no-arrow {
-
   .slick-next,
   .slick-prev {
     display: none !important;
@@ -667,8 +666,16 @@ button {
   color: $white !important;
   letter-spacing: 0.05em;
   border: 2px solid var(--theme-deafult);
-  background-image: -webkit-linear-gradient(30deg, var(--theme-deafult) 50%, transparent 50%);
-  background-image: linear-gradient(30deg, var(--theme-deafult) 50%, transparent 50%);
+  background-image: -webkit-linear-gradient(
+    30deg,
+    var(--theme-deafult) 50%,
+    transparent 50%
+  );
+  background-image: linear-gradient(
+    30deg,
+    var(--theme-deafult) 50%,
+    transparent 50%
+  );
   background-size: 540px;
   background-repeat: no-repeat;
   background-position: 0;
@@ -682,7 +689,11 @@ button {
   }
 
   &.black-btn {
-    background-image: -webkit-linear-gradient(30deg, $dark-font 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(
+      30deg,
+      $dark-font 50%,
+      transparent 50%
+    );
     background-image: linear-gradient(30deg, $dark-font 50%, transparent 50%);
     border: 2px solid $dark-font;
   }
@@ -693,20 +704,32 @@ button {
 
   &.btn-gradient {
     background: var(--theme-deafult);
-    background: linear-gradient(180deg, var(--gradient1) 0%, var(--gradient2) 99%);
+    background: linear-gradient(
+      180deg,
+      var(--gradient1) 0%,
+      var(--gradient2) 99%
+    );
     transition: background 300ms ease-in-out;
     background-size: 300% 100%;
     border: none;
 
     &:hover {
-      background: linear-gradient(-180deg, var(--gradient2) 0%, var(--gradient1) 99%);
+      background: linear-gradient(
+        -180deg,
+        var(--gradient2) 0%,
+        var(--gradient1) 99%
+      );
       transition: background 300ms ease-in-out;
       color: white;
     }
   }
 
   &.btn-green {
-    background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    background-image: linear-gradient(
+      to right,
+      var(--gradient1),
+      var(--gradient2)
+    );
     border: none;
     background-color: var(--theme-deafult);
 
@@ -774,12 +797,19 @@ button {
 
 button {
   &.btn {
-
     &.btn-solid,
     &.btn-outline {
       &:active {
-        background-image: -webkit-linear-gradient(30deg, var(--theme-deafult) 50%, transparent 50%);
-        background-image: linear-gradient(30deg, var(--theme-deafult) 50%, transparent 50%);
+        background-image: -webkit-linear-gradient(
+          30deg,
+          var(--theme-deafult) 50%,
+          transparent 50%
+        );
+        background-image: linear-gradient(
+          30deg,
+          var(--theme-deafult) 50%,
+          transparent 50%
+        );
         color: $white;
         background: var(--theme-deafult);
       }
@@ -858,7 +888,12 @@ button {
     hr[role="tournament6"] {
       border: 0px solid;
       height: 1px;
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--theme-deafult), rgba(0, 0, 0, 0));
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        var(--theme-deafult),
+        rgba(0, 0, 0, 0)
+      );
       display: block;
       width: 25%;
       margin: 15px auto 30px auto;
@@ -998,7 +1033,6 @@ button {
     }
 
     span {
-
       &:after,
       &:before {
         position: absolute;
@@ -1134,8 +1168,8 @@ header {
     }
 
     .pixelstrap {
-      >li {
-        >a {
+      > li {
+        > a {
           padding-top: 20px;
           padding-bottom: 20px;
           color: $white;
@@ -1162,7 +1196,7 @@ header {
       padding-top: 20px;
       padding-bottom: 20px;
 
-      >div {
+      > div {
         img {
           filter: brightness(54);
         }
@@ -1218,7 +1252,6 @@ header {
       background: #ffffff;
       color: var(--theme-deafult);
     }
-
   }
 
   &.marketplace {
@@ -1352,7 +1385,7 @@ header {
   left: 0;
   background-color: lighten($white, 5%);
 
-  >div {
+  > div {
     height: 100%;
     width: 100%;
     display: flex;
@@ -1623,7 +1656,7 @@ header {
     .menu-left {
       &.around-border {
         .navbar {
-          >a {
+          > a {
             padding: 0;
             display: block;
           }
@@ -1643,6 +1676,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 9;
+  // margin-left: 10vh;
 
   &.product-full-page {
     z-index: 9999;
@@ -1652,6 +1686,7 @@ header {
     display: inline-block;
     padding-top: 35px;
     padding-bottom: 35px;
+    margin-left: 10vh;
   }
 
   .menu-left {
@@ -1677,7 +1712,7 @@ header {
 
     &.around-border {
       .navbar {
-        >a {
+        > a {
           // border: 2px solid lighten(var(--theme-deafult), 35%);
           padding: 11px 10px 6px;
         }
@@ -1689,7 +1724,7 @@ header {
         padding-right: 0;
         padding-left: 45px;
 
-        >a {
+        > a {
           padding: 0;
         }
 
@@ -1940,7 +1975,6 @@ header {
 ==========================*/
 .home-slider,
 .center-slider {
-
   .slick-prev,
   .slick-next {
     opacity: 0;
@@ -2107,7 +2141,6 @@ header {
   }
 
   &:hover {
-
     .slick-prev,
     .slick-next {
       opacity: 1;
@@ -2143,7 +2176,6 @@ header {
 .home-slider {
   &.text-white {
     .slider-contain {
-
       h1,
       h4 {
         color: $white;
@@ -2272,7 +2304,7 @@ header {
   }
 
   .home-banner {
-    >div {
+    > div {
       img {
         width: 100%;
       }
@@ -2385,7 +2417,6 @@ header {
   }
 
   span {
-
     &:before,
     &:after {
       background: var(--theme-deafult);
@@ -2412,7 +2443,6 @@ header {
   }
 
   &:hover {
-
     &:before,
     &:after {
       bottom: 0;
@@ -2420,7 +2450,6 @@ header {
     }
 
     span {
-
       &:before,
       &:after {
         bottom: 0;
@@ -2434,7 +2463,6 @@ header {
   text-align: center;
   padding-left: 15px;
   padding-right: 15px;
-
 
   h4 {
     color: var(--theme-deafult);
@@ -2475,7 +2503,7 @@ header {
   }
 }
 
-.error-message{
+.error-message {
   color: red;
   font-weight: 500;
 }
@@ -2518,7 +2546,7 @@ header {
     margin-bottom: 0;
   }
 
-  +.service-block {
+  + .service-block {
     border-left: 1px solid lighten($black, 86.5%);
   }
 
@@ -2669,7 +2697,6 @@ header {
     }
   }
 }
-
 
 /*=====================
     9.Category CSS start
@@ -2871,7 +2898,11 @@ header {
       }
 
       .category-btn {
-        background-image: linear-gradient(30deg, $dark-font 50%, transparent 50%);
+        background-image: linear-gradient(
+          30deg,
+          $dark-font 50%,
+          transparent 50%
+        );
         border: 2px solid $dark-font;
         transition: all 0.5s ease;
       }
@@ -2928,7 +2959,7 @@ header {
 
 .category-m {
   .slick-slide {
-    >div {
+    > div {
       margin: 0 10px;
     }
   }
@@ -2942,8 +2973,7 @@ header {
     padding-bottom: 40px;
     position: relative;
 
-    >div {
-
+    > div {
       &:after,
       &:before {
         content: "";
@@ -2995,8 +3025,7 @@ header {
         width: 100%;
       }
 
-      >div {
-
+      > div {
         &:after,
         &:before {
           transition-delay: 0.2s;
@@ -3091,7 +3120,7 @@ header {
   }
 
   .slick-slide {
-    >div {
+    > div {
       margin: 0 15px;
     }
   }
@@ -3360,7 +3389,6 @@ header {
           justify-content: center;
         }
       }
-
 
       &:hover {
         img {
@@ -3717,7 +3745,6 @@ header {
     transition: all 0.5s ease;
 
     a {
-
       [class^="icon-"],
       [class*=" icon-"] {
         display: inline-block;
@@ -4128,7 +4155,6 @@ header {
 
 .game-product {
   .theme-tab {
-
     .tab-title,
     .tab-title2 {
       .current {
@@ -4139,7 +4165,6 @@ header {
       }
     }
   }
-
 
   .product-box {
     .product-detail {
@@ -4216,7 +4241,6 @@ header {
     }
 
     .banner-contain {
-
       h3,
       h4 {
         color: $white;
@@ -4266,7 +4290,6 @@ header {
     display: block;
 
     &[style="display: block;"] {
-
       .product-box,
       .tab-box {
         animation: zoomIn 300ms ease-in-out;
@@ -4452,8 +4475,6 @@ header {
   // &.jewellery-bg0{
   //   background-image: url('/assets/images/parallax/18.jpg');
   // }
-
-
 
   @for $i from 1 through 28 {
     &.parallax-banner#{$i} {
@@ -4653,7 +4674,6 @@ header {
   }
 
   .banner-contain {
-
     .btn-solid,
     .btn-outline {
       margin-top: 20px;
@@ -4686,7 +4706,6 @@ header {
     }
 
     &.christmas-contain {
-
       .btn-solid,
       .btn-outline {
         margin-top: calc(20px + (65 - 20) * ((100vw - 320px) / (1920 - 320)));
@@ -4738,7 +4757,12 @@ header {
       animation-duration: 2s;
       animation-iteration-count: infinite;
       -webkit-transition-timing-function: cubic-bezier(0.6, 0, 0.735, 0.045);
-      -webkit-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      -webkit-transition-timing-function: cubic-bezier(
+        0.6,
+        -0.28,
+        0.735,
+        0.045
+      );
       -moz-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
       -o-transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
       transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -4900,7 +4924,6 @@ header {
       letter-spacing: 0.1em;
       margin-bottom: -6px;
     }
-
   }
 
   &.christmas-banner {
@@ -5078,7 +5101,8 @@ header {
 .center-image-width {
   .product-box {
     .img-wrapper {
-      .front, .back {
+      .front,
+      .back {
         img {
           width: 70%;
           margin: 0 auto;
@@ -5195,7 +5219,7 @@ header {
       padding: 15px 15px 15px 0;
     }
 
-    >div {
+    > div {
       .media {
         &:last-child {
           .media-body {
@@ -5334,7 +5358,7 @@ header {
           }
         }
 
-        +.product-box2 {
+        + .product-box2 {
           border-top: 1px solid $border-grey;
         }
 
@@ -5422,22 +5446,24 @@ header {
   &.modal-dialog {
     .modal-content {
       .modal-body {
-        background-image: linear-gradient(135deg,
-            var(--theme-deafult) 5.77%,
-            $white 5.77%,
-            $white 25%,
-            $grey01 25%,
-            $grey01 30.77%,
-            $white 30.77%,
-            $white 50%,
-            var(--theme-deafult) 50%,
-            var(--theme-deafult) 55.77%,
-            $white 55.77%,
-            $white 75%,
-            $grey01 75%,
-            $grey01 80.77%,
-            $white 80.77%,
-            $white 100%);
+        background-image: linear-gradient(
+          135deg,
+          var(--theme-deafult) 5.77%,
+          $white 5.77%,
+          $white 25%,
+          $grey01 25%,
+          $grey01 30.77%,
+          $white 30.77%,
+          $white 50%,
+          var(--theme-deafult) 50%,
+          var(--theme-deafult) 55.77%,
+          $white 55.77%,
+          $white 75%,
+          $grey01 75%,
+          $grey01 80.77%,
+          $white 80.77%,
+          $white 100%
+        );
         background-size: 36.77px 36.77px;
         background-color: white;
 
@@ -5484,7 +5510,7 @@ header {
               margin: 0 auto;
               text-align: center;
 
-              >div {
+              > div {
                 display: flex;
                 margin-bottom: 10px;
               }
@@ -5785,7 +5811,7 @@ header {
   &.modal-dialog {
     .modal-content {
       .modal-body {
-        padding: 1rem;    
+        padding: 1rem;
       }
     }
   }
@@ -5800,8 +5826,8 @@ header {
   padding-bottom: 25px;
 
   .lookbook-img {
-    >div {
-      +div {
+    > div {
+      + div {
         img {
           margin-top: 25px;
         }
@@ -6307,7 +6333,6 @@ header {
   }
 
   .banner-contain {
-
     h4,
     h3,
     p {
@@ -6397,7 +6422,8 @@ footer {
       }
     }
 
-    .subscribe-form {}
+    .subscribe-form {
+    }
 
     .sub-footer {
       background-color: #494949;
@@ -6416,7 +6442,7 @@ footer {
   }
 
   &.footer-christmas {
-    background-image: url('/assets/images/christmas/footer-bg.jpg');
+    background-image: url("/assets/images/christmas/footer-bg.jpg");
     background-size: cover;
     background-position: center;
     display: block;
@@ -6426,7 +6452,7 @@ footer {
         color: $white;
       }
     }
-    
+
     .light-layout {
       background: transparent;
     }
@@ -6779,7 +6805,11 @@ footer {
 
   .instagram-box {
     .overlay {
-      background: linear-gradient(-180deg, var(--gradient1) 0%, var(--gradient2) 99%);
+      background: linear-gradient(
+        -180deg,
+        var(--gradient1) 0%,
+        var(--gradient2) 99%
+      );
     }
   }
 }
@@ -6807,7 +6837,11 @@ footer {
         top: 0;
 
         i {
-          background: linear-gradient(180deg, var(--gradient1) 0%, var(--gradient2) 99%);
+          background: linear-gradient(
+            180deg,
+            var(--gradient1) 0%,
+            var(--gradient2) 99%
+          );
           color: rgba($white, 0.6);
           border-radius: 100%;
           margin: 0 5px;
@@ -6865,7 +6899,7 @@ footer {
 
   &.partition-cls {
     .row {
-      >div {
+      > div {
         &:nth-child(-n + 4) {
           margin-bottom: 30px;
         }
@@ -6892,7 +6926,6 @@ footer {
 .gym-banner {
   .collection-banner {
     .contain-banner {
-
       h4,
       h2 {
         color: $white;
@@ -6949,7 +6982,11 @@ footer {
 
 .tap-top {
   &.gradient-top {
-    background: linear-gradient(180deg,  var(--gradient1) 0%,  var(--gradient2) 99%);
+    background: linear-gradient(
+      180deg,
+      var(--gradient1) 0%,
+      var(--gradient2) 99%
+    );
   }
 }
 
@@ -7035,8 +7072,8 @@ footer {
 
   .main-navbar {
     .nav-menu {
-      >li {
-        >a {
+      > li {
+        > a {
           padding-top: 20px;
           padding-bottom: 20px;
           color: $white;
@@ -7070,7 +7107,7 @@ footer {
     padding-top: 20px;
     padding-bottom: 20px;
 
-    >div {
+    > div {
       img {
         filter: brightness(54);
       }
@@ -7119,12 +7156,20 @@ footer {
 
 .btn-gradient {
   background: var(--theme-deafult);
-  background: linear-gradient(180deg, var(--gradient1) 0%, var(--gradient2) 99%);
+  background: linear-gradient(
+    180deg,
+    var(--gradient1) 0%,
+    var(--gradient2) 99%
+  );
   transition: background 300ms ease-in-out;
   background-size: 300% 100%;
   border: none;
   &:hover {
-    background: linear-gradient(-180deg, var(--gradient2) 0%, var(--gradient1) 99%);
+    background: linear-gradient(
+      -180deg,
+      var(--gradient2) 0%,
+      var(--gradient1) 99%
+    );
     transition: background 300ms ease-in-out;
     color: white;
   }
@@ -7139,7 +7184,6 @@ footer {
     background-color: $white;
 
     .header-dropdown {
-
       .mobile-wishlist,
       .mobile-account {
         img {
@@ -7157,7 +7201,7 @@ footer {
     padding-top: 15px;
     padding-bottom: 15px;
 
-    >div {
+    > div {
       img {
         width: 20px;
         height: auto;
@@ -7182,8 +7226,8 @@ footer {
     }
 
     .pixelstrap {
-      >li {
-        >a {
+      > li {
+        > a {
           padding: 10px 0 20px 0;
 
           &:hover,
@@ -7285,7 +7329,6 @@ footer {
       }
 
       .leftside_setting {
-
         .language,
         .currency {
           display: flex;
@@ -7358,7 +7401,7 @@ footer {
 
     .menu-right {
       .header-dropdown {
-        >li {
+        > li {
           img {
             width: 20px;
             height: auto;
@@ -7368,7 +7411,7 @@ footer {
 
       .icon-nav {
         .onhover-div {
-          >img {
+          > img {
             width: 20px;
             height: auto;
           }
@@ -7479,8 +7522,8 @@ footer {
 
   .main-navbar {
     .nav-menu {
-      >li {
-        >a {
+      > li {
+        > a {
           padding-top: 25px;
           padding-bottom: 25px;
         }
@@ -7532,7 +7575,7 @@ footer {
   }
 
   .logo-menu-part {
-    >.container {
+    > .container {
       background-color: #fff;
       border-bottom: 2px solid var(--theme-deafult);
     }
@@ -7560,8 +7603,8 @@ footer {
   }
 
   .sm-horizontal {
-    >li {
-      >a {
+    > li {
+      > a {
         padding-top: 25px;
         padding-bottom: 25px;
 
@@ -7606,7 +7649,6 @@ footer {
     .home-slider {
       .home {
         .slider-contain {
-
           h4,
           h1 {
             color: $white;
@@ -7653,7 +7695,6 @@ footer {
   }
 
   .tools-grey {
-
     .slick-prev,
     .slick-next {
       transform: scale(1.5);
@@ -7978,7 +8019,6 @@ footer {
       }
 
       .contact-list {
-
         li,
         i {
           color: $grey8;
@@ -8005,7 +8045,11 @@ footer {
 .green-gradient {
   .top-header {
     background: var(--theme-deafult);
-    background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    background-image: linear-gradient(
+      to right,
+      var(--gradient1),
+      var(--gradient2)
+    );
 
     .header-contact {
       padding: 10px 0;
@@ -8039,7 +8083,11 @@ footer {
     li {
       .lable-nav {
         background: var(--theme-deafult);
-        background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+        background-image: linear-gradient(
+          to right,
+          var(--gradient1),
+          var(--gradient2)
+        );
       }
     }
   }
@@ -8145,7 +8193,6 @@ footer {
   }
 }
 
-
 .product_section {
   background-image: url("#{$assetspath}/marijuana/leaf-bg.jpg");
 }
@@ -8154,7 +8201,11 @@ footer {
   &.tools-grey {
     .ribbon {
       span {
-        background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+        background-image: linear-gradient(
+          to right,
+          var(--gradient1),
+          var(--gradient2)
+        );
       }
     }
     .product-box {
@@ -8164,17 +8215,29 @@ footer {
       .cart-info {
         a {
           &:hover {
-            background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+            background-image: linear-gradient(
+              to right,
+              var(--gradient1),
+              var(--gradient2)
+            );
           }
         }
         button {
           &:hover {
-            background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+            background-image: linear-gradient(
+              to right,
+              var(--gradient1),
+              var(--gradient2)
+            );
           }
         }
       }
       .quick-view-part {
-        background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+        background-image: linear-gradient(
+          to right,
+          var(--gradient1),
+          var(--gradient2)
+        );
       }
     }
   }
@@ -8184,7 +8247,7 @@ footer {
   .detail_section {
     text-align: center;
 
-    >div {
+    > div {
       box-shadow: -1px 2px 5px 1px #ececec;
       padding: 45px 25px;
       background-color: white;
@@ -8210,7 +8273,11 @@ footer {
 
 footer {
   &.footer-5 {
-    background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    background-image: linear-gradient(
+      to right,
+      var(--gradient1),
+      var(--gradient2)
+    );
 
     .dark-layout {
       background-color: transparent;
@@ -8219,7 +8286,7 @@ footer {
     .sub-footer {
       background-color: transparent;
 
-      >.container {
+      > .container {
         border-top: 1px solid $white;
       }
 
@@ -8253,7 +8320,11 @@ footer {
 
 .tap-top {
   &.green-top {
-    background-image: linear-gradient(to right, var(--gradient1), var(--gradient2));
+    background-image: linear-gradient(
+      to right,
+      var(--gradient1),
+      var(--gradient2)
+    );
     border: 1px solid rgba($white, 0.5);
   }
 }
@@ -8267,7 +8338,7 @@ footer {
   }
 }
 
-#toast-container>div {
+#toast-container > div {
   opacity: 1;
 }
 
@@ -8369,7 +8440,11 @@ footer {
           }
 
           .black-btn {
-            background-image: linear-gradient(30deg, #23292c 50%, transparent 50%);
+            background-image: linear-gradient(
+              30deg,
+              #23292c 50%,
+              transparent 50%
+            );
             border: 2px solid #23292c;
           }
         }
@@ -8393,7 +8468,6 @@ footer {
     }
 
     .subscribe {
-
       h4,
       p {
         color: $black;
@@ -8887,7 +8961,6 @@ footer {
   }
 
   &.section-light {
-
     h2,
     h4 {
       color: $dark-font;
@@ -9220,7 +9293,8 @@ footer {
       z-index: -1;
       text-decoration: none;
       background-color: rgb(249, 249, 249);
-      box-shadow: -5.985px -0.419px 30px 0 rgba(0, 0, 0, 0.08), inset -2px 0 10px 0 rgba(0, 0, 0, 0.04);
+      box-shadow: -5.985px -0.419px 30px 0 rgba(0, 0, 0, 0.08),
+        inset -2px 0 10px 0 rgba(0, 0, 0, 0.04);
       top: -80px;
       color: $black;
 
@@ -9473,7 +9547,8 @@ footer {
       display: flex;
       align-items: center;
 
-      i, img {
+      i,
+      img {
         margin-right: 5px;
         font-size: 18px;
       }
@@ -9483,7 +9558,8 @@ footer {
       }
     }
 
-    .btn_multi {}
+    .btn_multi {
+    }
   }
 
   .overlay {
@@ -9529,7 +9605,7 @@ footer {
       display: block;
     }
 
-    >div {
+    > div {
       text-decoration: none;
       color: black;
 
@@ -10106,7 +10182,7 @@ footer {
 
         .custom-control-input {
           &:checked {
-            ~.custom-control-label {
+            ~ .custom-control-label {
               &:after {
                 background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='%23000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/></svg>");
               }
@@ -10513,7 +10589,6 @@ footer {
     }
   }
 }
-
 
 .filter-main-btn {
   display: none;
@@ -11000,7 +11075,7 @@ footer {
 .wishlist-section {
   .table {
     tbody {
-      &+tbody {
+      & + tbody {
         border-top: none;
       }
     }
@@ -11009,7 +11084,7 @@ footer {
   .cart-buttons {
     padding-top: 35px;
 
-    >div {
+    > div {
       &:last-child {
         text-align: right;
         padding-right: 59px;
@@ -11134,7 +11209,7 @@ footer {
         }
 
         &:first-child {
-          width: 85%;
+          width: 70%;
           font-size: 15px;
           padding-right: 10px;
           text-transform: capitalize;
@@ -11178,7 +11253,7 @@ footer {
       margin-bottom: 15px;
 
       li {
-        &+li {
+        & + li {
           padding-left: 15px;
           margin-left: 15px;
           border-left: 1px solid $round-border;
@@ -11188,7 +11263,7 @@ footer {
   }
 
   .blog-advance {
-    >div {
+    > div {
       &:last-child {
         p {
           &:last-child {
@@ -11322,7 +11397,7 @@ footer {
             }
           }
 
-          &+li {
+          & + li {
             margin-top: 30px;
           }
         }
@@ -11345,7 +11420,7 @@ footer {
             }
           }
 
-          &+li {
+          & + li {
             margin-top: 30px;
           }
 
@@ -11355,7 +11430,7 @@ footer {
         }
       }
 
-      &+.theme-card {
+      & + .theme-card {
         margin-top: 30px;
       }
     }
@@ -11406,7 +11481,7 @@ footer {
             padding-right: 3px;
           }
 
-          &+li {
+          & + li {
             padding-left: 15px;
             margin-left: 15px;
             border-left: 1px solid #dddddd;
@@ -11495,14 +11570,13 @@ footer {
   }
 
   .slick-slide {
-    >div {
+    > div {
       display: flex;
       margin-bottom: 5px;
     }
   }
 
   &:hover {
-
     .slick-prev,
     .slick-next {
       opacity: 1;
@@ -11557,7 +11631,7 @@ footer {
     padding: 0 15px 15px;
     padding-bottom: 0;
 
-    >div {
+    > div {
       display: flex;
       margin: 0;
       border: 1px solid $round-border;
@@ -11565,7 +11639,7 @@ footer {
     }
 
     &.slick-current {
-      >div {
+      > div {
         border-color: $font-grey;
         transition: all 0.5s ease;
       }
@@ -11585,7 +11659,7 @@ footer {
 .rtl-slider-right-nav {
   .slick-slide {
     &:first-child {
-      >div {
+      > div {
         margin-top: 0;
       }
     }
@@ -11607,7 +11681,7 @@ footer {
 
 .image-scroll {
   div {
-    >div {
+    > div {
       padding-bottom: 20px;
 
       &:last-child {
@@ -11674,18 +11748,18 @@ footer {
   }
 
   .product-buttons {
-      margin-bottom: 20px;
-      .btn-solid,
-      .btn-outline {
-          padding: 7px 25px;
-      }
-      a, button {
-          &:last-child {
-              margin-left: 10px;
-          }
+    margin-bottom: 20px;
+    .btn-solid,
+    .btn-outline {
+      padding: 7px 25px;
+    }
+    a,
+    button {
+      &:last-child {
+        margin-left: 10px;
       }
     }
-  
+  }
 
   .product-description {
     h6 {
@@ -11940,7 +12014,6 @@ footer {
 }
 
 .vertical-tab {
-
   &.tab-product,
   .product-full-tab {
     .nav-material {
@@ -12316,7 +12389,6 @@ footer {
     }
 
     input {
-
       &[type="text"],
       &[type="email"],
       &[type="password"],
@@ -12727,7 +12799,7 @@ footer {
         color: #333;
       }
 
-      >a {
+      > a {
         position: absolute;
         right: 0;
         top: 12px;
@@ -13084,7 +13156,7 @@ footer {
   }
 
   .slick-slide {
-    >div {
+    > div {
       border: 1px solid #ddd;
       border-left: none;
     }
@@ -13094,7 +13166,6 @@ footer {
     }
   }
 }
-
 
 /*=====================
     18.Portfoilio CSS start
@@ -13138,7 +13209,6 @@ footer {
   }
 
   .isotopeSelector {
-
     .product-box {
       img {
         transition: all 0.4s ease;
@@ -13191,9 +13261,7 @@ footer {
           }
         }
       }
-
     }
-
   }
 
   .border-portfolio {
@@ -13336,7 +13404,6 @@ footer {
   }
 
   &.grid-portfolio {
-    
     .isotopeSelector {
       .overlay {
         margin-bottom: 30px;
@@ -13344,11 +13411,11 @@ footer {
         img {
           transition: all 0.4s ease;
         }
-  
+
         .overlay-background {
           transform: scale(0);
           transition: all 0.4s ease;
-  
+
           i {
             position: absolute;
             top: 50%;
@@ -13367,13 +13434,13 @@ footer {
             justify-content: center;
           }
         }
-  
+
         &:hover {
           img {
             transform: scale(1.2) rotate(2deg);
             transition: all 0.4s ease;
           }
-  
+
           .overlay-background {
             transform: scale(1);
             border: 3px solid white;
@@ -13385,7 +13452,7 @@ footer {
             z-index: 1;
             background-color: rgba(var(--theme-deafult), 0.2);
             transition: all 0.4s ease;
-  
+
             i {
               display: flex;
               transition: all 0.4s ease;
@@ -13394,7 +13461,6 @@ footer {
         }
       }
     }
-
   }
 }
 
@@ -13405,10 +13471,10 @@ footer {
 
     ul {
       &.filter {
-        >li {
+        > li {
           padding: 0 25px;
 
-          >a {
+          > a {
             color: var(--theme-deafult);
             font-size: 20px;
             line-height: 40px;
@@ -13440,7 +13506,7 @@ footer {
     }
 
     .filter {
-      >li {
+      > li {
         padding: 0;
         margin: 0;
       }
@@ -13547,7 +13613,7 @@ footer {
 }
 
 /* Style your items */
-.my-masonry-grid_column>div {
+.my-masonry-grid_column > div {
   /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 30px;
 }
@@ -13561,7 +13627,7 @@ footer {
   .top-header {
     background-color: transparent;
 
-    .header-dropdown>li {
+    .header-dropdown > li {
       padding-top: 40px;
       padding-right: 0;
     }
@@ -13734,7 +13800,8 @@ footer {
     .theme-card {
       .offer-slider {
         .product-box2 {
-          box-shadow: 0 2px 5px 0 rgba(145, 145, 145, 0.16), 0 2px 10px 0 rgba(145, 145, 145, 0.12);
+          box-shadow: 0 2px 5px 0 rgba(145, 145, 145, 0.16),
+            0 2px 10px 0 rgba(145, 145, 145, 0.12);
 
           .media {
             padding-right: 15px;
@@ -13754,7 +13821,7 @@ footer {
             }
           }
 
-          +.product-box2 {
+          + .product-box2 {
             border-top: none;
             margin-top: 30px;
           }
@@ -13789,7 +13856,7 @@ footer {
 
   .theme-card {
     .offer-slider {
-      >div {
+      > div {
         .media {
           &:last-child {
             .media-body {
@@ -13995,7 +14062,6 @@ header {
     }
 
     &:hover {
-
       .slick-next,
       .slick-prev {
         display: none !important;
@@ -14074,7 +14140,7 @@ header {
 .leftImage {
   .slider-nav {
     .slick-slide {
-      >div {
+      > div {
         margin: 0;
         margin-top: 15px;
       }
@@ -14134,7 +14200,7 @@ header {
     width: 0;
 
     &:checked {
-      ~.checkmark {
+      ~ .checkmark {
         &::after {
           display: block;
         }
@@ -14188,7 +14254,7 @@ header {
 }
 
 .product_image_4 {
-  >div:nth-last-child(-n + 2) {
+  > div:nth-last-child(-n + 2) {
     margin-top: 25px;
   }
 }
@@ -14402,7 +14468,9 @@ table {
             }
 
             span {
-              margin-left: calc(10px + (30 - 10) * ((100vw - 320px) / (1920 - 320)));
+              margin-left: calc(
+                10px + (30 - 10) * ((100vw - 320px) / (1920 - 320))
+              );
               border-radius: 2px;
               text-transform: capitalize;
               color: var(--theme-deafult);
@@ -14440,7 +14508,7 @@ table {
         }
 
         .row {
-          >div {
+          > div {
             .form-check {
               margin-bottom: 10px;
               padding-left: 0;
@@ -14456,7 +14524,7 @@ table {
           margin-top: 15px;
         }
 
-        +.account-setting {
+        + .account-setting {
           margin-top: 15px;
         }
       }
@@ -14606,7 +14674,7 @@ table {
         font-size: 14px;
         line-height: 1.5;
 
-        +p {
+        + p {
           margin-top: 10px;
         }
       }
@@ -14648,7 +14716,7 @@ table {
       }
     }
 
-    +.profile-left {
+    + .profile-left {
       margin-top: 40px;
     }
   }
@@ -14684,14 +14752,15 @@ table {
       right: -0;
       height: 100%;
       display: block;
-      background: url("/assets/images/vendor/step-arrow.png") no-repeat center center;
+      background: url("/assets/images/vendor/step-arrow.png") no-repeat center
+        center;
     }
 
     .row {
       margin-left: -50px;
       margin-right: -50px;
 
-      >div {
+      > div {
         padding-left: 50px;
         padding-right: 50px;
 
@@ -14799,7 +14868,6 @@ table {
 
     .typo-content {
       &.heading_content {
-
         h1,
         h2,
         h3,
@@ -14929,7 +14997,7 @@ table {
       margin-bottom: 15px;
 
       li {
-        &+li {
+        & + li {
           padding-left: 15px;
           margin-left: 15px;
           border-left: 1px solid $round-border;
@@ -14939,7 +15007,7 @@ table {
   }
 
   .blog-advance {
-    >div {
+    > div {
       &:last-child {
         p {
           &:last-child {
@@ -15134,7 +15202,7 @@ table {
     align-items: center;
     justify-content: center;
 
-    >div {
+    > div {
       width: 100%;
     }
 
@@ -15240,14 +15308,18 @@ table {
   position: relative;
   overflow: hidden;
 
-  >div {
+  > div {
     transition: all 0.5s ease;
   }
 
   &:after {
     position: absolute;
     content: "";
-    background: linear-gradient(-180deg, var(--gradient1) 0%, var(--gradient2) 99%);
+    background: linear-gradient(
+      -180deg,
+      var(--gradient1) 0%,
+      var(--gradient2) 99%
+    );
     width: 100%;
     height: 100%;
     top: 0;
@@ -15262,7 +15334,7 @@ table {
       transition: all 0.5s ease;
     }
 
-    >div {
+    > div {
       transform: scale(1.2) rotate(5deg);
       transition: all 0.5s ease;
     }
@@ -15588,22 +15660,24 @@ table {
   .modal-dialog {
     .modal-content {
       .modal-body {
-        background-image: linear-gradient(135deg,
-            var(--theme-deafult) 5.77%,
-            $white 5.77%,
-            $white 25%,
-            $grey01 25%,
-            $grey01 30.77%,
-            $white 30.77%,
-            $white 50%,
-            var(--theme-deafult) 50%,
-            var(--theme-deafult) 55.77%,
-            $white 55.77%,
-            $white 75%,
-            $grey01 75%,
-            $grey01 80.77%,
-            $white 80.77%,
-            $white 100%);
+        background-image: linear-gradient(
+          135deg,
+          var(--theme-deafult) 5.77%,
+          $white 5.77%,
+          $white 25%,
+          $grey01 25%,
+          $grey01 30.77%,
+          $white 30.77%,
+          $white 50%,
+          var(--theme-deafult) 50%,
+          var(--theme-deafult) 55.77%,
+          $white 55.77%,
+          $white 75%,
+          $grey01 75%,
+          $grey01 80.77%,
+          $white 80.77%,
+          $white 100%
+        );
         background-size: 36.77px 36.77px;
         background-color: white;
 
@@ -15645,7 +15719,7 @@ table {
               margin: 0 auto;
               text-align: center;
 
-              >div {
+              > div {
                 display: flex;
                 margin-bottom: 10px;
               }
@@ -15889,7 +15963,6 @@ table {
       display: flex;
 
       a {
-
         [class^="icon-"],
         [class*=" icon-"] {
           display: inline-block;
@@ -15937,7 +16010,7 @@ table {
 
       .rating {
         i {
-          &:nth-child(-n+4) {
+          &:nth-child(-n + 4) {
             color: var(--theme-deafult);
           }
 
@@ -16076,7 +16149,7 @@ table {
       margin: 0 -15px;
 
       .slick-slide {
-        >div {
+        > div {
           margin: 0 15px;
           position: relative;
         }
@@ -16223,9 +16296,9 @@ table {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #fff url("/assets/images/christmas/loading.gif") no-repeat center center;
+  background: #fff url("/assets/images/christmas/loading.gif") no-repeat center
+    center;
 }
-
 
 /*=====================
     17.4.Fashion-3 Demo CSS
@@ -16234,35 +16307,35 @@ table {
 .box-layout-body {
   background-color: $grey-lighter;
   .box-layout-header {
-      background-color: $white;
+    background-color: $white;
   }
   .box-layout {
-      margin-top: -70px;
-      margin-bottom: 5px;
-      box-shadow: 0 0 8px 0 #ddd;
-      position: relative;
-      background-color: white;
-      .full-banner {
-          margin-left: -15px;
-          margin-right: -15px;
-          padding-top: 200px;
-          padding-bottom: 200px;
-      }
-      &.bg-image {
-          background-image: url("/assets/images/bg-image.jpg");
-      }
+    margin-top: -70px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 8px 0 #ddd;
+    position: relative;
+    background-color: white;
+    .full-banner {
+      margin-left: -15px;
+      margin-right: -15px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+    &.bg-image {
+      background-image: url("/assets/images/bg-image.jpg");
+    }
   }
 }
 
-  video#background-video {
-    position: absolute;
-    z-index: 0;
-    background: url(/assets/video/2.mp4) no-repeat;
-    background-size: 100% 100%;
-    top: 0px;
-    left: 0px; 
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+video#background-video {
+  position: absolute;
+  z-index: 0;
+  background: url(/assets/video/2.mp4) no-repeat;
+  background-size: 100% 100%;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
