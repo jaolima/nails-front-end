@@ -2037,6 +2037,11 @@ header{
     }
   }
 }
+
+.width-logo {
+  max-width: 50%;
+}
+
 @media (max-width:577px) {
   .top-header {
     height: 0;
@@ -2222,7 +2227,10 @@ header{
 @media (max-width: 480px) {
   .brand-logo {
     img {
-      height: 25px;
+      height: 50px;
     }
+  }
+  .width-logo {
+    max-width: 100% !important;
   }
 }
