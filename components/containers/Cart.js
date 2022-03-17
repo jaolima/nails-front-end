@@ -13,7 +13,7 @@ const CartComponent = ({ icon, layout }) => {
   const total = context.cartTotal;
   const removeFromCart = context.removeFromCart;
   const [openSide, setOpenSide] = useState(false);
-        const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Fragment>
@@ -67,7 +67,7 @@ const CartComponent = ({ icon, layout }) => {
                         </a>
                         <h4>
                           <span>
-                            {item.qty} x {symbol} {item.price}
+                            {item.qty} x {symbol + item.price}
                           </span>
                         </h4>
                       </div>

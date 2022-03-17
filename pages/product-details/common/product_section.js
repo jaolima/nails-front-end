@@ -91,9 +91,9 @@ const ProductSection = () => {
         </Row>
         <Row className="search-product">
           {!data ||
-          !data.products ||
-          data.products.items.length === 0 ||
-          loading ? (
+            !data.products ||
+            data.products.items.length === 0 ||
+            loading ? (
             "loading"
           ) : (
             <>
@@ -167,8 +167,7 @@ const ProductSection = () => {
                           <h6>{product.title}</h6>
                         </a>
                         <h4>
-                          {symbol}
-                          {product.price}
+                          {symbol + product.price}
                         </h4>
                         <ul className="color-variant">
                           <li className="bg-light0"></li>
@@ -212,12 +211,12 @@ const ProductSection = () => {
                         {uniqueTags ? (
                           <ul className="color-variant">
                             {selectedProduct.type === "jewellery" ||
-                            selectedProduct.type === "nursery" ||
-                            selectedProduct.type === "beauty" ||
-                            selectedProduct.type === "electronics" ||
-                            selectedProduct.type === "goggles" ||
-                            selectedProduct.type === "watch" ||
-                            selectedProduct.type === "pets" ? (
+                              selectedProduct.type === "nursery" ||
+                              selectedProduct.type === "beauty" ||
+                              selectedProduct.type === "electronics" ||
+                              selectedProduct.type === "goggles" ||
+                              selectedProduct.type === "watch" ||
+                              selectedProduct.type === "pets" ? (
                               ""
                             ) : (
                               <>

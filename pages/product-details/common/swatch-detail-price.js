@@ -34,14 +34,12 @@ const SwatchDetailsWithPrice = (params) => {
         <h2> {product.title} </h2>
         <h4>
           <del>
-            {symbol}
-            {product.price}
+            {symbol + product.price}
           </del>
           <span>{product.discount}% off</span>
         </h4>
         <h3>
-          {symbol}
-          {product.price - (product.price * product.discount) / 100}{" "}
+          {symbol + (product.price - (product.price * product.discount) / 100)}{" "}
         </h3>
         {product.variants.map((vari) => {
           var findItem = uniqueColor.find((x) => x.color === vari.color);
@@ -168,7 +166,7 @@ const SwatchDetailsWithPrice = (params) => {
           <Link href={`/page/account/checkout`}>
             <a
               className="btn btn-solid"
-              // onClick={() => BuynowClicked(item, quantity)}
+            // onClick={() => BuynowClicked(item, quantity)}
             >
               buy now
             </a>

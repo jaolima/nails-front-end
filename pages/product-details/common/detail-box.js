@@ -25,8 +25,7 @@ const DetailBox = ({ item, changeColorVar }) => {
         <span>{item.discount}% off</span>
       </h4>
       <h3>
-        {symbol}
-        {item.price}
+        {symbol + item.price}
       </h3>
       <ul>
         {item.variants.map((vari) => {

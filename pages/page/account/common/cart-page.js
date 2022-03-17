@@ -105,9 +105,7 @@ const CartPage = () => {
                               </div>
                               <div className="col-xs-3">
                                 <h2 className="td-color">
-                                  {symbol}
-                                  {/* {item.price - (item.price * item.discount) / 100} */}
-                                  {item.price}
+                                  {symbol + item.price}
                                 </h2>
                               </div>
                               <div className="col-xs-3">
@@ -124,9 +122,7 @@ const CartPage = () => {
                           </td>
                           <td>
                             <h2>
-                              {symbol}
-                              {/* {item.price - (item.price * item.discount) / 100} */}
-                              {item.price}
+                              {symbol + item.price}
                             </h2>
                           </td>
                           <td>
@@ -146,7 +142,7 @@ const CartPage = () => {
                                 />
                               </div>
                             </div>
-                            {item.qty >= item.qtd ? "out of Stock" : ""}
+                            {item.qty >= item.qtd ? t("out of Stock") : ""}
                           </td>
                           <td>
                             <i
@@ -156,9 +152,7 @@ const CartPage = () => {
                           </td>
                           <td>
                             <h2 className="td-color">
-                              {symbol}
-                              {/* {item.total} */}
-                              {item.price}
+                              {symbol + item.price}
                             </h2>
                           </td>
                         </tr>
@@ -170,9 +164,9 @@ const CartPage = () => {
                   <tfoot>
                     <tr>
                       <td>{t('total price')} :</td>
-                      <td>
+                      <td >
                         <h2>
-                          {symbol} {total}{" "}
+                          {symbol + total}
                         </h2>
                       </td>
                     </tr>

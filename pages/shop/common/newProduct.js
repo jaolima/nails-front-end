@@ -94,8 +94,7 @@ const NewProduct = () => {
                         <h6>{product.name}</h6>
                       </a>
                       <h4>
-                        {symbol}
-                        {product.price}
+                        {symbol + product.price}
                       </h4>
                     </div>
                   </div>
@@ -132,14 +131,13 @@ const NewProduct = () => {
                         <h6>{product.name}</h6>
                       </a>
                       <h4>
-                        {symbol}
-                        {product.price}
+                        {symbol + product.price}
                       </h4>
                     </div>
                   </div>
                 ))}
             </>
-          )} 
+          )}
         </div>
       </Slider>
     </div>

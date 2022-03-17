@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef ,useEffect } from 'react';
+import React, { useContext, useState, useRef, useEffect } from 'react';
 import { Container, Row, Col, ModalBody, Modal, ModalHeader, Media, Input } from 'reactstrap';
 import Link from 'next/link';
 import Slider from 'react-slick';
@@ -131,9 +131,9 @@ const OutsideImagePage = () => {
                                         <div className="product-right">
                                             <h2> {data.product.name} </h2>
                                             <h4>
-                                                <del>{symbol}{data.product.price}</del>
+                                                <del>{symbol + data.product.price}</del>
                                                 <span>{data.product.discount}% off</span></h4>
-                                            <h3>{symbol}{data.product.price - (data.product.price * data.product.discount / 100)} </h3>
+                                            <h3>{symbol + (data.product.price - (data.product.price * data.product.discount / 100))} </h3>
                                             {data.product.variants.map(vari => {
                                                 var findItem = uniqueColor.find(x => x.color === vari.color);
                                                 if (!findItem)

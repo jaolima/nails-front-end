@@ -56,18 +56,18 @@ const OrderSuccess = () => {
                                         <Col xs="3" className="order_detail">
                                             <div>
                                                 <h4>price</h4>
-                                                <h5>{symbol}{item.price}</h5>
+                                                <h5>{symbol + item.price}</h5>
                                             </div>
                                         </Col>
                                     </Row>
                                 )}
                                 <div className="total-sec">
                                     <ul>
-                                        <li>subtotal <span>{symbol}{cartTotal}</span></li>
+                                        <li>subtotal <span>{symbol + cartTotal}</span></li>
                                     </ul>
                                 </div>
                                 <div className="final-total">
-                                    <h3>total <span>{symbol}{cartTotal}</span></h3>
+                                    <h3>total <span>{symbol + cartTotal}</span></h3>
                                 </div>
                             </div>
                         </Col>
@@ -93,7 +93,7 @@ const OrderSuccess = () => {
                                 <Col sm="12" className="payment-mode">
                                     <h4>payment method</h4>
                                     <p>Pay on Delivery (Cash/Card). Cash on delivery (COD) available. Card/Net banking
-                                acceptance subject to device availability.</p>
+                                        acceptance subject to device availability.</p>
                                 </Col>
                                 <Col md="12">
                                     <div className="delivery-sec">

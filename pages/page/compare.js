@@ -23,7 +23,7 @@ const Compare = () => {
                                             <thead>
                                                 <tr className="th-compare">
                                                     <td>Action</td>
-                                                    {compareItem.map((item,i) =>
+                                                    {compareItem.map((item, i) =>
                                                         <th className="item-row" key={i}>
                                                             <button type="button" className="remove-compare" onClick={() => contextCompare.removeFromComapre(item)}>Remove</button>
                                                         </th>
@@ -44,11 +44,11 @@ const Compare = () => {
                                                         <td className="item-row" key={i}><img src={item.images[0].src} alt=""
                                                             className="featured-image" />
                                                             <div className="product-price product_price"><strong>On Sale:
-                                                            </strong><span>{symbol}{item.price}</span></div>
+                                                            </strong><span>{symbol + item.price}</span></div>
                                                             <form className="variants clearfix">
                                                                 <input type="hidden" />
                                                                 <button title="Add to Cart" className="add-to-cart btn btn-solid">Add to
-                                                        Cart</button>
+                                                                    Cart</button>
                                                             </form>
                                                             <p className="grid-link__title hidden">{item.title}</p>
                                                         </td>
@@ -65,9 +65,9 @@ const Compare = () => {
                                                 <tr>
                                                     <th className="product-name">Availability</th>
                                                     {compareItem.map((item, i) =>
-                                                    <td className="available-stock" key={i}>
-                                                        <p>{item.stock >= 0 ? 'Not Available' : 'Available'}</p>
-                                                    </td>
+                                                        <td className="available-stock" key={i}>
+                                                            <p>{item.stock >= 0 ? 'Not Available' : 'Available'}</p>
+                                                        </td>
                                                     )}
                                                 </tr>
                                             </tbody>

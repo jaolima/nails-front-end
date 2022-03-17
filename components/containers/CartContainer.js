@@ -33,8 +33,7 @@ const CartContainer = ({ icon }) => {
                   <h5>
                     subtotal :{" "}
                     <span>
-                      {symbol}
-                      {total}
+                      {symbol + total}
                     </span>
                   </h5>
                 </div>

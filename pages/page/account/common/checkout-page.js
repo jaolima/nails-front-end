@@ -218,8 +218,7 @@ const CheckoutPage = () => {
                             <li key={index}>
                               {item.title} × {item.qty}{" "}
                               <span>
-                                {symbol}
-                                {item.total}
+                                {symbol + item.total}
                               </span>
                             </li>
                           ))}
@@ -228,8 +227,7 @@ const CheckoutPage = () => {
                           <li>
                             {t('Subtotal')}{" "}
                             <span className="count">
-                              {symbol}
-                              {cartTotal}
+                              {symbol + cartTotal}
                             </span>
                           </li>
                           <li>
@@ -262,8 +260,7 @@ const CheckoutPage = () => {
                           <li>
                             {t('Total')}{" "}
                             <span className="count">
-                              {symbol}
-                              {cartTotal}
+                              {symbol + cartTotal}
                             </span>
                           </li>
                         </ul>

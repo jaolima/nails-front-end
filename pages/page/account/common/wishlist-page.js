@@ -48,7 +48,7 @@ const WishlistPage = () => {
                                                 <td><a href="#">{item.name}</a>
                                                     <Row className="mobile-cart-content">
                                                         <div className="col-xs-3">
-                                                            <p>out of stock</p>
+                                                            <p>{t('out of Stock')}</p>
                                                         </div>
                                                         <div className="col-xs-3">
                                                             <h2 className="td-color">{item.price}</h2>
@@ -81,7 +81,7 @@ const WishlistPage = () => {
                         </Row>
                         <Row className="wishlist-buttons">
                             <Col sm="12">
-                                <Link href={'/'}><a href={null} className="btn btn-solid" >{t('continue shopping')}</a></Link>
+                                <Link href={'/page/account/cart'}><a href={null} className="btn btn-solid" >{t('continue shopping')}</a></Link>
                                 <a href={null} className="btn btn-solid" onClick={checkOut}>{t('check out')}</a>
                             </Col>
                         </Row>
