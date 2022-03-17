@@ -7590,3 +7590,15 @@ body {
     }
   }
 }
+
+@media (max-width: 1206px) {
+  .none-parallax-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1206px) {
+  .none-parallax-pc {
+    display: none !important;
+  }
+}

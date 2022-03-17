@@ -35,7 +35,7 @@ const Fashion = () => {
 
       <Banner />
 
-      <ServiceLayout sectionClass="border-section small-section" />
+      <ServiceLayout sectionClass="border-section small-section none-parallax-mobile" />
 
       <TopProduct
         title="special offer"
@@ -48,7 +48,6 @@ const Fashion = () => {
         productDetail="text-center"
         cartClass="cart-box"
       />
-
 
       <Parallax />
 

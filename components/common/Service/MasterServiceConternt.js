@@ -10,16 +10,16 @@ const MasterServiceContent = ({
 }) => {
   const { t } = useTranslation();
   return (
-  <div
-    className={`${!marijuana ? "media" : ""} ${lastChild ? "border-0 m-0" : ""
-      }`}
-  >
-    <div dangerouslySetInnerHTML={{ __html: link }} />
-    <div className="media-body">
-      <h4>{t(title)}</h4>
-      <p>{t(service)}</p>
+    <div
+      className={`${!marijuana ? "media" : ""} ${lastChild ? "border-0 m-0" : ""
+        }`}
+    >
+      <div dangerouslySetInnerHTML={{ __html: link }} />
+      <div className="media-body">
+        <h4>{t(title)}</h4>
+        <p>{t(service)}</p>
+      </div>
     </div>
-  </div>
   );
 };
 
