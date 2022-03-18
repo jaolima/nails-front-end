@@ -135,12 +135,6 @@ const NavBar = () => {
             <i className="fa fa-bars sidebar-bar"></i>
           </div> */}
           <ul className="nav-menu" >
-            <li className="back-btn" onClick={closeNav.bind(this)}>
-              <div className="mobile-back text-right">
-                <span>Back navbar</span>
-                <i className="fa fa-angle-right pl-2" aria-hidden="true"></i>
-              </div>
-            </li>
             {MENUITEMS.map((menuItem, i) => {
               return (
                 <li

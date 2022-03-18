@@ -132,7 +132,6 @@ const SideBar = () => {
                             )}
                             {childrenItem.children ? (
                               <ul>
-
                                 {childrenItem.children.map((childrenSubItem, key) => (
                                   <li key={key}>
                                     {childrenSubItem.type === "link" ? (
@@ -154,33 +153,6 @@ const SideBar = () => {
                     </ul>
                   )}
 
-                  {/* 
-                    <li>
-                      <a href="#">laptop bags</a>
-                    </li>
-                    <li>
-                      <a href="#">clutches</a>
-                    </li>
-                    <li>
-                      <a href="#" onClick={(e) => handleSubTwoMenu(e)}>
-                        purses
-                        <span className="sub-arrow"></span>
-                      </a>
-                      <ul>
-                        <li>
-                          <a href="#">purses</a>
-                        </li>
-                        <li>
-                          <a href="#">wallets</a>
-                        </li>
-                        <li>
-                          <a href="#">leathers</a>
-                        </li>
-                        <li>
-                          <a href="#">satchels</a>
-                        </li>
-                      </ul>
-                    </li> */}
                 </li>
               </ul>
             );
