@@ -33,7 +33,6 @@ const ProductItem = ({
   const toggle = () => setModal(!modal);
   const uniqueTags = [];
 
-  console.log("product ", product)
   const onClickHandle = (img) => {
     setImage(img);
   };

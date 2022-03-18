@@ -79,11 +79,9 @@ const Login = () => {
                 .then(function (response) {
                     // setDataProduct(response.data);
                     toast.success(t("Access successful"));
-                    console.log("response", response);
                 })
                 .catch(function (error) {
                     toast.error(t("Erro. Could not login"));
-                    console.log("error", error);
                 });
         }
 

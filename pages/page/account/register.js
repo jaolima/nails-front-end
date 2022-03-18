@@ -27,6 +27,7 @@ const Register = () => {
   }
 
   function validation(name, email, password) {
+    console.log("name, email, password ", name, email, password)
     if (name === "") {
       toast.error(t("The name field is required."));
       info.name = true;
@@ -40,11 +41,8 @@ const Register = () => {
     if (password === "") {
       toast.error(t("The password field is required."));
       info.password = true;
-    } else if (password.length < 6) {
-      toast.error(t("The password must be longer than 6 characters."));
-      info.password = true;
     } else {
-      info.password = false;
+      info.password = checkStrongPassword(password)
     }
 
     if (email === "") {
@@ -63,6 +61,24 @@ const Register = () => {
       return true;
     } else {
       return false;
+    }
+  }
+
+  function checkStrongPassword(password) {
+    var numeros = /([0-9])/;
+    var alfabeto = /([a-zA-Z])/;
+    var chEspeciais = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
+
+    if (password.length < 6) {
+      toast.error(t("The password must be longer than 6 characters."));
+      return true;
+    } else {
+      if (password.match(numeros) && password.match(alfabeto) && password.match(chEspeciais)) {
+        return false;
+      } else {
+        toast.error(t("Password is medium, please enter a special character."));
+        return true;
+      }
     }
   }
 
@@ -96,7 +112,6 @@ const Register = () => {
           router.push("/page/account/login");
         })
         .catch(function (error) {
-          console.log("error", error)
           toast.error(t("Unable to register, please try again later !"));
         });
     }

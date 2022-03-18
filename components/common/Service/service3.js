@@ -65,7 +65,6 @@ const Service = ({ layoutClass, hrLine }) => {
     ],
   };
 
-  console.log("Data ", Data)
   return (
     <Fragment>
       <section className="none-parallax-mobile">

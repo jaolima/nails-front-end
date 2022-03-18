@@ -76,7 +76,6 @@ const SideBar = () => {
     }
   };
 
-  console.log("MENUITEMS ", MENUITEMS)
 
   return (
     <Fragment>
