@@ -309,17 +309,18 @@ i18next
                     'This Product Already Added !': 'This Product Already Added !',
                     'Product Removed Successfully !': 'Product Removed Successfully !',
                     'Product Quantity Updated !': 'Product Quantity Updated !',
-                    'my cart' : 'my cart',
-                    'It is mandatory to fill in the field above !' : 'It is mandatory to fill in the field above !',
-                    'It is mandatory to fill in all fields !' : 'It is mandatory to fill in all fields !',
-                    'Successfully registered !' : 'Successfully registered !',
-                    'Unable to register, please try again later !' : 'Unable to register, please try again later !',
-                    'The name field is required.' : 'The name field is required.',
-                    'The name must be longer than 3 characters.' : 'The name must be longer than 3 characters.',
-                    'The password field is required.' : 'The password field is required.',
-                    'The password must be longer than 6 characters.' : 'The password must be longer than 6 characters.',
-                    'The email field is required.' : 'The email field is required.',
-                    'The email is not valid.' : 'The email is not valid.',
+                    'my cart': 'my cart',
+                    'It is mandatory to fill in the field above !': 'It is mandatory to fill in the field above !',
+                    'It is mandatory to fill in all fields !': 'It is mandatory to fill in all fields !',
+                    'Successfully registered !': 'Successfully registered !',
+                    'Unable to register, please try again later !': 'Unable to register, please try again later !',
+                    'The name field is required.': 'The name field is required.',
+                    'The name must be longer than 3 characters.': 'The name must be longer than 3 characters.',
+                    'The password field is required.': 'The password field is required.',
+                    'The password must be longer than 6 characters.': 'The password must be longer than 6 characters.',
+                    'The email field is required.': 'The email field is required.',
+                    'The email is not valid.': 'The email is not valid.',
+                    'Password confirmation does not match.': 'Password confirmation does not match',
                 }
             },
             de: {
@@ -634,6 +635,7 @@ i18next
                     'The password must be longer than 6 characters.': "Das Passwort muss länger als 6 Zeichen sein.",
                     'The email field is required.': "Das E-Mail-Feld ist erforderlich.",
                     'The email is not valid.': "Die E-Mail ist ungültig.",
+                    'Password confirmation does not match.': 'Adgangskodebekræftelse stemmer ikke overens',
                 }
             },
             es: {
@@ -948,6 +950,7 @@ i18next
                     'The password must be longer than 6 characters.': "La contraseña debe tener más de 6 caracteres.",
                     'The email field is required.': "El campo de correo electrónico es obligatorio.",
                     'The email is not valid.': "El correo electrónico no es válido.",
+                    'Password confirmation does not match.': "La confirmación de la contraseña no coincide",
                 }
             },
             fr: {
@@ -1251,17 +1254,18 @@ i18next
                     'This Product Already Added !': "Ce produit déjà ajouté !",
                     'Product Removed Successfully !': "Produit supprimé avec succès !",
                     'Product Quantity Updated !': "Quantité de produit mise à jour !",
-                    'my cart':"mon panier",
-                    'It is mandatory to fill in the field above !':"Il est obligatoire de remplir le champ ci-dessus !",
-                    'It is mandatory to fill in all fields !':"Il est obligatoire de remplir tous les champs !",
-                    'Successfully registered !':"Enregistré avec succès !",
-                    'Unable to register, please try again later !':"Impossible de s'inscrire, veuillez réessayer plus tard !",
-                    'The name field is required.':"Il est requis de compléter le champ correspondant au nom.",
-                    'The name must be longer than 3 characters.':"Le nom doit comporter plus de 3 caractères.",
-                    'The password field is required.':"Le champ mot de passe est obligatoire.",
-                    'The password must be longer than 6 characters.':"Le mot de passe doit comporter plus de 6 caractères.",
-                    'The email field is required.':"Le champ e-mail est obligatoire.",
-                    'The email is not valid.':"L'e-mail n'est pas valide.",
+                    'my cart': "mon panier",
+                    'It is mandatory to fill in the field above !': "Il est obligatoire de remplir le champ ci-dessus !",
+                    'It is mandatory to fill in all fields !': "Il est obligatoire de remplir tous les champs !",
+                    'Successfully registered !': "Enregistré avec succès !",
+                    'Unable to register, please try again later !': "Impossible de s'inscrire, veuillez réessayer plus tard !",
+                    'The name field is required.': "Il est requis de compléter le champ correspondant au nom.",
+                    'The name must be longer than 3 characters.': "Le nom doit comporter plus de 3 caractères.",
+                    'The password field is required.': "Le champ mot de passe est obligatoire.",
+                    'The password must be longer than 6 characters.': "Le mot de passe doit comporter plus de 6 caractères.",
+                    'The email field is required.': "Le champ e-mail est obligatoire.",
+                    'The email is not valid.': "L'e-mail n'est pas valide.",
+                    'Password confirmation does not match.': 'La confirmation du mot de passe ne correspond pas',
                 }
             },
             it: {
@@ -1576,6 +1580,7 @@ i18next
                     'The password must be longer than 6 characters.': "La password deve essere più lunga di 6 caratteri.",
                     'The email field is required.': "Il campo email è obbligatorio.",
                     'The email is not valid.': "L'e-mail non è valida.",
+                    'Password confirmation does not match.' : 'La conferma della password non corrisponde.'
                 }
             },
             pt: {
@@ -1879,17 +1884,18 @@ i18next
                     'This Product Already Added !': "Este produto já foi adicionado!",
                     'Product Removed Successfully !': "Produto removido com sucesso!",
                     'Product Quantity Updated !': "Quantidade do produto atualizada!",
-                    'my cart':"meu carrinho",
-                    'It is mandatory to fill in the field above !':"É obrigatório preencher o campo acima!",
-                    'It is mandatory to fill in all fields !':"É obrigatório preencher todos os campos!",
-                    'Successfully registered !':"Registrado com sucesso !",
-                    'Unable to register, please try again later !':"Incapaz de registrar, por favor tente novamente mais tarde!",
-                    'The name field is required.':"O campo nome é obrigatório.",
-                    'The name must be longer than 3 characters.':"O nome deve ter mais de 3 caracteres.",
-                    'The password field is required.':"O campo de senha é necessária.",
-                    'The password must be longer than 6 characters.':"A senha deve ter mais de 6 caracteres.",
-                    'The email field is required.':"O campo do email é obrigatório.",
-                    'The email is not valid.':"O email não é válido.",
+                    'my cart': "meu carrinho",
+                    'It is mandatory to fill in the field above !': "É obrigatório preencher o campo acima!",
+                    'It is mandatory to fill in all fields !': "É obrigatório preencher todos os campos!",
+                    'Successfully registered !': "Registrado com sucesso !",
+                    'Unable to register, please try again later !': "Incapaz de registrar, por favor tente novamente mais tarde!",
+                    'The name field is required.': "O campo nome é obrigatório.",
+                    'The name must be longer than 3 characters.': "O nome deve ter mais de 3 caracteres.",
+                    'The password field is required.': "O campo de senha é necessária.",
+                    'The password must be longer than 6 characters.': "A senha deve ter mais de 6 caracteres.",
+                    'The email field is required.': "O campo do email é obrigatório.",
+                    'The email is not valid.': "O email não é válido.",
+                    'Password confirmation does not match.': 'A confirmação da senha não corresponde',
                 }
             },
             sq: {
@@ -2205,6 +2211,8 @@ i18next
                     'The password must be longer than 6 characters.': "Fjalëkalimi duhet të jetë më i gjatë se 6 karaktere.",
                     'The email field is required.': "Kërkohet fusha e emailit.",
                     'The email is not valid.': "Email-i nuk është i vlefshëm.",
+                    'Password confirmation does not match.': 'Konfirmimi i fjalëkalimit nuk përputhet.',
+                    
                 }
             },
             zh: {
@@ -2518,6 +2526,7 @@ i18next
                     'The password must be longer than 6 characters.': "密码必须超过 6 个字符。",
                     'The email field is required.': "电子邮件字段是必需的。",
                     'The email is not valid.': "电子邮件无效。",
+                    'Password confirmation does not match.': '密码确认不匹配'
                 }
             },
 

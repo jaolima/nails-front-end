@@ -1,15 +1,9 @@
 import React from "react";
-import { Container, Row, Col, Media } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import Link from "next/link";
 import firebase from "../../../config/base";
 import { useRouter } from "next/router";
 import { useTranslation } from "react-i18next";
-import language from "../../../public/assets/images/icon/language_translator.png";
-import Currency from "./currency";
-import CartContainer from "../../containers/CartContainer";
-import Cart from "../../containers/Cart";
-import cart from "../../../public/assets/images/icon/cart.png";
-import langConfig from "../../constant/langConfig.json";
 import i18next from "../../constant/i18n";
 
 const TopBarDark = ({ topClass, fluid, direction }) => {

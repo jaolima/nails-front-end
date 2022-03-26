@@ -14,20 +14,22 @@ const Register = () => {
     name: "",
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
   const [info, setInfo] = useState({
     name: false,
     email: false,
     password: false,
+    confirmPassword: false,
   });
   function handleInput(values, id) {
     dataForm[id] = values;
     setDataForm(dataForm);
   }
 
-  function validation(name, email, password) {
-    console.log("name, email, password ", name, email, password)
+  function validation(name, email, password, confirmPassword) {
+
     if (name === "") {
       toast.error(t("The name field is required."));
       info.name = true;
@@ -38,11 +40,11 @@ const Register = () => {
       info.name = false;
     }
 
-    if (password === "") {
+    if (password === "" || confirmPassword === "") {
       toast.error(t("The password field is required."));
       info.password = true;
     } else {
-      info.password = checkStrongPassword(password)
+      info.password = checkStrongPassword(password, confirmPassword)
     }
 
     if (email === "") {
@@ -64,20 +66,25 @@ const Register = () => {
     }
   }
 
-  function checkStrongPassword(password) {
+  function checkStrongPassword(password, confirmPassword) {
     var numeros = /([0-9])/;
     var alfabeto = /([a-zA-Z])/;
     var chEspeciais = /([~,!,@,#,$,%,^,&,*,-,_,+,=,?,>,<])/;
 
-    if (password.length < 6) {
-      toast.error(t("The password must be longer than 6 characters."));
-      return true;
-    } else {
-      if (password.match(numeros) && password.match(alfabeto) && password.match(chEspeciais)) {
-        return false;
-      } else {
-        toast.error(t("Password is medium, please enter a special character."));
+    if (!(password === confirmPassword)) {
+        toast.error(t("Password confirmation does not match."));
         return true;
+    } else {
+      if (password.length < 6) {
+        toast.error(t("The password must be longer than 6 characters."));
+        return true;
+      } else {
+        if (password.match(numeros) && password.match(alfabeto) && password.match(chEspeciais)) {
+          return false;
+        } else {
+          toast.error(t("Password is medium, please enter a special character."));
+          return true;
+        }
       }
     }
   }
@@ -87,7 +94,8 @@ const Register = () => {
     let respValidation = validation(
       dataForm.name,
       dataForm.email,
-      dataForm.password
+      dataForm.password,
+      dataForm.confirmPassword,
     );
 
     if (respValidation) {
@@ -166,6 +174,19 @@ const Register = () => {
                         className="form-control"
                         id="password"
                         placeholder={t("Enter your password")}
+                        required=""
+                        onChange={(e) =>
+                          handleInput(e.target.value, e.target.id)
+                        }
+                      />
+                    </Col>
+                    <Col md="6">
+                      <Label for="review">{t("Password")}</Label>
+                      <Input
+                        type="password"
+                        className="form-control"
+                        id="confirmPassword"
+                        placeholder={t("Confirm your password")}
                         required=""
                         onChange={(e) =>
                           handleInput(e.target.value, e.target.id)
