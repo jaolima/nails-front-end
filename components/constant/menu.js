@@ -1,6 +1,6 @@
 export const MENUITEMS = [
    { title: 'Sale', path: '/product/sale', type: 'link', arrow: false },
-   { title: 'Coupons', path: '/shop/left_sidebar', type: 'link', arrow: false },
+   { title: 'Coupons', path: '/product/left_sidebar', type: 'link', arrow: false },
    { title: 'Starter sets', path: '/shop/left_sidebar', type: 'link', arrow: false },
    { title: 'Nail varnishes - color varnishes', path: '/shop/left_sidebar', type: 'link', arrow: false },
    { title: 'Gel & acrylic system', type: 'sub', children: [
@@ -19,7 +19,6 @@ export const MENUITEMS = [
             ]
          },
          { title: 'sealing', path: '/shop/left_sidebar',  type: 'link', },
- 
       ]
    },
    { title: 'UV / LED color gels', type: 'sub', children: [
@@ -157,4 +156,4 @@ export const MENUITEMS = [
          { title: 'Private courses', path: '/shop/left_sidebar', type: 'link', },
       ]
    },
- ]
+]

@@ -170,9 +170,9 @@ const NavBar = () => {
                                 href={null}
                                 onClick={() => toggletNavActive(childrenItem)}
                               >
-                                {childrenItem.title}
+                                {t(childrenItem.title)}
                                 {childrenItem.tag === "new" ? (
-                                  <span className="new-tag">new</span>
+                                  <span className="new-tag">{t('new')}</span>
                                 ) : (
                                   ""
                                 )}
@@ -184,9 +184,9 @@ const NavBar = () => {
                             {childrenItem.type === "link" ? (
                               <Link href={`${childrenItem.path}`}>
                                 <a>
-                                  {childrenItem.title}
+                                  {t(childrenItem.title)}
                                   {childrenItem.tag === "new" ? (
-                                    <span className="new-tag">new</span>
+                                    <span className="new-tag">{t('new')}</span>
                                   ) : (
                                     ""
                                   )}
@@ -205,10 +205,10 @@ const NavBar = () => {
                                       {childrenSubItem.type === "link" ? (
                                         <Link href={childrenSubItem.path}>
                                           <a className="sub-menu-title">
-                                            {childrenSubItem.title}
+                                            {t(childrenSubItem.title)}
                                             {childrenSubItem.tag === "new" ? (
                                               <span className="new-tag">
-                                                new
+                                                {t('new')}
                                               </span>
                                             ) : (
                                               ""

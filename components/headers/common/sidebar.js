@@ -1,13 +1,10 @@
-import React, { Fragment } from "react";
-import { Row, Col, Media } from "reactstrap";
-import fashion from "../../../public/assets/images/mega-menu/fashion.jpg";
+import React, { useEffect, useState, Fragment } from "react";
 import { MENUITEMS } from "../../constant/menu";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 
 const SideBar = () => {
   const { t } = useTranslation();
-
   const closeNav = () => {
     var closemyslide = document.getElementById("mySidenav");
     if (closemyslide) closemyslide.classList.remove("open-side");
@@ -40,42 +37,6 @@ const SideBar = () => {
       event.target.nextElementSibling.classList.add("opensub2");
     }
   };
-  const handleSubThreeMenu = (event) => {
-    if (event.target.classList.contains("sub-arrow")) return;
-
-    if (event.target.nextElementSibling.classList.contains("opensub3"))
-      event.target.nextElementSibling.classList.remove("opensub3");
-    else {
-      document.querySelectorAll(".opensub3").forEach(function (value) {
-        value.classList.remove("opensub3");
-      });
-      event.target.nextElementSibling.classList.add("opensub3");
-    }
-  };
-
-  const handleSubFourMenu = (event) => {
-    if (event.target.classList.contains("sub-arrow")) return;
-
-    if (event.target.nextElementSibling.classList.contains("opensub4"))
-      event.target.nextElementSibling.classList.remove("opensub4");
-    else {
-      document.querySelectorAll(".opensub4").forEach(function (value) {
-        value.classList.remove("opensub4");
-      });
-      event.target.nextElementSibling.classList.add("opensub4");
-    }
-  };
-
-  const handleMegaSubmenu = (event) => {
-    if (event.target.classList.contains("sub-arrow")) return;
-
-    if (event.target.nextElementSibling.classList.contains("opensidesubmenu"))
-      event.target.nextElementSibling.classList.remove("opensidesubmenu");
-    else {
-      event.target.nextElementSibling.classList.add("opensidesubmenu");
-    }
-  };
-
 
   return (
     <Fragment>
@@ -102,7 +63,7 @@ const SideBar = () => {
                     </Link>
                   ) : (
                     <a href="#" onClick={(e) => handleSubmenu(e)}>
-                      {menuItem.title}
+                      {t(menuItem.title)}
                       <span className="sub-arrow"></span>
                     </a>
                   )}
@@ -114,7 +75,7 @@ const SideBar = () => {
                           <li key={index}>
                             {childrenItem.type === "sub" ? (
                               <a href="#" onClick={(e) => handleSubTwoMenu(e)}>
-                                {childrenItem.title}
+                                {t(childrenItem.title)}
                                 <span className="sub-arrow"></span>
                               </a>
                             ) : (
@@ -124,7 +85,7 @@ const SideBar = () => {
                             {childrenItem.type === "link" ? (
                               <Link href={`${childrenItem.path}`}>
                                 <a>
-                                  {childrenItem.title}
+                                  {t(childrenItem.title)}
                                 </a>
                               </Link>
                             ) : (
@@ -136,7 +97,7 @@ const SideBar = () => {
                                   <li key={key}>
                                     {childrenSubItem.type === "link" ? (
                                       <Link href={childrenSubItem.path}>
-                                        {childrenSubItem.title}
+                                        {t(childrenSubItem.title)}
                                       </Link>
                                     ) : (
                                       ""
@@ -152,12 +113,10 @@ const SideBar = () => {
                       })}
                     </ul>
                   )}
-
                 </li>
               </ul>
             );
           })}
-
         </nav>
       </div>
     </Fragment>

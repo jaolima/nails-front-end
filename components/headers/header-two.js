@@ -8,13 +8,10 @@ import CartContainer from "../containers/CartContainer";
 import TopBar from "./common/topbar-dark";
 import { Media, Container, Row, Col, Input } from "reactstrap";
 import LogoImage from "./common/logo";
-import search from "../../public/assets/images/icon/search.png";
 import language from "../../public/assets/images/icon/language_translator.png";
-import Currency from "./common/currency";
 import SearchOverlay from "./common/search-overlay";
 import { useTranslation } from "react-i18next";
 import langConfig from "../constant/langConfig.json";
-import Link from "next/link";
 import i18next from "../constant/i18n";
 
 const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
@@ -30,15 +27,14 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
       openmyslide.classList.add("open-side");
     }
   };
-  const openSearch = () => {
-    document.getElementById("search-overlay").style.display = "block";
-  };
 
   const { t } = useTranslation();
 
   const changeLanguage = (lng) => {
     i18next.changeLanguage(lng);
   };
+
+
 
   return (
     <div>
@@ -103,8 +99,6 @@ const HeaderTwo = ({ logoName, headerClass, topClass, direction }) => {
                                     ))}
                                   </ul>
                                 </li>
-
-
                               </ul>
                             </div>
                           </li>

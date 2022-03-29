@@ -4,6 +4,7 @@ import CartHeader from "../headers/common/cart-header";
 import CartContext from "../../helpers/cart";
 import { Media } from "reactstrap";
 import { CurrencyContext } from "../../helpers/Currency/CurrencyContext";
+import { useTranslation } from "react-i18next";
 
 const CartContainer = ({ icon }) => {
   const context = useContext(CartContext);
@@ -11,6 +12,7 @@ const CartContainer = ({ icon }) => {
   const symbol = currContext.state.symbol;
   const cartList = context.state;
   const total = context.cartTotal;
+  const { t } = useTranslation();
 
   return (
     <Fragment>
@@ -31,7 +33,7 @@ const CartContainer = ({ icon }) => {
               <li>
                 <div className="total">
                   <h5>
-                    subtotal :{" "}
+                    {t("subtotal")} :{" "}
                     <span>
                       {symbol + total}
                     </span>
@@ -41,17 +43,17 @@ const CartContainer = ({ icon }) => {
               <li>
                 <div className="buttons view-cart">
                   <Link href={`/page/account/cart`}>
-                    <a>view cart</a>
+                    <a>{t("view cart")}</a>
                   </Link>
                   <Link href={`/page/account/checkout`}>
-                    <a className="checkout">checkout</a>
+                    <a className="checkout">{t("checkout")}</a>
                   </Link>
                 </div>
               </li>
             </div>
           ) : (
             <li>
-              <h5>Your cart is currently empty.</h5>
+              <h5>{t("Your cart is currently empty.")}</h5>
             </li>
           )}
         </ul>

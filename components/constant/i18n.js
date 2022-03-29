@@ -321,6 +321,10 @@ i18next
                     'The email field is required.': 'The email field is required.',
                     'The email is not valid.': 'The email is not valid.',
                     'Password confirmation does not match.': 'Password confirmation does not match',
+                    'view cart': 'view cart',
+                    'subtotal': 'subtotal',
+                    'Your cart is currently empty.': 'Your cart is currently empty.',
+
                 }
             },
             de: {
@@ -635,7 +639,11 @@ i18next
                     'The password must be longer than 6 characters.': "Das Passwort muss länger als 6 Zeichen sein.",
                     'The email field is required.': "Das E-Mail-Feld ist erforderlich.",
                     'The email is not valid.': "Die E-Mail ist ungültig.",
-                    'Password confirmation does not match.': 'Adgangskodebekræftelse stemmer ikke overens',
+                    'Password confirmation does not match.': 'Passwortbestätigung stimmt nicht überein.',
+                    'view cart': 'Warenkorb ansehen',
+                    'subtotal': 'Zwischensumme',
+                    'Your cart is currently empty.': 'Ihr Warenkorb ist derzeit leer.',
+
                 }
             },
             es: {
@@ -951,6 +959,10 @@ i18next
                     'The email field is required.': "El campo de correo electrónico es obligatorio.",
                     'The email is not valid.': "El correo electrónico no es válido.",
                     'Password confirmation does not match.': "La confirmación de la contraseña no coincide",
+                    'view cart': 'ver carro',
+                    'subtotal': 'total parcial',
+                    'Your cart is currently empty.': 'Su carrito está vacío.',
+
                 }
             },
             fr: {
@@ -1266,6 +1278,9 @@ i18next
                     'The email field is required.': "Le champ e-mail est obligatoire.",
                     'The email is not valid.': "L'e-mail n'est pas valide.",
                     'Password confirmation does not match.': 'La confirmation du mot de passe ne correspond pas',
+                    'view cart':'voir le panier',
+                    'subtotal': 'total',
+                    'Your cart is currently empty.': 'Votre carte est actuellement vide.',
                 }
             },
             it: {
@@ -1580,7 +1595,11 @@ i18next
                     'The password must be longer than 6 characters.': "La password deve essere più lunga di 6 caratteri.",
                     'The email field is required.': "Il campo email è obbligatorio.",
                     'The email is not valid.': "L'e-mail non è valida.",
-                    'Password confirmation does not match.' : 'La conferma della password non corrisponde.'
+                    'Password confirmation does not match.': 'La conferma della password non corrisponde.',
+                    'view cart': 'voir le panier',
+                    'subtotal': 'totale parziale',
+                    'Your cart is currently empty.': 'Il carrello è vuoto.',
+
                 }
             },
             pt: {
@@ -1896,6 +1915,10 @@ i18next
                     'The email field is required.': "O campo do email é obrigatório.",
                     'The email is not valid.': "O email não é válido.",
                     'Password confirmation does not match.': 'A confirmação da senha não corresponde',
+                    'view cart': 'ver carrinho',
+                    'subtotal': 'subtotal',
+                    'Your cart is currently empty.': 'Seu carrinho está vazio no momento.',
+
                 }
             },
             sq: {
@@ -2108,7 +2131,6 @@ i18next
                     'buy now': 'blej tani',
                     'share it': 'Shperndaje',
                     'Time Reminder ': 'Kujtesa e kohës',
-
                     'Great nail polish color polishes with an exceptionally nourishing formula. The composition works without the 18 harmful chemicals that can normally be found in nail polishes. They dry super fast. You don’t have to wait so long before you can go back to everyday business': "Lustrime të shkëlqyera të manikyrit me një formulë jashtëzakonisht ushqyese. Përbërja funksionon pa 18 kimikatet e dëmshme që normalisht mund të gjenden në manikyrin e thonjve. Ata thahen super shpejt. Nuk duhet të prisni kaq gjatë përpara se të mund t'i ktheheni biznesit të përditshëm",
                     'Days': "Ditët",
                     'Hrs': "ora",
@@ -2212,7 +2234,11 @@ i18next
                     'The email field is required.': "Kërkohet fusha e emailit.",
                     'The email is not valid.': "Email-i nuk është i vlefshëm.",
                     'Password confirmation does not match.': 'Konfirmimi i fjalëkalimit nuk përputhet.',
-                    
+                    'view cart': 'shikoni karrocën',
+                    'subtotal': 'nëntotali',
+                    'Your cart is currently empty.': 'Shporta juaj është aktualisht bosh.',
+
+
                 }
             },
             zh: {
@@ -2526,7 +2552,10 @@ i18next
                     'The password must be longer than 6 characters.': "密码必须超过 6 个字符。",
                     'The email field is required.': "电子邮件字段是必需的。",
                     'The email is not valid.': "电子邮件无效。",
-                    'Password confirmation does not match.': '密码确认不匹配'
+                    'Password confirmation does not match.': '密码确认不匹配',
+                    'view cart': '查看购物车',
+                    'subtotal': '小计',
+                    'Your cart is currently empty.': '您的购物车目前是空的',
                 }
             },
 

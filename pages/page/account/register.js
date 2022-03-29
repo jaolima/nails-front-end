@@ -120,6 +120,7 @@ const Register = () => {
           router.push("/page/account/login");
         })
         .catch(function (error) {
+          error === cod1
           toast.error(t("Unable to register, please try again later !"));
         });
     }
