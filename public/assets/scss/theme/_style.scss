@@ -12707,21 +12707,21 @@ footer {
         }
       }
 
-      &:before {
-        content: "\f105";
-        display: inline-block;
-        font-family: FontAwesome;
-        font-style: normal;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        font-size: 18px;
-        font-weight: 700;
-        margin-top: 3px;
-      }
+      // &:before {
+      //   content: "\f105";
+      //   display: inline-block;
+      //   font-family: FontAwesome;
+      //   font-style: normal;
+      //   line-height: 1;
+      //   -webkit-font-smoothing: antialiased;
+      //   -moz-osx-font-smoothing: grayscale;
+      //   width: 30px;
+      //   height: 30px;
+      //   text-align: center;
+      //   font-size: 18px;
+      //   font-weight: 700;
+      //   margin-top: 3px;
+      // }
 
       &:hover {
         a {

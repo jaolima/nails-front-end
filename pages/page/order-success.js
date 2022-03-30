@@ -4,6 +4,7 @@ import { Container, Row, Col, Media } from 'reactstrap';
 import one from '../../public/assets/images/pro3/1.jpg';
 import CartContext from '../../helpers/cart';
 import { CurrencyContext } from '../../helpers/Currency/CurrencyContext';
+import { useTranslation } from "react-i18next";
 
 const OrderSuccess = () => {
     const cartContext = useContext(CartContext);
@@ -11,6 +12,7 @@ const OrderSuccess = () => {
     const cartTotal = cartContext.cartTotal;
     const curContext = useContext(CurrencyContext);
     const symbol = curContext.state.symbol;
+    const { t } = useTranslation();
 
     return (
         <CommonLayout parent="Home" title="order success">
@@ -19,8 +21,8 @@ const OrderSuccess = () => {
                     <Row>
                         <Col md="12">
                             <div className="success-text"><i className="fa fa-check-circle" aria-hidden="true"></i>
-                                <h2>thank you</h2>
-                                <p>Payment is successfully processsed and your order is on the way</p>
+                                <h2>{t('thank you')}</h2>
+                                <p>{t('Payment is successfully processsed and your order is on the way')}</p>
                                 <p>Transaction ID:267676GHERT105467</p>
                             </div>
                         </Col>
@@ -33,29 +35,29 @@ const OrderSuccess = () => {
                     <Row>
                         <Col lg="6">
                             <div className="product-order">
-                                <h3>your order details</h3>
+                                <h3>{t('your order details')}</h3>
 
-                                {cartItems.map((item, i) =>
+                                {cartItems && cartItems.map((item, i) =>
                                     <Row className="product-order-detail" key={i}>
                                         <Col xs="3" >
-                                            <Media src={item.images[0].src} alt=""
+                                            <Media src={item.uri_image} alt=""
                                                 className="img-fluid blur-up lazyload" />
                                         </Col>
                                         <Col xs="3" className="order_detail">
                                             <div>
-                                                <h4>product name</h4>
+                                                <h4>{t('product name')}</h4>
                                                 <h5>{item.title}</h5>
                                             </div>
                                         </Col>
                                         <Col xs="3" className="order_detail">
                                             <div>
-                                                <h4>quantity</h4>
+                                                <h4>{t('quantity')}</h4>
                                                 <h5>{item.qty}</h5>
                                             </div>
                                         </Col>
                                         <Col xs="3" className="order_detail">
                                             <div>
-                                                <h4>price</h4>
+                                                <h4>{t('price')}</h4>
                                                 <h5>{symbol + item.price}</h5>
                                             </div>
                                         </Col>
@@ -63,26 +65,25 @@ const OrderSuccess = () => {
                                 )}
                                 <div className="total-sec">
                                     <ul>
-                                        <li>subtotal <span>{symbol + cartTotal}</span></li>
+                                        <li>{t('subtotal')} <span>{symbol + cartTotal}</span></li>
                                     </ul>
                                 </div>
                                 <div className="final-total">
-                                    <h3>total <span>{symbol + cartTotal}</span></h3>
+                                    <h3>{t('total')} <span>{symbol + cartTotal}</span></h3>
                                 </div>
                             </div>
                         </Col>
                         <Col lg="6">
                             <Row className="order-success-sec">
                                 <Col sm="6">
-                                    <h4>summery</h4>
                                     <ul className="order-detail">
-                                        <li>order ID: 5563853658932</li>
-                                        <li>Order Date: October 22, 2021</li>
-                                        <li>Order Total: $907.28</li>
+                                        <li>{t('order ID')}: 5563853658932</li>
+                                        <li>{t('Order Date')}: October 22, 2021</li>
+                                        <li>{t('Order Total')}: $907.28</li>
                                     </ul>
                                 </Col>
                                 <Col sm="6">
-                                    <h4>shipping address</h4>
+                                    <h4>{t('shipping address')}</h4>
                                     <ul className="order-detail">
                                         <li>gerg harvell</li>
                                         <li>568, suite ave.</li>
@@ -91,13 +92,12 @@ const OrderSuccess = () => {
                                     </ul>
                                 </Col>
                                 <Col sm="12" className="payment-mode">
-                                    <h4>payment method</h4>
-                                    <p>Pay on Delivery (Cash/Card). Cash on delivery (COD) available. Card/Net banking
-                                        acceptance subject to device availability.</p>
+                                    <h4>{t('payment method')}</h4>
+                                    <p>{t('Pay on Delivery (Cash/Card). Cash on delivery (COD) available. Card/Net banking  acceptance subject to device availability.')}</p>
                                 </Col>
                                 <Col md="12">
                                     <div className="delivery-sec">
-                                        <h3>expected date of delivery</h3>
+                                        <h3>{t('expected date of delivery')}</h3>
                                         <h2>october 22, 2021</h2>
                                     </div>
                                 </Col>

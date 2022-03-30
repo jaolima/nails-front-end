@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { CurrencyContext } from "../../../../helpers/Currency/CurrencyContext";
 import { useTranslation } from "react-i18next";
+
 const CheckoutPage = () => {
   const { t } = useTranslation();
   const cartContext = useContext(CartContext);

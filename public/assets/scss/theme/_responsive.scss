@@ -7602,3 +7602,9 @@ body {
     display: none !important;
   }
 }
+
+@media (min-width: 992px) {
+  .responsive-menu-dashboard {
+    display: none !important;
+  }
+}
