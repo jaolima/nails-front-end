@@ -41,7 +41,7 @@ const Service = ({ layoutClass, hrLine }) => {
   const { t } = useTranslation();
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 4,

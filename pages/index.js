@@ -1,18 +1,11 @@
 import React from "react";
 import Banner from "./layouts/Fashion/Components/Banner";
-import CollectionBanner from "./layouts/Fashion/Components/Collection-Banner";
 import TopProduct from "../components/common/Collections/TopProduct";
-import TopCollection2 from "../components/common/Collections/Collection2";
 import Parallax from "./layouts/Fashion/Components/Parallax";
-import TopCategories from "../components/common/Collections/TopCategories";
 import ServiceLayout from "../components/common/Service/service3";
-import Blog from "../components/common/Blog/blog1";
 import Instagram from "../components/common/instagram/instagram1";
-import LogoBlock from "../components/common/logo-block";
 import HeaderTwo from "../components/headers/header-two";
 import { withApollo } from "../helpers/apollo/apollo";
-import { Product4, Product5, Product6 } from "../services/script";
-import ModalComponent from "../components/common/Modal";
 import Helmet from "react-helmet";
 import favicon from "../public/assets/images/favicon/1.png";
 import MasterFooter from "../components/footers/common/MasterFooter";

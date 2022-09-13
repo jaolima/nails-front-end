@@ -267,7 +267,7 @@ body {
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 1759px) {
   .main-menu {
     .menu-left {
       .navbar {
@@ -7599,6 +7599,12 @@ body {
 
 @media (min-width: 1206px) {
   .none-parallax-pc {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-menu-dashboard {
     display: none !important;
   }
 }

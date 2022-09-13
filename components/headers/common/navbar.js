@@ -135,12 +135,6 @@ const NavBar = () => {
             <i className="fa fa-bars sidebar-bar"></i>
           </div> */}
           <ul className="nav-menu" >
-            <li className="back-btn" onClick={closeNav.bind(this)}>
-              <div className="mobile-back text-right">
-                <span>Back navbar</span>
-                <i className="fa fa-angle-right pl-2" aria-hidden="true"></i>
-              </div>
-            </li>
             {MENUITEMS.map((menuItem, i) => {
               return (
                 <li
@@ -176,9 +170,9 @@ const NavBar = () => {
                                 href={null}
                                 onClick={() => toggletNavActive(childrenItem)}
                               >
-                                {childrenItem.title}
+                                {t(childrenItem.title)}
                                 {childrenItem.tag === "new" ? (
-                                  <span className="new-tag">new</span>
+                                  <span className="new-tag">{t('new')}</span>
                                 ) : (
                                   ""
                                 )}
@@ -190,9 +184,9 @@ const NavBar = () => {
                             {childrenItem.type === "link" ? (
                               <Link href={`${childrenItem.path}`}>
                                 <a>
-                                  {childrenItem.title}
+                                  {t(childrenItem.title)}
                                   {childrenItem.tag === "new" ? (
-                                    <span className="new-tag">new</span>
+                                    <span className="new-tag">{t('new')}</span>
                                   ) : (
                                     ""
                                   )}
@@ -211,10 +205,10 @@ const NavBar = () => {
                                       {childrenSubItem.type === "link" ? (
                                         <Link href={childrenSubItem.path}>
                                           <a className="sub-menu-title">
-                                            {childrenSubItem.title}
+                                            {t(childrenSubItem.title)}
                                             {childrenSubItem.tag === "new" ? (
                                               <span className="new-tag">
-                                                new
+                                                {t('new')}
                                               </span>
                                             ) : (
                                               ""

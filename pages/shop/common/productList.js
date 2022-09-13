@@ -93,11 +93,12 @@ const ProductList = ({ colClass, layoutList, openSidebar, noSidebar, category })
 
   useEffect(() => {
     const pathname = window.location.pathname;
+    console.log("pathname ", pathname)
     setUrl(pathname);
     // router.push(
     //   `${pathname}?${filterContext.state}&brand=${selectedBrands}&color=${selectedColor}&size=${selectedSize}&minPrice=${selectedPrice.min}&maxPrice=${selectedPrice.max}`
     // );
-  }, [selectedBrands, selectedColor, selectedSize, selectedPrice]);
+  }, [selectedBrands, selectedColor, selectedSize, selectedPrice, window.location.pathname]);
 
   var { loading, data, fetchMore } = useQuery(GET_PRODUCTS, {
     variables: {

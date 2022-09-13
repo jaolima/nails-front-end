@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import CommonLayout from '../../../components/shop/common-layout';
 import { Container, Row, Form, Label, Input, Col, Button } from 'reactstrap';
 import { useTranslation } from "react-i18next";
@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 const Login = () => {
 
     const { t } = useTranslation();
-    const [loading, setLoading] = useState(false);
 
     const [dataForm, setDataForm] = useState({
         email: "",
@@ -79,9 +78,13 @@ const Login = () => {
                 .then(function (response) {
                     // setDataProduct(response.data);
                     toast.success(t("Access successful"));
+                    console.log('response ', response)
                 })
                 .catch(function (error) {
+                    const { response: err } = error;
+                    const message = err && err.data ? err.data.message : 'Erro desconhecido';
                     toast.error(t("Erro. Could not login"));
+                    console.log('message ', message)
                 });
         }
 

@@ -907,7 +907,7 @@ header{
 }
 
 // Responsive menu css start //
-@media (min-width: 1200px) {
+@media (min-width:  1760px) {
   .responsive-btn{
     display: none;
   }
@@ -1445,7 +1445,7 @@ header{
     }
   }
 }
-@media (max-width: 1199px) {
+@media (max-width:  1759px) {
   header {
     .main-navbar{
       .nav-menu{
@@ -2040,6 +2040,7 @@ header{
 
 .width-logo {
   max-width: 50%;
+  margin-left: 10vh;
 }
 
 @media (max-width:577px) {
@@ -2234,5 +2235,6 @@ header{
   }
   .width-logo {
     max-width: 100% !important;
-  }
+  margin-left: 1vh !important;
+}
 }
